@@ -1,0 +1,1 @@
+print('testando modulos juntamente com arquivos.')

@@ -1,7 +1,7 @@
 import random
 
 def escolher_palavra():
-    palavras = ["python", "programacao", "desenvolvimento", "computador", "teclado"]
+    palavras = ["cavalo"]
     return random.choice(palavras)
 
 def exibir_palavra_oculta(palavra, letras_corretas):
@@ -13,7 +13,7 @@ def jogo_da_forca():
     tentativas = 6
     
     print("Bem-vindo ao Jogo da Forca!")
-    
+
     while tentativas > 0:
         print("\nPalavra:", exibir_palavra_oculta(palavra, letras_corretas))
         print(f"Tentativas restantes: {tentativas}")
