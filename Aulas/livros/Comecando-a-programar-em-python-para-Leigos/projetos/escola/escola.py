@@ -16,6 +16,9 @@ for i in range(1, quantidade + 1):
     nomes.append(nome)
     notas.append(nota)
 
+    with open('notas.txt', 'a') as arquivo:
+        arquivo.write(f'{str(nome)} {str(nota)}\n')
+
 
 soma = sum(notas)
 media = soma / len(notas)
@@ -26,5 +29,3 @@ print(f'A soma das notas é {soma}')
 print(f'A média das notas é {media}')
 
 
-with open('notas.txt', 'a') as arquivo:
-    arquivo.write(f'{str(nome)} {str(nota)}\n')
