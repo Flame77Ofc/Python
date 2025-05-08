@@ -120,3 +120,17 @@ The Enterprise is captained by Picard.
 5. Delete "Discovery" from the dictionary.
 6. Bonus: Make the same dictionary by using dict() and passing in
 the initial values when you first create the dictionary.
+
+1. Create a list with the names of friends and colleagues. Calculate the average length of the names.
+
+2. Create a list with the names of friends and colleagues. Search for the name John using a for loop. Print not found if you didn't find it. (Hint: use else).
+
+3. Create a list of tuples of first name, last name, and age for your friends and colleagues. If you don't know the age, put in None. Calculate the average age, skipping over any None values. Print out each name, followed by old or young if they are above or below the average age.
+
+1. Create a variable, age, set to your age. Create another variable, old, that uses a condition to test whether you are older than 18. The value of old should be True or False.
+
+2. Create a variable, name, set to your name. Create another variable, second_half, that tests whether the name would be classified in the second half of the alphabet? What do you need to compare it to?
+
+3. Create a list, names, with the names of people in a class. Write code to print 'The class is empty!' or 'Class has enrollments.', based on whether there are values in names. (See the tip in this chapter for details).
+
+4. Create a variable, car, set to None. Write code to print 'Taxi for you!', or 'You have a car!'. based on whether or not car is set (None is not the name of a car).
