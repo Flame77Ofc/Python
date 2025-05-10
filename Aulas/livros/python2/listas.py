@@ -1,0 +1,12 @@
+lista = ['Pedro', 'João', 'Maria', 'Luiz']
+lista.append('Marcos')
+lista.insert(1, 'Julio')
+lista.pop(); lista.pop(2)
+lista.remove('Pedro')
+lista.count('Rafael')
+lista.index('João')
+lista_copy = lista.copy()
+lista.extend(lista_copy)
+lista.reverse()
+lista.sort()
+lista.clear()
