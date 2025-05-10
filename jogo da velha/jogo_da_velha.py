@@ -15,10 +15,10 @@ def alerta_posicao():
 jogo = [['1', '2', '3'],
         ['4', '5', '6'],
         ['7', '8', '9']]
+
 def view():
     for visualizacao in jogo:
         print(visualizacao)
-
 
 def visu(indice1, indice2, letra):
     jogo[indice1][indice2] = letra
@@ -35,6 +35,7 @@ while contador > 1:
             print('Deve ser entre 1 a 9!')
             numero = int(input('Digite um número: '))
             continue
+
         if numero == 1:
             if jogo[0][0] == 'O' or jogo[0][0] == 'X':
                 alerta_posicao()
@@ -97,6 +98,7 @@ while contador > 1:
             print('Deve ser entre 1 a 9!')
             numero = int(input('Digite um número: '))
             continue
+        
         if numero == 1:
             if jogo[0][0] == 'X' or jogo[0][0] == 'O':
                 alerta_posicao()
