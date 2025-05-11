@@ -1,25 +1,4 @@
-def nome_da_funcao ():
-    print('Hello, World!')
-nome_da_funcao()
-
-
-def prazer(nome):
-    mensagem = print(f'Olá, {nome}')
-    return mensagem
-prazer('Gabriel')
-
-
-def informacoes(**info):
-    print(info)
-informacoes(name='Flame', age=34)
-
-def frutas(**fruta):
-    print(fruta)
-frutas(maçã = 3.90, laranja = 1.55, tomate = 0.50)
-
-
-
-
+<!-- Concluídos -->
 # Exercicio 1: Criar uma função que recebe um número e faz uma contagem regressiva desse número:
 def contador(numero):
     for i in range(numero, 0, -1):
@@ -36,3 +15,19 @@ def maior_numero(lista):
             maior = i
     print(maior)
 maior_numero([17, -5, 45, 9, 92, 64, 56])
+
+# Implementar uma função que receba um dicionário e retorne a soma, a média e a variação dos valores.
+notas = {
+    'João Alberto': 6.70,
+    'Maria Carvalho': 9.68,
+    'Luiz Paulo Costa': 4.76
+}
+
+total = 0
+for value in notas.values():
+    total += value
+
+ 
+media = round(total / len(notas.values()), 2)
+print(media)
+print(total)
