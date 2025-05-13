@@ -1,0 +1,6 @@
+lista = ['João', 'Julia', 'Maria', 'Pedro']
+for vis in lista:
+    print(vis, end=' ')
+escolha = int(input("Escolha um: "))
+
+print(lista[escolha-1])
