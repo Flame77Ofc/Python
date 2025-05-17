@@ -1,4 +1,0 @@
-Python
-JavaScript
-HTML
-CSS
