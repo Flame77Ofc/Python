@@ -1,1 +1,0 @@
-Estudar filter, map, reduce
