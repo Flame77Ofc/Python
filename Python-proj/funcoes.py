@@ -108,10 +108,24 @@ info() # Você está na América do Norte em Estados Unidos^
 info('América do Sul', 'Brasil')
 
 
+# Tópicos avançados
 # Return
+# Como vimos, os blocos de código podem ter qualquer coisa dentro do seu bloco de código, porém utilizamos apenas os comandos print(). Mas existe um comando específico apenas para funções, o return. Pelo seu próprio nome, ele retorna algo. Quando usamos a função print, estamos apenas imprimindo na tela nossa mensagem. Porém a função return retorna um argumento ou qualquer outra coisa que desejar. Vamos ver com um exemplo simples:
+def mensagem(nome):
+    texto = f'Seu nome é {nome}'
+    return texto
+# Para chamar uma função com o return, devemos utilizar o print agora.
+print(mensagem('João')) # Seu nome é João
+
+# E é apenas isso. Apesar de ser simples, é recomendável que toda função retorne algo. Elas podem retornar textos também, não apenas argumentos. Veja o exemplo a seguir:
+def retorna_texto():
+    return 'Um exemplo de texto'
+print(retorna_texto()) # Um exemplo de texto
 
 
 
 
 
-# agrs e kwargs
+
+
+# ARGS E KWARS [Já feito]

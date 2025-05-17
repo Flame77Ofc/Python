@@ -327,20 +327,20 @@ print(idade)
 
 # Ok, conseguimos imprimir agora a idade do usuário. Mas tem uma pequena coisa errada na variável idade. Como você sabe, o input() pergunta algo ao usuário. Porém essa pergunta é feita e retornada um tipo de dado string, e nós estamos perguntando a idade, ou seja, é do tipo int (inteiro). Quando você responde a variável idade, sempre retornará uma string. Vamos supor que o usuário digitou a idade como 25. Retorna na verdade uma string '25' e não um número inteiro 25. Isso é muito ruim pois não permite realizar cálculos matemáticos. Vamos ver um exemplo
 # Pede ao usuário a sua idade e subtrai o ano atual - idade, para descobrir em que ano o usuário nasceu:
-idade = input('Digite a sua idade: ')
+"""idade = input('Digite a sua idade: ')
 ano = 2025
 print(ano - idade) # Subtrai o ano atual - a idade do usuário
-
+"""
 # Se o usuário digitasse que sua idade é 10, então ele nasceu em 2015 pelo cálculo. Mas há um grande problema, pois isso resultará em um erro, porque esquecemos de um pequeno detalhe. Como eu disse, o comando input() SEMPRE RETORNARÁ uma string. É aí que está o problema. Quando o programa executa aquele código, o programa se pergunta: "Mas como eu vou subtrair 2025 de um texto?". Não é possível fazer cálculos utilizando um inteiro e uma string. Mas é possível resolver isso utilizando o int() antes do input para indicar que isso precisa retornar um inteiro. Vamos ver como fica:
 idade = int(input('Digite a sua idade: '))
 ano = 2025
 print(ano - idade)
 # Agora sim, o programa efetuará o cálculo e retornará o ano em que o usuário nasceu. Então lembre-se de utilizar o int() quando for fazer cálculos envolvendo entradas do usuário com input(). Vamos ver mais um exemplo:
 # Pede ao usuário o seu saldo e efetua a adição entre o saldo e a aposentadoria
-saldo = input('Digite o seu saldo: ')
+"""saldo = input('Digite o seu saldo: ')
 aposentadoria = 2400
 print(saldo + aposentadoria)
-
+"""
 # Consegue perceber se tem algum erro neste código? Analise bem!
 # Se você consegui que falta o int, parabéns! Vamos ajustar o código novamente:
 saldo = int(input('Digite o seu saldo: '))
@@ -585,7 +585,7 @@ if True: # Omitindo a comparação 'True == True'
     print('Isso é verdadeiro')
 
 
-# Listas são um novo tipo de dado (como os inteiros, booleanos, strings), mais especificamente, são sequências ordenadas e mutáveis (É possível alterar seus elementos) e possuem índices. Seus elementos são cercados por colchetes [] e cada elemento é separado por vírgulas. O índice é o identificador de um elemento, e começa do 0 até a quantidade de elementos - 1. Por exemplo, se uma lista tem 50 elementos, o primeiro índice será 0 e o último será a quantidade -1, que é 49.
+# Listas são um tipo de dado (como os inteiros, booleanos, strings), mais especificamente, são sequências ordenadas e mutáveis (É possível alterar seus elementos) e possuem índices. Seus elementos são cercados por colchetes [] e cada elemento é separado por vírgulas. O índice é o identificador de um elemento, e começa do 0 até a quantidade de elementos - 1. Por exemplo, se uma lista tem 50 elementos, o primeiro índice será 0 e o último será a quantidade -1, que é 49.
 # sintaxe básica
 # lista = ['e1', 'e2', 'e3']
 
@@ -868,6 +868,128 @@ print(inicio) # ['Tubarão', 'Crocodilo', 'Gato']
 print(fim) # Morcego
 # Agora como a ordem foi alterada, a variável inicio possui os primeiros elementos da lista, e o fim possui o último elemento da lista, que é o Morcego.
 
+
+# Os dicionários apresentam pares de chave-valor, isso é muito útil quando você precisa de uma forma mais organizada de criar dados mais significativos pelo seu programa. Dicionários também são mutáveis, o que significa que podem ser usados funções implicitamente para alterar os pares chave-valor do dicionário. Chaves serão os identificadores dos valores (como um índice que identifica os elementos em uma lista)
+# Vamos ver alguns exemplos:
+
+compras = {
+    'Arroz': 3.45,
+    'Feijão': 2.90,
+    'Macarrão': 4.50
+#   chave: valor
+}
+# Criamos um dicionário e seu nome é compras. Repare que todos os 3 pares de chave-valor tem a mesma estrutura, primeiro a chave, seguido dos dois pontos e por fim o seu valor. As chaves são únicas, isso quer dizer que um único dicionário não pode contér duas chaves iguais. Exemplo: duas chaves do dicionário possuem o nome 'Abacaxi'. Isso pode causar confusões no seu dicionário.
+# Imprimindo os dicionários
+# É possível imprimir o dicionários apenas digitando print() e dentro dos parênteses o nome do dicionário:
+print(compras)
+# Também é possível acessar o valor de um dicionário pela sua chave, quase igual uma lista com índices:
+print(compras['Arroz']) # saída: 3.45 (imprime o valor)
+
+
+# Modificando e alterando os pares-chave
+# Neste tipo de modificação ou acrescentação, o programa verifica no dicionário se a chave já existe no dicionário, veja:
+compras['Sushi'] = 1.35 # O programa verifica se já existe 'Sushi' no dicionário. Como não existe, então apenas adicinará um novo elemento, juntamente com o seu valor. Porém se já existisse, apenas alteraria o seu valor. Veja um exemplo em que a chave já existe:
+compras['Macarrão'] = 0.35 # Como a chave já existe no dicionário, apenas substituirá o seu valor, que antes era 4.50 e agora passa a ser 0.35.
+
+
+
+frutas = {
+    'Maçã': 3.99,
+    'Laranja': 4.99,
+    'Limão': 2.99,
+    'Abacaxi': 1.99,
+    'Manga': 1.59,
+}
+# Funções e métodos de dicionários
+# As funções e métodos permitem deixar os dicionários com mais funcionalidades e com mais poder. Vamos quais são:
+# del: A função del serve para deletar o par de chave-valor do dicionário
+del frutas['Abacaxi']
+print(frutas) # {'Maçã': 3.99, 'Laranja': 4.99, 'Limão': 2.99, 'Manga': 1.59}
+
+# popitem: A função popitem é responsável por remover o último par de chave-valor do dicionário
+frutas.popitem()
+print(frutas) # {'Maçã': 3.99, 'Laranja': 4.99, 'Limão': 2.99}
+
+# pop: O pop remove um par de chave-valor pela sua chave
+frutas.pop('Maçã')
+print(frutas) # {'Laranja': 4.99, 'Limão': 2.99}
+
+# get('valor', 'mensagem se não encontrar'): Retorna o valor da chave. Muito útil para evitar erros
+print(frutas.get('Limão', 'Fruta não foi encontrada')) # 2.99
+print(frutas.get('Pêra', 'Fruta não foi encontrada')) # Fruta não foi encontrada
+
+
+# operadores de pertencimento (in e not in): Retornam um boolean dizendo se tal item está presente no dicionário
+print('Laranja' in frutas) # True
+print('Tomate' not in frutas) # True
+
+# clear: Limpa todos os pares chave-valor da lista
+frutas.clear()
+print(frutas)
+
+# Acessando a chave, o valor e item
+compras = {
+    'Arroz': 3.45,
+    'Feijão': 2.90,
+    'Macarrão': 4.50
+#   chave: valor
+}
+
+# chave, valor, item
+# keys: Chaves do dicionário (Identificadores)
+print(compras.keys()) # dict_keys(['Arroz', 'Feijão', 'Macarrão', 'Sushi'])
+
+# values: Valores das chaves
+print(compras.values()) # dict_values([3.45, 2.9, 0.35, 1.35])
+
+# items: São tuplas individuais que contém os pares de chave-valor
+print(compras.items()) # dict_items([('Arroz', 3.45), ('Feijão', 2.9), ('Macarrão', 0.35), ('Sushi', 1.35)])
+
+# Vamos supor que eu tenho um dicionário de alunos e quero ter uma visão geral desse dicionário, como o total de notas, a média de notas e quantos alunos há no dicionário. Vamos ver:
+alunos = {
+    'João': 7.90,
+    'Mariane': 5.60,
+    'Cristopher': 8.55,
+    'Lucas': 4.50
+#   nome: nota
+}
+# Queremos o total de notas, a média e quantos alunos há, vamos fazer isso.
+# Primeiramente, para descobrir o total de notas, deveremos utilizar as values e a função sum. Vamos ver como isso ficaria:
+total = sum(alunos.values())
+print(total)
+# A variável total está armazenando a soma dos valores do dicionários alunos, e os valores são as notas.
+# Agora para saber a quantidade de alunos, utilizamos a função len() e dentro dos parênteses as chaves do dicionário. Ficará assim:
+quantidade = len(alunos.keys())
+print(quantidade)
+# A variável quantidade está armazenando a quantidade de alunos baseado na quantidade de chaves
+# Por fim, para saber a média, apenas dividimos o total das notas pela quantidade de alunos
+media = total / quantidade
+print(media)
+# A média está armazenando a divisão do total das notas pela quantidade de alunos
+
+
+# Tópicos avançados
+# Iteração com dicionários
+# É possível iterar sobre cada par de chave-valor de um dicionário. Isso é um assunto mais avançado, porém muito útil. Não vou explicar detalhadamente o que são iterações nesta aula, mas sim na própria aula de iterações com o loop for. Enfim, não se preocupe se não entender o código a seguir. Darei uma breve explicada:
+# Loops for são laços de repetição que podem iterar sobre elementos ou sequências, como listas, strings e dicionários também. Ou seja, eles podem acessar cada elemento individualmente. Tudo que quero te mostrar a seguir é apenas um jeito elegante de imprimir as chaves e os valores de um dicionário. Veja o seguinte código:
+# Considere o seguinte dicionário:
+produtos = {
+    'smartphone': 3500,
+    'tablet': 2675,
+    'smartwatch': 375
+}
+items = produtos.items()
+
+for chave, valor in items:
+    print(chave, valor)
+
+# A saída deste código será:
+"""
+smartphone 3500
+tablet 2675
+smartwatch 375
+"""
+# Isso imprime os itens de maneira mais organizadas.
 
 
 
@@ -1174,4 +1296,7 @@ else:
     print('Adulto')
 
 print('Jovem' if idade < 18 else 'Adulto')
-# Vamos entender: O programa imprimirá 'Jovem' se idade for menor que 18, mas se idade não for menor que 18, isso é, se idade for maior que 18, então imprimirá 'Adulto'. Os operadores ternário possuem uma sintaxe bem menor se comparado a uma estrutura condicial tradicional, não é mesmo?
+# Vamos entender: O programa imprimirá 'Jovem' se idade for menor que 18, mas se idade não for menor que 18, isso é, se idade for maior que 18, então imprimirá 'Adulto'. Os operadores ternário possuem uma sintaxe bem menor se comparado a uma estrutura condicial tradicional, não é mesmo? Vamos a mais alguns exemplos
+luz = True
+ternario = 'luz acessa' if luz else 'luz apagada'
+print(ternario) # 'luz acessa'
