@@ -7,6 +7,10 @@
 # Isso também é um comentário
 # Mas, seu eu utilizar # o hashtag após o texto que que queria, dará um erro. Todos os caracteres devem estar APÓS a hashtag.
 
+# O que são palavras-chave, palavras reservadas ou keywords?
+# keywords são as palavras específicas que o python implementou na sua linguagem. Exemplos: True, if, def, None
+
+
 # Saída de informações
 # Imagine um programa sem saídas, por exemplo, uma calculadora. Imagine que você digita a operação que você quer fazer, como 5 + 4 e a calculadora simplesmente não te responde, em outras palavras, não te dá uma saída. Isso não seria uma calculadora, certo? Não serveria pra nada, pois eu não consegui ver o resultado dessa operação. É exatamente essa a saída que vamos ver, que tal?
 # Seu primeiro código: Digite print() e dentro dos parênteses, escreva um texto cercado por aspas (podem ser simples ou duplas), como esse:
@@ -143,7 +147,41 @@ idade = 14 # Isso é um int (inteiro)
 nome = 'Felipe' # Declaramos a variável nome e atribuímos a ela o valor Felipe
 print(nome) # Imprimimos o nome, que era Felipe. Então a saída será Felipe
 
-# As strings não são apenas tipos de dedos. É possível fazer inúmeras coisas com as strings, ela possui diversas funções, o que deixa as strings mais poderosas e com mais funcionalidades. Vamos ver o que é possível fazer com elas?
+
+# Atribuindo múltiplos valores às variáveis
+
+# Como você já sabe, é possível atribuir valores às variáveis individualmente, uma por uma. Mas também existe uma forma de atribuir valores à variáveis em uma só linha. Vamos ver como isso funciona:
+# atribuição normal:
+nome = "Lucas"
+idade = 14
+estado = "MG"
+print(nome)
+print(idade)
+print(estado)
+
+# essa atribuição consome muitas linhas do seu código (por mais que seja mais recomendável), mas você pode utilizar da forma que você quiser. Veremos a seguir a atribuição múltipla:
+# múltiplas atribuições
+nome, idade, estado = "Lucas", 14, "MG"
+print(nome)
+print(idade)
+print(estado)
+# Ambos os códigos fazem a mesma coisa.
+
+# Podemos atribuir também um valor para múltiplas variáveis. Exemplo:
+x = y = z = 10
+# x, y, z recebem o valor de 10
+
+
+# Constantes
+# Constantes são variáveis que possuem um valor fixo, ou seja, seu valor não será alterado uma vez que foi definido. Para criar um constante, nome da variável precisa estar toda em maiúscula, veja algums exemplos:
+PI = 3.14
+GRAVIDADE = 9.81
+print(PI)
+print(GRAVIDADE)
+# Apesar de serem muito boas, poucas ou nenhuma vez utilizamos contantes. Isso porque letras minúsculas são uma particularidade do python, mantendo sua sintaxe simples e elegante.
+
+
+# As strings não são apenas tipos de dados. É possível fazer inúmeras coisas com as strings, ela possui diversas funções, o que deixa as strings mais poderosas e com mais funcionalidades. Vamos ver o que é possível fazer com elas?
 
 # Indexação: Acessando caracteres ou sequências de strings
 # O índice de strings é uma forma de acessar um caractere ou uma sequência de caracteres.
