@@ -2,4 +2,5 @@
 salario = int(input('Qual é o salário do funcionário? '))
 aumento = salario * 0.15
 salario = salario + aumento
+
 print(salario)
