@@ -1,1 +1,0 @@
-# As condições permitem que o programa tome decisões a partir de condições que sejam verdadeiras. Com isso o programa pode escolher em que bloco será executado, desviando o fluxo comum do programa.
