@@ -1,5 +1,6 @@
 # Um programa que pergunte ao usuário um número e retorne a tabuada desse número
 num = int(input("Digite o número: "))
+
 print(num * 0)
 print(num * 1)
 print(num * 2)
