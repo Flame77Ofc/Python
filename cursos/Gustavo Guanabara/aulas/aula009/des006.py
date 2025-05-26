@@ -1,7 +1,4 @@
-numeros = 0
-soma = 0
-maior = 0
-menor = 0
+numeros = soma = maior = menor = 0
 
 while True:
     numero = int(input("Digite um número: "))
