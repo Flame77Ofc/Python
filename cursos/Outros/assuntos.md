@@ -1,1 +1,0 @@
-Variáveis, Tipos de dados
