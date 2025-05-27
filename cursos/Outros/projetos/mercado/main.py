@@ -21,12 +21,16 @@ while True:
         print('Item adicionado com sucesso')
     elif menu == 2:
         remover = input('Qual produto deseja remover?\n>>>').strip().title()
+        while remover not in carrinho:
+            print('Lista de compras:')
+            view()
+            remover = input('Este produto não está no carrinho! Digite novamente:\n>>>').strip().title()
         del carrinho[remover]
         print('Item removido com sucesso')
     elif menu == 3:
         view()
     elif menu == 4:
-        if len(carrinho) <= 0:
+        if len(carrinho) == 0:
             print('Nenhum item no carrinho')
         else:
             view()
