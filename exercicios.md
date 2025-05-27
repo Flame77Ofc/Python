@@ -537,14 +537,14 @@ com os três nomes mais a média de suas idades.
 4. Faça um algoritmo que faça a soma dos números inteiros de 1 a 18
 
 5. Faça um programa que leia 4 números inteiros e apresente:
-• Média dos ímpares
-• Maior número par
-• Diferença do maior menos o menor número
+Média dos ímpares
+Maior número par
+Diferença do maior menos o menor número
 
 6. Faça um programa que leia o nome e a idade de 3 pessoas e apresente:
-• Maior idade
-• Nome da pessoa mais nova
-• Média das idades
+Maior idade
+Nome da pessoa mais nova
+Média das idades
 
 7. Faça um programa que leia a medida do lado de um quadrado e calcule e apresente a área e o
 perímetro desta figura. Obs: Perímetro é a soma de todos os lados de uma figura geométrica.
@@ -572,10 +572,10 @@ Fim Se;
 Fim.
 3) Uma pesquisa sobre algumas características físicas da população de uma determinada região
 coletou os seguintes dados referentes a cada habitante para serem analisados
-• Sexo (masculino, feminino)
-• Cabelos(Louros, preto, castanho, ruivo)
-• Cor dos Olhos (Azul, verde, castanho)
-• Idade em anos
+Sexo (masculino, feminino)
+Cabelos(Louros, preto, castanho, ruivo)
+Cor dos Olhos (Azul, verde, castanho)
+Idade em anos
 Para cada habitante foi digitada uma linha com esses dados e a última linha, que não corresponde
 a ninguém conterá o valor de idade igual a -1. Fazer um algoritmo que determine e imprima:
 a) A maior idade dos habitantes
@@ -610,11 +610,11 @@ escrevendo no final o resultado obtido. OBS: o valor lido pode ser ímpar.
 5) Faça um algoritmo que fique lendo valores até encontrar o valor zero, com cada valor lido faça
 a soma de 10 valores subseqüentes e mostre a soma e a média desses valores.
 6) Fazer um algoritmo que fique lendo valores, um de cada vez e faça o seguinte:
-• se for 0 (zero) escreva "desligue tudo" e termine o algoritmo;
-• se for 1 (um) escreva "ligar TV";
-• se for 2 (dois) escreva "ligar rádio";
-• se for 3 (três) escreva "ligar a luz".
-• Se for outro valor escreva "tente novamente"
+se for 0 (zero) escreva "desligue tudo" e termine o algoritmo;
+se for 1 (um) escreva "ligar TV";
+se for 2 (dois) escreva "ligar rádio";
+se for 3 (três) escreva "ligar a luz".
+Se for outro valor escreva "tente novamente"
 
 7) Escrever um algoritmo que lê 10 valores, um de cada vez, e conta quantos deles estão no
 intervalo fechado entre 10 e 20 e quantos deles estão fora do intervalo, no final escreva estes
@@ -664,9 +664,9 @@ pagamento a prazo é embutido acréscimo de 30% sobre o preço da mercadoria.
 2. Faça um algoritmo que leia 18 números inteiros e calcule e imprima a média dos mesmos
 
 3. Faça um programa que leia 4 números inteiros e apresente:
-• Média dos ímpares
-• Maior número par
-• Diferença do maior menos o menor número
+Média dos ímpares
+Maior número par
+Diferença do maior menos o menor número
 
 
 4. Faca um programa que leia um conteúdo com 100 números inteiros e apresente a media dos
@@ -1799,7 +1799,7 @@ multiplicar deste (1 até 10)
 6. Exiba o tamanho da lista
 
 
-• Faça um programa que utilize
+Faça um programa que utilize
 listas para gerenciar uma agenda
 de telefones.
 o A agenda deve guardar nome e telefone de
@@ -1823,17 +1823,17 @@ grama que receba a senha de um correntista para validar o seu
 
 acesso ao sistema. Considere que a senha fictícia do correntista
 é 123456. Considere as seguintes restrições:
-• quando a senha estiver correta, mostrar a mensagem:
+quando a senha estiver correta, mostrar a mensagem:
 “Olá, <SEUNOME>. Seja bem-vindo ao nosso banco!"
-• quando o usuário errar a senha pela primeira vez,
+quando o usuário errar a senha pela primeira vez,
 mostrar a mensagem: “Senha incorreta! Você ainda
 tem 2 tentativas.”
-• se o usuário errar a senha pela segunda vez, mostrar
+se o usuário errar a senha pela segunda vez, mostrar
 
 a mensagem: “Senha incorreta! Você ainda tem 1 ten-
 tativa.”
 
-• se o usuário errar a senha novamente, mostrar a men-
+se o usuário errar a senha novamente, mostrar a men-
 sagem “Sua senha foi bloqueada! Por favor, dirija-se a
 
 um de nossos caixas.” e o programa deve ser encerrado.
@@ -1997,9 +1997,9 @@ Row 2 sum: 7
 1. Create an empty dictionary named captains.
 2. Using square bracket notation, enter the following data into the
 dictionary one item at a time:
-• 'Enterprise': 'Picard'
-• 'Voyager': 'Janeway'
-• 'Defiant': 'Sisko'
+'Enterprise': 'Picard'
+'Voyager': 'Janeway'
+'Defiant': 'Sisko'
 3. Write two if statements that check if "Enterprise" and "Discovery"
 exist as keys in the dictionary. Set their values to "unknown" if the
 key does not exist.
@@ -2164,9 +2164,9 @@ Tuition median: $ 39,849
 1. Create an empty dictionary named captains.
 2. Using square bracket notation, enter the following data into the
 dictionary one item at a time:
-• 'Enterprise': 'Picard'
-• 'Voyager': 'Janeway'
-• 'Defiant': 'Sisko'
+'Enterprise': 'Picard'
+'Voyager': 'Janeway'
+'Defiant': 'Sisko'
 3. Write two if statements that check if "Enterprise" and "Discovery"
 exist as keys in the dictionary. Set their values to "unknown" if the
 key does not exist.
@@ -2214,12 +2214,12 @@ temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês
 extenso: 1 – Janeiro, 2 – Fevereiro,..).
 4.7. Crie uma lista com os nomes dos super-heróis que devem participar da
 Iniciativa Vingadores seguindo a ordem:
-• Homem de Ferro
-• Capitão América
-• Thor
-• Hulk
-• Viúva Negra
-• Gavião Arqueiro
+Homem de Ferro
+Capitão América
+Thor
+Hulk
+Viúva Negra
+Gavião Arqueiro
 4.8. No exercício anterior, inclua o Homem-Aranha no final da lista e imprima em qual
 posição está o Thor.
 
@@ -2691,9 +2691,9 @@ ingresso custa U$S10; e caso tenha mais de 12 anos, o ingresso custa US$15. Escr
 que pergunte a idade dos usuários e, em seguida, informe o preço do ingresso do cinema.
 7.6 Três saídas: Crie diferentes versões do Exercício 7.4 ou 7.5 que executem cada uma das
 seguintes tarefas, pelo menos uma vez:
-• Use um teste condicional na instrução while para interromper o loop.
-• Use uma variável active para controlar o tempo que o loop é executado.
-• Use uma instrução break para sair do loop quando o usuário inserir o valor 'quit'.
+Use um teste condicional na instrução while para interromper o loop.
+Use uma variável active para controlar o tempo que o loop é executado.
+Use uma instrução break para sair do loop quando o usuário inserir o valor 'quit'.
 7.7 Infinito: Escreva e execute um loop infinito. (Para encerrar o loop, pressione CTRL+C ou
 feche a janela que exibe a saída.)
 
@@ -2761,3 +2761,407 @@ Crie uma instância da classe User e chame increment_login_attempts() diversas v
 valor de login_attempts para verificar que foi incrementado corretamente e, em seguida, chame
 reset_login_attempts(). Exiba login_attempts novamente a fim de ter certeza de que foi
 redefinido para 0.
+
+5.3 – Cores de alienígenas #1: Suponha que um alienígena acabou de ser
+atingido em um jogo. Crie uma variável chamada alien_color e atribua-lhe um
+valor igual a 'green', 'yellow' ou 'red'.
+Escreva uma instrução if para testar se a cor do alienígena é verde. Se for,
+mostre uma mensagem informando que o jogador acabou de ganhar cinco
+pontos.
+Escreva uma versão desse programa em que o teste if passe e outro em que
+ele falhe. (A versão que falha não terá nenhuma saída.) 5.4 – Cores de
+alienígenas #2: Escolha uma cor para um alienígena, como foi feito no
+Exercício 5.3, e escreva uma cadeia if-else.
+Se a cor do alienígena for verde, mostre uma frase informando que o jogador
+acabou de ganhar cinco pontos por atingir o alienígena.
+Se a cor do alienígena não for verde, mostre uma frase informando que o
+jogador acabou de ganhar dez pontos.
+Escreva uma versão desse programa que execute o bloco if e outro que
+execute o bloco else.
+5.5 – Cores de alienígenas #3: Transforme sua cadeia if-else do Exercício 5.4
+em uma cadeia if-elif-else.
+Se o alienígena for verde, mostre uma mensagem informando que o jogador
+ganhou cinco pontos.
+Se o alienígena for amarelo, mostre uma mensagem informando que o
+jogador ganhou dez pontos.
+Se o alienígena for vermelho, mostre uma mensagem informando que o
+jogador ganhou quinze pontos.
+Escreva três versões desse programa, garantindo que cada mensagem seja
+exibida para a cor apropriada do alienígena.
+5.6 – Estágios da vida: Escreva uma cadeia if-elif-else que determine o
+estágio da vida de uma pessoa. Defina um valor para a variável age e então: •
+Se a pessoa tiver menos de 2 anos de idade, mostre uma mensagem dizendo
+que ela é um bebê.
+Se a pessoa tiver pelo menos 2 anos, mas menos de 4, mostre uma
+mensagem dizendo que ela é uma criança.
+Se a pessoa tiver pelo menos 4 anos, mas menos de 13, mostre uma
+mensagem dizendo que ela é um(a) garoto(a).
+Se a pessoa tiver pelo menos 13 anos, mas menos de 20, mostre uma
+mensagem dizendo que ela é um(a) adolescente.
+Se a pessoa tiver pelo menos 20 anos, mas menos de 65, mostre uma
+mensagem dizendo que ela é adulto.
+Se a pessoa tiver 65 anos ou mais, mostre uma mensagem dizendo que essa
+pessoa é idoso.
+5.7 – Fruta favorita: Faça uma lista de suas frutas favoritas e, então, escreva uma
+série de instruções if independentes que verifiquem se determinadas frutas
+estão em sua lista.
+Crie uma lista com suas três frutas favoritas e chame-a de favorite_fruits.
+Escreva cinco instruções if. Cada instrução deve verificar se uma
+determinada fruta está em sua lista. Se estiver, o bloco if deverá exibir uma
+frase, por exemplo, Você realmente gosta de bananas!
+
+
+
+
+
+5.8 – Olá admin: Crie uma lista com cinco ou mais nomes de usuários, incluindo
+o nome 'admin'. Suponha que você esteja escrevendo um código que exibirá
+uma saudação a cada usuário depois que eles fizerem login em um site.
+Percorra a lista com um laço e mostre uma saudação para cada usuário: Se o
+nome do usuário for 'admin', mostre uma saudação especial, por exemplo, Olá
+admin, gostaria de ver um relatório de status?
+
+
+Caso contrário, mostre uma saudação genérica, como Olá Eric, obrigado por
+fazer login novamente.
+5.9 – Sem usuários: Acrescente um teste if em hello_admin.py para garantir
+que a lista de usuários não esteja vazia.
+Se a lista estiver vazia, mostre a mensagem Precisamos encontrar alguns
+usuários!
+Remova todos os nomes de usuário de sua lista e certifique-se de que a
+mensagem correta seja exibida.
+5.10 – Verificando nomes de usuários: Faça o seguinte para criar um programa
+que simule o modo como os sites garantem que todos tenham um nome de
+usuário único.
+Crie uma lista chamada current_users com cinco ou mais nomes de usuários.
+Crie outra lista chamada new_users com cinco nomes de usuários. Garanta
+que um ou dois dos novos usuários também estejam na lista current_users.
+Percorra a lista new_users com um laço para ver se cada novo nome de
+usuário já foi usado. Em caso afirmativo, mostre uma mensagem informando
+que a pessoa deverá fornecer um novo nome. Se um nome de usuário não foi
+usado, apresente uma mensagem dizendo que o nome do usuário está
+disponível.
+Certifique-se de que sua comparação não levará em conta as diferenças
+entre letras maiúsculas e minúsculas. Se 'John' foi usado, 'JOHN' não deverá
+ser aceito.
+5.11 – Números ordinais: Números ordinais indicam sua posição em uma lista,
+por exemplo, 1st ou 2nd, em inglês. A maioria dos números ordinais nessa
+língua termina com th, exceto 1, 2 e 3.
+Armazene os números de 1 a 9 em uma lista.
+Percorra a lista com um laço.
+Use uma cadeia if-elif-else no laço para exibir a terminação apropriada
+para cada número ordinal. Sua saída deverá conter "1st 2nd 3rd 4th 5th
+6th 7th 8th 9th", e cada resultado deve estar em uma linha separada.
+
+5.12 – Estilizando instruções if: Revise os programas que você escreveu neste
+capítulo e certifique-se de que os testes condicionais foram estilizados de forma
+apropriada.
+5.13 – Suas ideias: A essa altura, você é um programador mais capacitado do
+que era quando começou a ler este livro. Agora que você tem melhor noção de
+como situações do mundo real são modeladas em programas, talvez esteja
+pensando em alguns problemas que poderia resolver com seus próprios
+programas. Registre qualquer ideia nova que tiver sobre problemas que você
+queira resolver à medida que suas habilidades em programação continuam a
+melhorar. Considere jogos que você queira escrever, conjuntos de dados que
+possa querer explorar e aplicações web que gostaria de criar.
+
+6.4 – Glossário 2: Agora que você já sabe como percorrer um dicionário com
+um laço, limpe o código do Exercício 6.3 (página 148), substituindo sua
+sequência de instruções print por um laço que percorra as chaves e os valores
+do dicionário. Quando tiver certeza de que seu laço funciona, acrescente mais
+cinco termos de Python ao seu glossário. Ao executar seu programa novamente,
+essas palavras e significados novos deverão ser automaticamente incluídos na
+saída.
+6.5 – Rios: Crie um dicionário que contenha três rios importantes e o país que
+cada rio corta. Um par chave-valor poderia ser 'nilo': 'egito'.
+Use um laço para exibir uma frase sobre cada rio, por exemplo, O Nilo corre
+pelo Egito.
+Use um laço para exibir o nome de cada rio incluído no dicionário.
+Use um laço para exibir o nome de cada país incluído no dicionário.
+6.6 – Enquete: Utilize o código em favorite_languages.py (página 150).
+Crie uma lista de pessoas que devam participar da enquete sobre linguagem
+favorita. Inclua alguns nomes que já estejam no dicionário e outros que não
+estão.
+Percorra a lista de pessoas que devem participar da enquete. Se elas já
+tiverem respondido à enquete, mostre uma mensagem agradecendo-lhes por
+responder. Se ainda não participaram da enquete, apresente uma mensagem
+convidando-as a responder.
+
+6.7 – Pessoas: Comece com o programa que você escreveu no Exercício 6.1
+(página 147). Crie dois novos dicionários que representem pessoas diferentes e
+armazene os três dicionários em uma lista chamada people. Percorra sua lista
+de pessoas com um laço. À medida que percorrer a lista, apresente tudo que
+você sabe sobre cada pessoa.
+6.8 – Animais de estimação: Crie vários dicionários, em que o nome de cada
+dicionário seja o nome de um animal de estimação. Em cada dicionário, inclua
+o tipo do animal e o nome do dono. Armazene esses dicionários em uma lista
+chamada pets. Em seguida, percorra sua lista com um laço e, à medida que
+fizer isso, apresente tudo que você sabe sobre cada animal de estimação.
+6.9 – Lugares favoritos: Crie um dicionário chamado favorite_places. Pense em
+três nomes para usar como chaves do dicionário e armazene de um a três
+
+
+lugares favoritos para cada pessoa. Para deixar este exercício um pouco mais
+interessante, peça a alguns amigos que nomeiem alguns de seus lugares
+favoritos. Percorra o dicionário com um laço e apresente o nome de cada
+pessoa e seus lugares favoritos.
+6.10 – Números favoritos: Modifique o seu programa do Exercício 6.2 (página
+147) para que cada pessoa possa ter mais de um número favorito. Em seguida,
+apresente o nome de cada pessoa, juntamente com seus números favoritos.
+6.11 – Cidades: Crie um dicionário chamado cities. Use os nomes de três
+cidades como chaves em seu dicionário. Crie um dicionário com informações
+sobre cada cidade e inclua o país em que a cidade está localizada, a
+população aproximada e um fato sobre essa cidade. As chaves do dicionário
+de cada cidade devem ser algo como country, population e fact. Apresente o
+nome de cada cidade e todas as informações que você armazenou sobre ela.
+6.12 – Extensões: Estamos trabalhando agora com exemplos complexos o
+bastante para poderem ser estendidos de várias maneiras. Use um dos
+programas de exemplo deste capítulo e estenda-o acrescentando novas chaves
+e valores, alterando o contexto do programa ou melhorando a formatação da
+saída.
+
+
+
+7.1 – Locação de automóveis: Escreva um programa que pergunte ao usuário
+qual tipo de carro ele gostaria de alugar. Mostre uma mensagem sobre esse
+carro, por exemplo, “Deixe-me ver se consigo um Subaru para você.”
+7.2 – Lugares em um restaurante: Escreva um programa que pergunte ao usuário
+quantas pessoas estão em seu grupo para jantar. Se a resposta for maior que
+oito, exiba uma mensagem dizendo que eles deverão esperar uma mesa. Caso
+contrário, informe que sua mesa está pronta.
+7.3 – Múltiplos de dez: Peça um número ao usuário e, em seguida, informe se o
+número é múltiplo de dez ou não.
+
+
+
+7.4 – Ingredientes para uma pizza: Escreva um laço que peça ao usuário para
+fornecer uma série de ingredientes para uma pizza até que o valor 'quit' seja
+fornecido. À medida que cada ingrediente é especificado, apresente uma
+mensagem informando que você acrescentará esse ingrediente à pizza.
+7.5 – Ingressos para o cinema: Um cinema cobra preços diferentes para os
+ingressos de acordo com a idade de uma pessoa. Se uma pessoa tiver menos
+de 3 anos de idade, o ingresso será gratuito; se tiver entre 3 e 12 anos, o
+ingresso custará 10 dólares; se tiver mais de 12 anos, o ingresso custará 15
+dólares. Escreva um laço em que você pergunte a idade aos usuários e, então,
+informe-lhes o preço do ingresso do cinema.
+7.6 – Três saídas: Escreva versões diferentes do Exercício 7.4 ou do Exercício
+7.5 que faça o seguinte, pelo menos uma vez: use um teste condicional na
+instrução while para encerrar o laço; use uma variável active para controlar
+o tempo que o laço executará; use uma instrução break para sair do laço
+quando o usuário fornecer o valor 'quit'.
+7.7 – Infinito: Escreva um laço que nunca termine e execute-o. (Para encerrar o
+laço, pressione CTRL-C ou feche a janela que está exibindo a saída.)
+
+
+
+7.8 – Lanchonete: Crie uma lista chamada sandwich_orders e a preencha com
+os nomes de vários sanduíches. Em seguida, crie uma lista vazia chamada
+finished_sandwiches. Percorra a lista de pedidos de sanduíches com um laço e
+mostre uma mensagem para cada pedido, por exemplo, Preparei seu
+sanduíche de atum. À medida que cada sanduíche for preparado, transfira-o
+para a lista de sanduíches prontos. Depois que todos os sanduíches estiverem
+prontos, mostre uma mensagem que liste cada sanduíche preparado.
+7.9 – Sem pastrami: Usando a lista sandwich_orders do Exercício 7.8, garanta
+que o sanduíche de 'pastrami' apareça na lista pelo menos três vezes.
+Acrescente um código próximo ao início de seu programa para exibir uma
+
+
+mensagem informando que a lanchonete está sem pastrami e, então, use um
+laço while para remover todas as ocorrências de 'pastrami' e
+sandwich_orders. Garanta que nenhum sanduíche de pastrami acabe em
+finished_sandwiches.
+7.10 – Férias dos sonhos: Escreva um programa que faça uma enquete sobre as
+férias dos sonhos dos usuários. Escreva um prompt semelhante a este: Se
+pudesse visitar um lugar do mundo, para onde você iria? Inclua um bloco de
+código que apresente os resultados da enquete.
+
+8.1 – Mensagem: Escreva uma função chamada display_message() que mostre
+uma frase informando a todos o que você está aprendendo neste capítulo.
+Chame a função e certifique-se de que a mensagem seja exibida corretamente.
+8.2 – Livro favorito: Escreva uma função chamada favorite_book() que aceite
+um parâmetro title. A função deve exibir uma mensagem como Um dos meus
+livros favoritos é Alice no país das maravilhas. Chame a função e não se
+esqueça de incluir o título do livro como argumento na chamada da função.
+8.3 – Camiseta: Escreva uma função chamada make_shirt() que aceite um
+tamanho e o texto de uma mensagem que deverá ser estampada na camiseta.
+A função deve exibir uma frase que mostre o tamanho da camiseta e a
+mensagem estampada.
+Chame a função uma vez usando argumentos posicionais para criar uma
+camiseta. Chame a função uma segunda vez usando argumentos nomeados.
+8.4 – Camisetas grandes: Modifique a função make_shirt() de modo que as
+camisetas sejam grandes por default, com uma mensagem Eu amo Python. Crie
+uma camiseta grande e outra média com a mensagem default, e uma camiseta
+de qualquer tamanho com uma mensagem diferente.
+8.5 – Cidades: Escreva uma função chamada describe_city() que aceite o
+nome de uma cidade e seu país. A função deve exibir uma frase simples, como
+Reykjavik está localizada na Islândia. Forneça um valor default ao
+parâmetro que representa o país. Chame sua função para três cidades
+diferentes em que pelo menos uma delas não esteja no país default.
+8.6 – Nomes de cidade: Escreva uma função chamada city_country() que
+aceite o nome de uma cidade e seu país. A função deve devolver uma string
+formatada assim: "Santiago, Chile"
+Chame sua função com pelo menos três pares cidade-país e apresente o valor
+devolvido.
+8.7 – Álbum: Escreva uma função chamada make_album() que construa um
+dicionário descrevendo um álbum musical. A função deve aceitar o nome de um
+artista e o título de um álbum e deve devolver um dicionário contendo essas
+duas informações. Use a função para criar três dicionários que representem
+álbuns diferentes. Apresente cada valor devolvido para mostrar que os
+dicionários estão armazenando as informações do álbum corretamente.
+Acrescente um parâmetro opcional em make_album() que permita armazenar
+o número de faixas em um álbum. Se a linha que fizer a chamada incluir um
+valor para o número de faixas, acrescente esse valor ao dicionário do álbum.
+Faça pelo menos uma nova chamada da função incluindo o número de faixas
+em um álbum.
+8.8 – Álbuns dos usuários: Comece com o seu programa do Exercício 8.7.
+Escreva um laço while que permita aos usuários fornecer o nome de um artista e
+o título de um álbum. Depois que tiver essas informações, chame make_album()
+com as entradas do usuário e apresente o dicionário criado. Lembre-se de incluir
+um valor de saída no laço while.
+8.9 – Mágicos: Crie uma lista de nomes de mágicos. Passe a lista para uma
+função chamada show_magicians() que exiba o nome de cada mágico da
+lista.
+8.10 – Grandes mágicos: Comece com uma cópia de seu programa do
+Exercício 8.9. Escreva uma função chamada make_great() que modifique a
+lista de mágicos acrescentando a expressão o Grande ao nome de cada
+mágico. Chame show_magicians() para ver se a lista foi realmente modificada.
+8.11 – Mágicos inalterados: Comece com o trabalho feito no Exercício 8.10.
+Chame a função make_great() com uma cópia da lista de nomes de mágicos.
+Como a lista original não será alterada, devolva a nova lista e armazene-a em
+uma lista separada. Chame show_magicians() com cada lista para mostrar que
+você tem uma lista de nomes originais e uma lista com a expressão o Grande
+adicionada ao nome de cada mágico.
+8.12 – Sanduíches: Escreva uma função que aceite uma lista de itens que uma
+pessoa quer em um sanduíche. A função deve ter um parâmetro que agrupe
+tantos itens quantos forem fornecidos pela chamada da função e deve
+apresentar um resumo do sanduíche pedido. Chame a função três vezes usando
+um número diferente de argumentos a cada vez.
+8.13 – Perfil do usuário: Comece com uma cópia de user_profile.py, da página
+210. Crie um perfil seu chamando build_profile(), usando seu primeiro nome
+e o sobrenome, além de três outros pares chave-valor que o descrevam.
+8.14 – Carros: Escreva uma função que armazene informações sobre um carro
+em um dicionário. A função sempre deve receber o nome de um fabricante e um
+modelo. Um número arbitrário de argumentos nomeados então deverá ser
+aceito. Chame a função com as informações necessárias e dois outros pares
+nome-valor, por exemplo, uma cor ou um opcional. Sua função deve ser
+apropriada para uma chamada como esta: car = make_car(‘subaru’, ‘outback’,
+color=’blue’, tow_package=True) Mostre o dicionário devolvido para garantir
+que todas as informações foram armazenadas corretamente.
+8.15 – Impressão de modelos: Coloque as funções do exemplo print_models.py
+em um arquivo separado de nome printing_functions.py. Escreva uma instrução
+import no início de print_models.py e modifique o arquivo para usar as funções
+importadas.
+8.16 – Importações: Usando um programa que você tenha escrito e que
+contenha uma única função, armazene essa função em um arquivo separado.
+Importe a função para o arquivo principal de seu programa e chame-a usando
+cada uma das seguintes abordagens: import nome_do_módulo from
+nome_do_módulo import nome_da_função from nome_do_módulo import
+nome_da_função as nf import nome_do_módulo as nm from nome_do_módulo import *
+8.17 – Estilizando funções: Escolha quaisquer três programas que você escreveu
+neste capítulo e garanta que estejam de acordo com as diretrizes de estilo
+descritas nesta seção.
+10.1 – Aprendendo Python: Abra um arquivo em branco em seu editor de texto e
+escreva algumas linhas que sintetizem o que você aprendeu sobre Python até
+agora. Comece cada linha com a expressão Em Python podemos.... Salve o
+arquivo como learning_python.txt no mesmo diretório em que estão seus
+exercícios deste capítulo. Escreva um programa que leia o arquivo e mostre o
+que você escreveu, três vezes. Exiba o conteúdo uma vez lendo o arquivo todo,
+uma vez percorrendo o objeto arquivo com um laço e outra armazenando as
+linhas em uma lista e então trabalhando com ela fora do bloco with.
+10.2 – Aprendendo C: Você pode usar o método replace() para substituir
+qualquer palavra por uma palavra diferente em uma string. Eis um exemplo
+rápido que mostra como substituir a palavra 'dog' por 'cat' em uma frase:
+>>> message = "I really like dogs."
+>>> message.replace('dog', 'cat') 'I really like cats.'
+Leia cada linha do arquivo learning_python.txt que você acabou de criar e
+substitua a palavra Python pelo nome de outra linguagem, por exemplo, C.
+Mostre cada linha modificada na tela.
+10.3 – Convidado: Escreva um programa que pergunte o nome ao usuário.
+Quando ele responder, escreva o nome em um arquivo chamado guest.txt.
+
+239
+
+10.4 – Lista de convidados: Escreva um laço while que pergunte o nome aos
+usuários. Quando fornecerem seus nomes, apresente uma saudação na tela e
+acrescente uma linha que registre a visita do usuário em um arquivo chamado
+guest_book.txt. Certifique-se de que cada entrada esteja em uma nova linha do
+arquivo.
+10.5 – Enquete sobre programação: Escreva um laço while que pergunte às
+pessoas por que elas gostam de programação. Sempre que alguém fornecer um
+motivo, acrescente-o em um arquivo que armazene todas as respostas.
+10.6 – Adição: Um problema comum quando pedir entradas numéricas ocorre
+quando as pessoas fornecem texto no lugar de números. Ao tentar converter a
+entrada para um int, você obterá um TypeError. Escreva um programa que
+peça dois números ao usuário. Some-os e mostre o resultado. Capture o
+TypeError caso algum dos valores de entrada não seja um número e apresente
+uma mensagem de erro simpática. Teste seu programa fornecendo dois números
+e, em seguida, digite um texto no lugar de um número.
+10.7 – Calculadora para adição: Coloque o código do Exercício 10.6 em um
+laço while para que o usuário possa continuar fornecendo números, mesmo se
+cometerem um erro e digitarem um texto no lugar de um número.
+10.8 – Gatos e cachorros: Crie dois arquivos, cats.txt e dogs.txt. Armazene pelo
+menos três nomes de gatos no primeiro arquivo e três nomes de cachorro no
+segundo arquivo. Escreva um programa que tente ler esses arquivos e mostre o
+conteúdo do arquivo na tela. Coloque seu código em um bloco try-except
+para capturar o erro FileNotFound e apresente uma mensagem simpática caso
+o arquivo não esteja presente. Mova um dos arquivos para um local diferente
+de seu sistema e garanta que o código no bloco except seja executado de
+forma apropriada.
+10.9 – Gatos e cachorros silenciosos: Modifique o seu bloco except do Exercício
+10.8 para falhar silenciosamente caso um dos arquivos esteja ausente.
+10.10 – Palavras comuns: Acesse o Projeto Gutenberg (http://gutenberg.org/ ) e
+encontre alguns textos que você gostaria de analisar. Faça download dos
+arquivos-texto dessas obras ou copie o texto puro de seu navegador para um
+arquivo-texto em seu computador.
+Você pode usar o método count() para descobrir quantas vezes uma palavra
+
+ou expressão aparece em uma string. Por exemplo, o código a seguir conta
+quantas vezes a palavra 'row' aparece em uma string: >>> line = "Row,
+row, row your boat"
+>>> line.count('row') 2
+>>> line.lower().count('row') 3
+Observe que converter a string para letras minúsculas usando lower() faz com
+que todas as formas da palavra que você está procurando sejam capturadas,
+independentemente do modo como elas estiverem grafadas.
+Escreva um programa que leia os arquivos que você encontrou no Projeto
+Gutenberg e determine quantas vezes a palavra 'the' aparece em cada texto.
+10.11 – Número favorito: Escreva um programa que pergunte qual é o número
+favorito de um usuário. Use json.dump() para armazenar esse número em um
+arquivo. Escreva um programa separado que leia esse valor e apresente a
+mensagem “Eu sei qual é o seu número favorito! É _____.”.
+10.12 – Lembrando o número favorito: Combine os dois programas do Exercício
+10.11 em um único arquivo. Se o número já estiver armazenado, informe o
+número favorito ao usuário. Caso contrário, pergunte ao usuário qual é o seu
+número favorito e armazene-o em um arquivo. Execute o programa duas vezes
+para garantir que ele funciona.
+10.13 – Verificando se é o usuário correto: A última listagem de
+remember_me.py supõe que o usuário já forneceu seu nome ou que o programa
+está executando pela primeira vez. Devemos modificá-lo para o caso de o
+usuário atual não ser a pessoa que usou o programa pela última vez.
+Antes de exibir uma mensagem de boas-vindas de volta em greet_user(),
+pergunte ao usuário se seu nome está correto. Se não estiver, chame
+get_new_username() para obter o nome correto.
+11.1 – Cidade, país: Escreva uma função que aceite dois parâmetros: o nome
+de uma cidade e o nome de um país. A função deve devolver uma única string
+no formado Cidade, País, por exemplo, Santiago, Chile. Armazene a função
+em um módulo chamado city_functions.py.
+Crie um arquivo de nome test_cities.py que teste a função que você acabou
+de escrever (lembre-se de que é necessário importar unittest e a função que
+você quer testar). Escreva um método chamado test_city_country() para
+conferir se a chamada à sua função com valores como 'santiago' e 'chile'
+resulta na string correta. Execute test_cities.py e garanta que
+test_city_country() passe no teste.
+11.2 – População: Modifique sua função para que ela exija um terceiro
+parâmetro, population. Agora ela deve devolver uma única string no formato
+
+263
+
+Cidade, País – população xxx, por exemplo, Santiago, Chile – população
+5000000. Execute test_cities.py novamente. Certifique-se de que
+test_city_country() falhe dessa vez.
+Modifique a função para que o parâmetro population seja opcional. Execute
+test_cities.py novamente e garanta que test_city_country() passe novamente.
+Escreva um segundo teste chamado test_city_country_population() que
+verifique se você pode chamar sua função com os valores 'santiago', 'chile' e
+'population=5000000'. Execute test_cities.py novamente e garanta que esse
+novo teste passe.   
