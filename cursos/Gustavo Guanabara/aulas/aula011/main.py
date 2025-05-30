@@ -16,3 +16,10 @@ numeros.append(4)
 numeros.sort()
 
 print(numeros)
+
+
+
+
+# Matrizes
+pessoas = [['João', 23], ['Maria', 24], ['Pedro', 12]]
+print(pessoas[2][0])
