@@ -1,0 +1,5 @@
+[
+nome: Lucas
+idade: 14
+livros: ('O Pequeno Princip', 80), ('Erwrgfhg', 75), ('Fdsfgf', 75), ('Red', 35), ('Fgh', 80)
+data: 09:42:33, 01/06/2025]

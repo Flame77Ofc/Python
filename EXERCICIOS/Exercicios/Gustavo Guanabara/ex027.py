@@ -1,5 +1,6 @@
-import random
-computador = random.randint(1, 3)
+# Crie um jogo de JoKenPo (Pedra-Papel-Tesoura) com o computador
+from random import randint
+computador = randint(1, 3)
 escolha = input('pedra, papel ou tesoura? ').strip().lower()
 
 computador = 'pedra' if computador == 1 else 'papel' if computador == 2 else 'tesoura'
