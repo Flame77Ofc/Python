@@ -1,287 +1,23 @@
-Fácil 21. Modifique o programa anterior para não aceitar a entrada do número zero, e requisitar a digitação de outro número neste caso.  
+41-  Faça um programa que receba a idade e a altura de várias pessoas e que calcule e mostre a média das alturas das pessoas com mais de 50 anos. Para encerrar a entrada de dados digite idade menor ou igual a zero.    
 
-Fácil 22. Modifique novamente o programa anterior, de modo a não exibir na saída os números zero que são mostrados para todas as posições que não receberam nenhum valor durante a atribuição (e portanto estão vazias).
 
-Intermediário 23- Faça um jogo de batalha naval, utilize as seguinte regras:
-
-– O primeiro usuário será o que vai configurar o tabuleiro inserindo os navios.
-– O tabuleiro deve ter 8×8
-– Quando inserido todos os navios o restante será considerado como “água”.
-– Cada navio pode ocupar apenas 1 posição
-– O jogador deve respeitar o espaço de 1 célula entre os navios
-– O jogador que irá descobrir onde os navios estão tem apenas 10 tiros
-– O jogador 1 pode posicionar 5 navios
-
-
-Intermediário 24- Crie um algoritmo que lê 10 números inteiros. Ao final da leitura ele deve fornecer um menú com os seguintes itens:
-
-(1) Adicionar um número
-(2) Remover um número
-(3) Incrementar um número
-
-No primeiro menú, você deve adicionar um número ao vetor. No entanto este vetor deve permanecer em ordem Crescente. 
-
-Já no segundo menú, ao seleciona-lo, o usuário deverá informar a posição do numero ou então o próprio numero e seu sistema deve remove-lo. Mas cuidado, você deverá reposicionar os números restantes para que não haja “buracos” no vetor. Além disso, o vetor deve permanecer em ordem crescente.
-
-Na terceira e ultima opção, você deve perguntar ao usuário qual numero ele deseja incrementar e de quanto seria este incremento. Então seu sistema deve incrementar o número e manter o vetor organizado em ordem crescente.
-
-Intermediário 25- Crie uma agenda que armazena, código da pessoa, número do telefone, idade. Sua agenda deve possibilitar:
-(1) – inserir um contato
-(2) – Remover um contato
-(3) – Editar um contato
-(4) – buscar um contato pelo Código.
-
-
-
-
-
-FUNÇÕES
-Fácil 1. Faça uma função que recebe por parâmetro o raio de uma esfera e calcula o seu volume (v = 4/3.P .R3).
-
-Intermediário 2. Escreva um procedimento que recebe as 3 notas de um aluno por parâmetro e uma letra. Se a letra for A o procedimento calcula a média aritmética das notas do aluno, se for P, a sua média ponderada (pesos: 5, 3 e 2) e se for H, a sua média harmônica. A média calculada também deve retornar por parâmetro.
-
-Intermediário 3. Faça uma função que recebe por parâmetro um valor inteiro e positivo e retorna o valor lógico Verdadeiro caso o valor seja primo e Falso em caso contrário.
-Intermediário4. Faça um procedimento que recebe por parâmetro os valores necessário para o cálculo da fórmula de báskara e retorna, também por parâmetro, as suas raízes, caso seja possível calcular.
-
-Fácil 5. Faça uma função que recebe por parâmetro o tempo de duração de uma fábrica expressa em segundos e retorna também por parâmetro esse tempo em horas, minutos e segundos.
-
-Fácil 6. Faça uma função que recebe a idade de uma pessoa em anos, meses e dias e retorna essa idade expressa em dias.
-
-Difícil 7. Faça uma função que verifique se um valor é perfeito ou não. Um valor é dito perfeito quando ele é igual a soma dos seus divisores excetuando ele próprio. (Ex: 6 é perfeito, 6 = 1 + 2 + 3, que são seus divisores). A função deve retornar um valor booleano.
-
-
-Fácil 9. Faça uma função que recebe um valor inteiro e verifica se o valor é positivo ou negativo. A função deve retornar um valor booleano.
-Intermediário 12. Faça uma função que recebe, por parâmetro, a altura (alt) e o sexo de uma pessoa e retorna o seu peso ideal. Para homens, calcular o peso ideal usando a fórmula peso ideal = 72.7 x alt – 58 e, para mulheres, peso ideal = 62.1 x alt – 44.7.
-
-Intermediário 13. Faça um procedimento que recebe 3 valores inteiros por parâmetro e retorna-os ordenados em ordem crescente.
-
-Difícil 14. Faça um procedimento que recebe, por parâmetro, a hora de inicio e a hora de término de um jogo, ambas subdivididas em 2 valores distintos: horas e minutos. O procedimento deve retornar, também por parâmetro, a duração do jogo em horas e minutos, considerando que o tempo máximo de duração de um jogo é de 24 horas e que o jogo pode começar em um dia e terminar no outro.
-
-
-
-LAÇOS DE REPETIÇÃO
-Fácil  1 – Faça um programa que receba um número e usando laços de repetição calcule e mostre a tabuada desse número.
-
-Fácil  2 –  Faça um programa que mostre as tabuadas dos números de 1 a 10 usando laços de repetição.
-
-Fácil 3 –    Faça um programa que verifique e mostre os números entre 1.000 e 2.000 (inclusive) que, quando divididos por 11 produzam resto igual a 2.
-
-Difícil 4 –    Faça um programa que leia um valor n, inteiro e positivo, calcule e mostre a seguinte soma: S = 1 + 1/2 + 1/3 + 1/4 + … + 1/n.
-
-Intermediário 5 –    Faça um programa que leia três valores (A, B, C) e mostre-os na ordem lida.  Em seguida, mostre-os em ordem crescente e decrescente.
-
-Fácil 6 –   Uma loja deseja cadastrar 5 clientes e verificar se o faturamento da loja foi superior a loja B (faturamento = 54000).  Se o faturamento atingir esse valor mostre na tela uma mensagem contendo em quanto foi superado o faturamento.
-
-Intermediário 7- Uma loja tem tem uma política de descontos de acordo com o valor da compra do cliente. Os descontos começam acima dos R$500. A cada 100 reais acima dos R$500,00 o cliente ganha 1% de desconto cumulativo até 25%. 
-
- Por exemplo: R$500 = 1% || R$600,00 = 2% … etc…
-
- Faça um programa que exiba essa tabela de descontos no seguinte formato:  
-
- Valordacompra – porcentagem de desconto – valor final
-
-Intermediário 8 –    Uma companhia de teatro deseja dar uma série de espetáculos. 
-a) A direção calcula que a R$5,00 o ingresso. 
-b) Serão vendidos 120 ingressos, e que as despesas serão R$ 200,00. 
-c) Diminuindo-se R$ 0,50 o preço dos ingressos espera-se que as vendas aumentem em 26 ingressos.
-
-Fácil 9-    Faça um programa que receba a idade de dez pessoas e que calcule e mostre a quantidade de pessoas com idade maior ou igual a 18 anos.
-
-Intermediário 10-    Faça um programa que receba a idade de 15 pessoas e que calcule e mostre:
-a) A quantidade de pessoas em cada faixa etária;
-b) A percentagem de pessoas na primeira e na última faixa etária, com relação ao total de pessoas: 
-
-Até 15 anos
-De 16 a 30 anos
-De 31 a 45 anos
-De 46 a 60 anos
-Acima de 61 anos
-Fácil 11- Escreva um aplicativo que recebe inteiro e mostra os números pares e ímpares (separados), de 1 até esse inteiro.
-
-Intermediário 12- Escreva um programa que lê o tamanho do lado de um quadrado e imprime um quadrado daquele tamanho com asteriscos. Seu programa deve usar laços de repetição e funcionar para quadrados com lados de todos os tamanhos entre 1 e 20.
-
-Por exemplo, para lado igual a 5:
-*****
-*****
-*****
-*****
-*****
-
-
-Intermediário 13- Escreva um programa que lê o tamanho do lado de um quadrado e imprime um quadrado daquele tamanho com asteriscos e espaços em branco. Seu programa deve funcionar para quadrados com lados de todos os tamanhos entre 1 e 20.
-Para lado igual a 5:
-*****
-*    *
-*    *
-*    *
-*****
-
-
-Intermediário 14- Faça um programa que recebe a altura de um triangulo em um número inteiro e imprima-o utilizando asteriscos. Veja o Exemplo:
-
-Entrada: 5
-
-*
-**
-***
-****
-*****
-
-Exercício adicional Se você lembrar bem, quando estudamos as variáveis do tipo caractere, char, dissemos que, na verdade, ela eram representadas por inteiros de 0 até 255.
-Mostre a tabela completa do código ASCII.
-
-Intermediário 15 –  Uma loja utiliza o código V para transação à vista e P para transação a prazo. Faça um programa que receba código e valor de 15 transações usando laços de repetição. Calcule e mostre:  
-
-O valor total das compras à vista
-O valor total das compras a prazo c.   
-O valor total das compras efetuadas
-O valor da primeira prestação das compras a prazo, sabendo-se que essas serão pagas em três vezes   Intermediário
-Fácil 16- Faça um programa que receba a idade, altura e o peso de 25 pessoas, Calcule e mostre:
-
-A quantidade de pessoas com idade superior a 50 anos;
-A média das Alturas das pessoas com idade entre 10 e 20 anos
-A porcentagem das pessoas com peso inferior a 40 quilos entre todas as pessoas analisadas.  
-Intermediário 17- Faça um programa que receba a idade e o peso de sete pessoas. Calcule e mostre:
-
-A quantidade de pessoas com mais de 90 quilos;
-A média das idades das sete pessoas;  
-Intermediário 18- Faça um programa que receba a idade, o peso, a altura, a cor dos olhos (A – Azul, P- Preto, V- Verde e C- Castanho) e a cor dos cabelos (P – Preto, C- Castanho, L – Louro e R-Ruivo) de 20 pessoas e que calcule e mostre: A quantidade de pessoas com idade superior a 50 anos e peso inferior a 60 quilos;
-
-A média das idades das pessoas com altura inferior a 1,50;
-A porcentagem de pessoas com olhos azuis entre a s pessoas analisadas;
-A quantidade de pessoas ruivas que não possuem olhos azuis;  
-Fácil 19 – Faça um programa que receba dez números e usando laços de repetição calcule e mostre a quantidade de números entre 30 e 90.  
-
-Intermediário 20 –  Faça um programa que receba dez idades, pesos e Alturas e que calcule e mostre:
-
-A média das idades das dez pessoas;
-A quantidade de pessoas com peso superior a 90 quilos e altura inferior a 1,50;
-A porcentagem de pessoas com idade entre 10 e 30 anos entre as pessoas que medem mais de 1,90;  
-Intermediário 21- Faça um programa que receba a idade e o sexto de sete pessoas e que calcule e mostre:
-
-A idade média do grupo;
-A idade média das mulheres;
-A idade média dos homens;  
-
-
-
-
-Intermediário 23-  Faça um programa que receba várias idades e que calcule e mostre a média das idades digitadas. Finalize digitando a idade igual a zero  
-
-Difícil 24 – Faça um programa que receba um conjunto de valores inteiros e positivos, com o intervalo formado pelo número imprima na tela todos os números primos existentes  
-
-Difícil 25 –  Faça um programa para calcular n! (Fatorial de n), sendo que o valor inteiro de n é fornecido pelo usuário. Sabe-se que: N! = 1 * 2 * 3 * … (n – 1) * n 0! = 1, por definição;  
-
-Intermediário 26- Faça um programa que usando laços de repetição receba a idade e o peso de 15 pessoas. Calcule e mostre as médias dos pesos das pessoas da mesma faixa etária. As faixas etárias são: de 1 a 10 anos, de ll a 20 anos, de 21 a 30 anos e maiores de 31 anos.  
-
-Intermediário 27- Cada espectador de um cinema respondeu a um questionário no qual constava sua idade e a sua opinião em relação ao filme: ótimo – 3, bom – 2, regular – 1. Faça um programa que receba a idade e a opinião de 15 espectadores e que calcule e mostre:
-
-A média das idades das pessoas que responderam ótimo;
-A quantidade de pessoas que respondeu regular;
-A percentagem de pessoas que respondeu bom entre todos os espectadores analisados.  
-Intermediário 28 – Uma firma fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um novo produto lançado no mercado. Para isso forneceu o sexo do entrevistado e sua resposta (S – Sim ou N – Não). Sabe-se que foram entrevistadas dez pessoas. Faça um programa que calcule e mostre:
-
-O número de pessoas que respondeu sim;
-O número de pessoas que respondeu não;
-O número de mulheres que respondeu sim;
-A percentagem de homens que respondeu não entre todos os homens analisados.    
-Intermediário 29-  O sistema de avaliação de uma determinada disciplina obedece aos seguintes critérios: 
-
-Durante o semestre são dadas três notas;
-A nota final é obtida pela média aritmética das três notas;
-É considerado aprovado o aluno que obtiver a nota final superior ou igual a 6 e que tiver comparecido a um mínimo de 40 aulas.  
-Intermediário 30- Faça um programa que leia um conjunto de dados contendo o número da matrícula, as três notas e a frequência (número de aulas frequentadas) de dez alunos.   Calcule e mostre:
-
-Para cada aluno o número da matrícula, a nota final e a mensagem (aprovado ou reprovado);
-A maior e a menor nota da turma;
-O total de alunos reprovados;
-A percentagem de alunos reprovados por frequência abaixo da mínima necessária.  
-Intermediário 31- Faça um programa que receba várias idades e que calcule e mostre a média das idades digitadas. Finalize digitando idade igual a zero.  
-
-Intermediário 32-  Foi feita uma pesquisa de audiência de canal de TV em várias casas de uma cidade, em um determinado dia. Para cada casa consultada foi fornecido o número do canal (4, 5, 7, 12) e o número de pessoas que estavam assistindo aquele canal. Se a televisão estivesse desligada, nada era anotado, ou seja, essa casa não entrava na pesquisa. Faça um programa que:  
-
-Leia um número indeterminado de dados (número do canal e o número de pessoas que estavam assistindo);
-Calcule e mostre a percentagem de audiência de cada canal.
-Para encerrar a entrada de dados digite o número do canal ZERO.  
-Intermediário 33 –  A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e o número de filhos. A prefeitura deseja saber:  
-
-A média do salário da população;
-A média do número de filhos;
-O maior salário;
-A percentagem de pessoas com salários até R$ 150,00.   O final da leitura de dados dar-se-á com a entrada de um salário negativo.  
-Intermediário 34- Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:  
-
-A média dos salários do grupo;
-A maior e a menor idade do grupo;
-A quantidade de mulheres com salário até R$ 200,00;
-A idade e o sexo da pessoa que possui o menor salário.   Finalize a entrada de dados ao ser digitada uma idade negativa.  
-Intermediário 35 –  Uma empresa deseja aumentar seus preços em 20%. Faça um programa que leia o código e o preço de custo de cada produto e que calcule o novo preço. Calcule também a média dos preços com e sem aumento. Mostre o código e o novo preço de cada produto e, no final, as médias. A entrada de dados deve terminar quando for lido um código de produto negativo.    
-
-Intermediário 36-  Faça um programa que receba o tipo da ação, ou seja, uma letra a ser comercializada na bolsa de valores, o preço de compra e o preço de venda de cada ação e que calcule e mostre:  
-
-O lucro de cada ação comercializada;
-A quantidade de ações com lucro superior a R$ 1.000,00;
-A quantidade de ações com lucro inferior a R$ 200,00;
-O lucro total da empresa   Finalize com o tipo de ação “F”.  
-Intermediário 37- Faça um programa que receba vários números e que calcule e mostre:  
-
-A quantidade de números inferiores a 35;
-A média dos números positivos;
-A percentagem de números entre 50 e 100 entre todos os números digitados;
-A percentagem de números entre 10 e 20 entre os números menores que 50.  
-Difícil 38. Faça um programa que apresente o menu de opções a seguir:  
-
-Menu de opções:  
-
-1. Média aritmética
-2. Média ponderada
-3. Sair  
-Digite a opção desejada:
-
-Na opção 1: receber duas notas, calcular e mostrar a média aritmética.
-Na opção 2: receber três notas e seus respectivos pesos, calcular e mostrar a média ponderada.
-Na opção 3: sair do programa.  
-Verifique a possibilidade de opção inválida, mostrando uma mensagem.  
-
-
-Intermediário 40- Faça um programa que receba como entrada uma lista de números positivos ou negativos, terminada com o número zero. O programa deve usar laços de repetição para produzir como saída a soma dos números positivos, a soma dos números negativos e a soma das duas somas parciais.  
-
-Intermediário 41-  Faça um programa que receba a idade e a altura de várias pessoas e que calcule e mostre a média das alturas das pessoas com mais de 50 anos. Para encerrar a entrada de dados digite idade menor ou igual a zero.    
-
-Intermediário 42-  Faça um programa que apresente um menu de opções para o cálculo das seguintes operações entre dois números: adição, subtração, multiplicação e divisão. O programa deve usar laços de repetição para possibilitar ao usuário a escolha da operação desejada, a exibição do resultado e a volta ao menu de opções. O programa só termina quando for escolhida a opção de saída.  
-
-Difícil 43-  Faça um programa que apresente o menu de opções a seguir, que permita ao usuário escolher a opção desejada, receba os dados necessários para executar a operação e mostre o resultado. Verificar a possibilidade de opção inválida e não se preocupar com as restrições, como salário inválido.  
-
-Menu de opções:  
-
-1. Novo salário
-2. Férias
-3. Décimo terceiro
-4. Sair  
 
 ESTRUTURAS DE CONDIÇÃO
-Fácil 1- Faça um programa que peça dois números e verifique (usando if e else) e imprima o maior deles  
 
-Fácil 2- Faça um programa que peça um valor e mostre na tela se o valor é positivo ou negativo  
-
-Fácil 3- Faça um programa que verifique (usando if e else) se uma letra digitada é “F” ou “M”. Conforme a letra escrever: F – Feminino, M- Masculino, Sexo inválido.  
-
-Fácil 4- Faça um programa que verifique (usando if e else) se uma letra digitada é vogal ou consoante.  
-
-Fácil 5- Faça um programa para a leitura de duas notas parciais de um aluno.  
+5- Faça um programa para a leitura de duas notas parciais de um aluno.  
 
 A mensagem “Aprovado”, se a média alcançada for maior ou igual a sete;
 A mensagem “Aprovado com Distinção”, se a média for igual a dez;
 A mensagem “Reprovado” se a média for menor de do que sete;
-Intermediário 6- Faça um programa que leia três números, verifique (usando if e else), e mostre o maior deles.  
+6- Faça um programa que leia três números, verifique (usando if e else), e mostre o maior deles.  
 
-Intermediário 7- Faça um programa que leia três números, verifique (usando if e else) e mostre o maior e o menor deles;  
+7- Faça um programa que leia três números, verifique (usando if e else) e mostre o maior e o menor deles;  
 
-Fácil 8- Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre o mais barato.  
+8- Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre o mais barato.  
 
-Intermediário 9- Faça um programa que leia três números e mostre-os em ordem decrescente.  
+9- Faça um programa que leia três números e mostre-os em ordem decrescente.  
 
-Fácil 10- Faça um programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-vespertino ou N-noturno. Imprima a mensagem “Bom dia!” ou  “Boa Noite” ou “Valor inválido”, conforme o caso.  
+10- Faça um programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-vespertino ou N-noturno. Imprima a mensagem “Bom dia!” ou  “Boa Noite” ou “Valor inválido”, conforme o caso.  
 
 Difícil 11- As organizações CSM resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes.  
 
@@ -319,9 +55,9 @@ Total de descontos                 : R$     165,00
 
 Salário Líquido                   : R$     935,00    
 
-Fácil13 – Faça um Programa que leia um número e exiba o dia correspondente da semana. (1- Domingo , 2- Segunda, etc.) se digitar outro valor deve aparecer “valor inválido)
+13 – Faça um Programa que leia um número e exiba o dia correspondente da semana. (1- Domingo , 2- Segunda, etc.) se digitar outro valor deve aparecer “valor inválido)
 
-Intermediário 14 – Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:  
+14 – Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:  
 
 Média de aproveitamento        Conceito 
 
@@ -335,28 +71,28 @@ Entre 4.0 e 6.0                                D
 
 Entre 4.0 e 0                                   E  
 
-Intermediário 14. O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C “REPROVADO” se o conceito for D ou E.    
+14. O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C “REPROVADO” se o conceito for D ou E.    
 
-Intermediário15. Faça um programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dicas:
+15. Faça um programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dicas:
 
 Três lados formam um triangulo quando a soma de quaisquer dos dois lados é maior que o terceiro.
 Triângulo Equilátero: três lados iguais;
 Triângulo Isósceles: quaisquer dois lados iguais;
 Triângulo Escaleno: três lados diferentes;
-Intermediário16. Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:  
+16. Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:  
 
 a. Se o usuário informar o valor de A igual a zero. a equação não e do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;
 b. Se o delta calculado for negativo, a equação não possui raízes reais. Informe ao usuário e encerre o programa;
 c. Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe ao usuário;
 d. Se o delta for positivo, a equação possui duas raízes reais; informe-as ao usuário;    
 
-Intermediário 18. Faça um Programa que peça um número inteiro e determine se ele e par ou ímpar. Dica: utilize o operador módulo (resto da divisão).  
+18. Faça um Programa que peça um número inteiro e determine se ele e par ou ímpar. Dica: utilize o operador módulo (resto da divisão).  
 
-Fácil19. Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número e:
+19. Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número e:
 
 Par ou ímpar;
 Positivo ou negativo;
-Fácil20. Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+20. Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
 
 “Telefonou para a vítima? “
 “Esteve no local do crime?”
@@ -365,7 +101,7 @@ Fácil20. Faça um programa que faça 5 perguntas para uma pessoa sobre um crime
 “Já trabalhou com a vítima? “
 O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como “Suspeita”, entre 3 e 4 como “Cúmplice” e 5 como “Assassino“. Caso contrário, ele será classificado como “Inocente“.  
 
-Intermediário21. Um posto está vendendo combustíveis com a seguinte tabela de descontos:   Álcool:
+21. Um posto está vendendo combustíveis com a seguinte tabela de descontos:   Álcool:
 
 Até 20 litros: desconto de 3% por litro
 Acima de 20 litros: Desconto de 5% por litro 99.
@@ -375,19 +111,19 @@ Até 20 litros: desconto de 4% por litro
 Acima de 20 litros, desconto de 6% por litro
 Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool. G-gasolina), calcule e imprima o valor a ser pago pelo cliente.  
 
-Fácil 22 – Faça um programa que peça dois números ao usuário e mostre qual o maior e qual o menor  
+22 – Faça um programa que peça dois números ao usuário e mostre qual o maior e qual o menor  
 
-Fácil 23 – Faça um programa que receba três inteiros e diga qual deles é o maior e qual o menor. Consegue criar mais de uma solução?  
+23 – Faça um programa que receba três inteiros e diga qual deles é o maior e qual o menor. Consegue criar mais de uma solução?  
 
-Fácil 24 – Escreva um programa em C que recebe um inteiro e diga se é par ou ímpar. Use o operador matemático % (resto da divisão ou módulo) e o teste condicional if.  
+24 – Escreva um programa em C que recebe um inteiro e diga se é par ou ímpar. Use o operador matemático % (resto da divisão ou módulo) e o teste condicional if.  
 
-Fácil 25 – Escreva um programa que pergunte o raio de uma circunferência, e sem seguida mostre o diâmetro, comprimento e área da circunferência  
+25 – Escreva um programa que pergunte o raio de uma circunferência, e sem seguida mostre o diâmetro, comprimento e área da circunferência  
 
-Fácil 26- Para doar sangue é necessário ter entre 18 e 67 anos. Faça um aplicativo que pergunte a idade de uma pessoa e diga se ela pode doar sangue ou não. Use alguns dos operadores lógicos OU (||) e E (&&).  
+26- Para doar sangue é necessário ter entre 18 e 67 anos. Faça um aplicativo que pergunte a idade de uma pessoa e diga se ela pode doar sangue ou não. Use alguns dos operadores lógicos OU (||) e E (&&).  
 
-Fácil 27 – Escreva um programa que pergunte o dia, mês e ano do aniversário de uma pessoa e diga se a data é válida ou não. Caso não seja, diga o motivo. Suponha que todos os meses tem 31 dias e que estejamos no ano de 2013.
+27 – Escreva um programa que pergunte o dia, mês e ano do aniversário de uma pessoa e diga se a data é válida ou não. Caso não seja, diga o motivo. Suponha que todos os meses tem 31 dias e que estejamos no ano de 2013.
 
-Fácil 28 – Crie um programa que peça um número ao usuário e armazene ele na variável x. Depois peça outro número e armazene na variável y. Mostre esses números. Em seguida, faça com que x passe a ter o valor de y, e que y passe a ter o valor de x.
+28 – Crie um programa que peça um número ao usuário e armazene ele na variável x. Depois peça outro número e armazene na variável y. Mostre esses números. Em seguida, faça com que x passe a ter o valor de y, e que y passe a ter o valor de x.
 
 
 
@@ -634,82 +370,19 @@ nas duas direções.
 
 6) Construa um algoritmo que receba três número e mostre o maior deles.
 
-
-
-1 - Faça um algoritmo que leia os valores de A, B, C e em seguida imprima na tela a soma entre A e B é mostre se a soma é menor que C.
-
-2 - Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo.
-
-3 - Faça um algoritmo que leia dois valores inteiros A e B, se os valores de A e B forem iguais, deverá somar os dois valores, 
-
-caso contrário devera multiplicar A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado a uma variável C e
-
-imprimir seu valor na tela.
-
-4 - Faça um algoritmo que receba um número inteiro e imprima na tela o seu antecessor e o seu sucessor.
-
-5 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse 
-
-usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$ 1.293,20).
-
-6 - Faça um algoritmo que leia um valor qualquer e imprima na tela com um reajuste de 5%.
-
-7 - Faça um algoritmo que leia dois valores booleanos (lógicos) e determine se ambos são VERDADEIRO ou FALSO.
-
-8 - Faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.
-
-9 - Faça um algoritmo que calcule o IMC (Índice de Massa Corporal) de uma pessoa, leia o seu peso e sua altura e imprima na tela sua condição 
-
-de acordo com a tabela abaixo:
-
-Fórmula do IMC = peso / (altura) ²
-
-Tabela Condições IMC
-
-  
-
- Abaixo de 18,5   | Abaixo do peso          
-
- Entre 18,6 e 24,9 | Peso ideal (parabéns)  
-
- Entre 25,0 e 29,9 | Levemente acima do peso
-
- Entre 30,0 e 34,9 | Obesidade grau I 
-
- Entre 35,0 e 39,9 | Obesidade grau II (severa)
-
- Maior ou igual a 40 | Obesidade grau III (mórbida)
-
- 
-
- 10 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.
-
- 
-
- 11 - Faça um algoritmo que leia quatro notas obtidas por um aluno, calcule a média das nota obtidas, imprima na tela o nome do aluno e 
-
- se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.
-
- 
-
- 12 - Faça um algoritmo que leia o valor de um produto e determine o valor que deve ser pago, conforme a escolha da forma de pagamento
-
- pelo comprador e imprima na tela o valor final do produto a ser pago. Utilize os códigos da tabela de condições de pagamento para efetuar o cálculo adequado.
+12 - Faça um algoritmo que leia o valor de um produto e determine o valor que deve ser pago, conforme a escolha da forma de pagamento pelo comprador e imprima na tela o valor final do produto a ser pago. Utilize os códigos da tabela de condições de pagamento para efetuar o cálculo adequado.
 Tabela de Código de Condições de Pagamento
 
- 
 
- 1 - À Vista em Dinheiro ou Pix, recebe 15% de desconto
 
- 2 - À Vista no cartão de crédito, recebe 10% de desconto
+1 - À Vista em Dinheiro ou Pix, recebe 15% de desconto
+2 - À Vista no cartão de crédito, recebe 10% de desconto
+3 - Parcelado no cartão em duas vezes, preço normal do produto sem juros
+4 - Parcelado no cartão em três vezes ou mais, preço normal do produto mais juros de 10%
 
- 3 - Parcelado no cartão em duas vezes, preço normal do produto sem juros
 
- 4 - Parcelado no cartão em três vezes ou mais, preço normal do produto mais juros de 10%
 
- 
-
- 13 - Faça algoritmo que leia o nome e a idade de uma peso e imprima na tela o nome da pessoa e se ela é maior ou menor de idade. 
+13 - Faça algoritmo que leia o nome e a idade de uma peso e imprima na tela o nome da pessoa e se ela é maior ou menor de idade. 
 
 14 - Faça um algoritmo que receba um valor A e B, e troque o valor de A por B e o valor de B por A e imprima na tela os valores.
 
@@ -743,7 +416,7 @@ Fórmula: C = (5 * ( F-32) / 9)
 
 Fórmula: distância = tempo x velocidade.
 
-            litros usados = distância / 12.
+litros usados = distância / 12.
 
 
 Encontre o maior número em uma lista: Escreva um algoritmo para encontrar o maior número em uma lista de valores.
@@ -1467,8 +1140,8 @@ Resposta: Inverta os dígitos do número e exiba o resultado.
 11. **Jogo da Forca** – Use listas de palavras e controle de tentativas.  
 12. **Calculadora de IMC** – `peso / (altura ** 2)`.  
 13. **Conversor de Temperatura (Celsius ↔ Fahrenheit)** – Fórmulas:  
-    - `°F = (°C × 9/5) + 32`  
-    - `°C = (°F − 32) × 5/9`  
+- `°F = (°C × 9/5) + 32`  
+- `°C = (°F − 32) × 5/9`  
 14. **Gerador de Senhas Aleatórias** – Combine letras, números e símbolos com `random.sample()`.  
 15. **Jogo "Pedra, Papel e Tesoura"** – Use `random` e compare escolhas.  
 16. **Contador de Palavras em um Texto** – Separe com `.split()` e conte.  
@@ -1530,7 +1203,6 @@ seqüencia que estão acima da média calculada.
 11) Elabore um algoritmo que apresente todos os números primos no intervalo de 1 a 50. Um número é
 considerado Primo quando ele puder ser dividido exclusivamente por 1 e por ele próprio.
 
-1. Construa um algoritmo que calcule a média ponderada entre 5 números quaisquer, sendo que os pesos a serem aplicados são 1, 2, 3, 4 e 5 respectivamente.
 
 2. Elabore um algoritmo que calcule a área de um círculo qualquer de raio fornecido.
 
@@ -2416,33 +2088,33 @@ estatura em metros e o programa converta-a para centímetros.
 <!-- Concluídos -->
 # Exercicio 1: Criar uma função que recebe um número e faz uma contagem regressiva desse número:
 def contador(numero):
-    for i in range(numero, 0, -1):
-        print(i)
+for i in range(numero, 0, -1):
+print(i)
 contador(15)
 contador(5)
 
 
 # Exercício 2: Criar uma função que recebe uma lista e retorna o maior número dessa lista:
 def maior_numero(lista):
-    maior = -1
-    for i in lista:
-        if i > maior:
-            maior = i
-    print(maior)
+maior = -1
+for i in lista:
+if i > maior:
+maior = i
+print(maior)
 maior_numero([17, -5, 45, 9, 92, 64, 56])
 
 # Implementar uma função que receba um dicionário e retorne a soma, a média e a variação dos valores.
 notas = {
-    'João Alberto': 6.70,
-    'Maria Carvalho': 9.68,
-    'Luiz Paulo Costa': 4.76
+'João Alberto': 6.70,
+'Maria Carvalho': 9.68,
+'Luiz Paulo Costa': 4.76
 }
 
 total = 0
 for value in notas.values():
-    total += value
+total += value
 
- 
+
 media = round(total / len(notas.values()), 2)
 print(media)
 print(total)
@@ -3080,7 +2752,6 @@ test_city_country() passe no teste.
 11.2 – População: Modifique sua função para que ela exija um terceiro
 parâmetro, population. Agora ela deve devolver uma única string no formato
 
-263
 
 Cidade, País – população xxx, por exemplo, Santiago, Chile – população
 5000000. Execute test_cities.py novamente. Certifique-se de que
