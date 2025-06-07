@@ -1,0 +1,117 @@
+4. Gerador de senhas
+11. Cronômetro  
+12. Timer regressivo  
+42. Jogo da forca  
+52. Jogo de memória (Tkinter)  
+54. Pong com Pygame  
+55. Snake com Pygame  
+58. Flappy Bird com Pygame  
+60. Pacman básico com Pygame  
+61. Bot do WhatsApp com Selenium  
+65. Envio automático de e-mails  
+66. Bot para baixar vídeos do YouTube  
+69. Leitor de notícias com web scraping  
+73. Notificador de aniversários  
+79. Web scraper de filmes/livros  
+83. Gerenciador de senhas (tipo 1Password)  
+85. Jogo de xadrez básico  
+92. Chat em tempo real (socket)  
+95. Painel de controle de tempo de estudo  
+99. Sistema de votação online  
+100. App de perguntas estilo "Kahoot"  
+1. Gerador de senhas aleatórias  
+2. Jogo da velha (simples no terminal)  
+17. Cronômetro e temporizador  
+
+Caixa Eletrônico 🏧: Simule um caixa eletrônico que libera notas de diferentes valores.
+Validação de Senha 🔐: Verifique se uma senha atende aos requisitos de segurança (comprimento mínimo, caracteres especiais, etc.).
+
+Cronômetro
+Timer regressivo
+Sistema de login com arquivos
+Jogo da forca
+Pacman básico com Pygame
+Bot do WhatsApp com Selenium
+Bot para baixar vídeos do YouTube
+Leitor de notícias com web scraping
+Notificador de aniversários
+Bot que toca música
+Sistema de login e cadastro com SQLite
+Jogo de memória (encontre os pares)
+
+3. Bloco de notas simples (salvar e ler arquivos .txt)  
+8. Gerador de números da Mega Sena  
+11. Jogo de forca (com palavras lidas de um .txt)  
+
+25. Calendário simples (mostrar mês/ano)  
+26. Lista de compras (salvar/ler de um arquivo)  
+
+28. Simulador de caixa eletrônico (saque, depósito, saldo)  
+
+31. Quiz de perguntas e respostas (perguntas de um txt)  
+
+35. Sistema de login e senha (com validação num txt)  
+
+39. Organizador de tarefas por prioridade  
+
+46. Sistema de votação simples (contar votos em txt)  
+
+48. Organizador de senhas (armazenamento seguro em txt)  
+
+65. Simulador de caixa de supermercado (fila, atendente)  
+72. Calculadora de tempo entre duas datas (datetime)  
+
+
+1. Bloco de notas simples (.txt)
+2. Jogo pokémon simples com coleções, cartas e inimigos
+43. Jogo de perguntas e respostas (quiz)
+
+45. Simulador de caixa eletrônico
+46. Editor de tarefas no terminal
+
+51. Medidor de tempo com `time`
+
+60. Sistema de login simples com `.txt`
+
+65. Gerador de horários de estudo
+
+
+89. Jogo de perguntas com tempo limitado
+
+92. Analisador de senhas (força com base em tamanho)
+93. Simulador de votação
+94. Simulador de caixa de supermercado
+100. Diário com senha de acesso
+
+
+
+
+
+
+7. Criptografia Simples: Leia um texto de um arquivo, aplique uma cifra de César (deslocamento de letras) e salve o resultado em outro .txt.
+
+
+22. Agenda Simples: Permita agendar eventos com data e hora, salvando em um arquivo .txt.
+23. Contador de Dias: Calcule quantos dias faltam para uma data específica (ex.: aniversário).
+26. Registro de Horas: Registre o horário de entrada e saída de um funcionário em um arquivo .txt.
+29. Calendário Simples: Gere um calendário de um mês específico em formato de texto.
+30. Contador de Tempo de Tarefa: Meça quanto tempo o usuário leva para completar uma tarefa, salvando o resultado em um .txt.
+
+45. Simulador de Caixa Eletrônico: Permita saques, depósitos e consulta de saldo, salvando em .txt.
+
+1. Gerenciador de Tarefas - Salva/edita tarefas em `.txt`  
+2. Diário Pessoal - Registro diário com timestamps usando `datetime`  
+3. Lista de Compras - Adiciona/remove itens de um arquivo  
+
+20. Sistema de Pontuação - Calcula rankings a partir de `.txt`  
+
+24. Calendário Mensal - Exibe o mês atual com `calendar`  
+25. Rastreador de Hábitos - Registro diário/semanal  
+26. Timer de Pomodoro - Notifica a cada 25 minutos  
+28. Gerador de Datas Aleatórias  
+
+41. Gerenciador de Senhas - Criptografia básica com `cryptography`  
+49. Encurtador de URL - Integração com APIs públicas  
+
+64. Fabrica de Personagens - Combina atributos/aparência  
+77. Automatizador de E-mails - Envia mensagens via SMTP  
