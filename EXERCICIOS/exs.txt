@@ -7,20 +7,13 @@
 79. Criar uma classe “Produto” com estoque e preço.
 80. Classe “Tarefa” com descrição e status.
 91. Implementar um sistema
-
-
-
-
-
 24. Verificar se uma senha é forte.
-
 41. Criar um gerador de senhas aleatórias.
 42. Fazer um cronômetro regressivo.
 43. Criar um sistema de login simples com verificação de senha.
 
 45. Simular uma roleta com premiações aleatórias.
 
-51. Classe `Aluno` com notas e método para calcular média.
 52. Classe `Carro` com velocidade e métodos `acelerar` e `frear`.
 53. Classe `Funcionario` com salário e método de aumento.
 54. Classe `Musica` com título, artista e duração.
@@ -43,9 +36,6 @@
 79. Calcular o tempo de download dado o tamanho e velocidade.
 80. Verificar se uma lista forma uma progressão aritmética.
 
----
-
-### 🛠️ **Projetos Mais Completos**
 
 81. Simulador de quiz com pontuação.
 82. Conversor de moedas com dados fictícios.
@@ -58,9 +48,6 @@
 89. Sistema de sorteio com entrada de nomes.
 90. Simulador de batalha entre personagens com atributos.
 
----
-
-### ⚙️ **Extras e Criativos**
 
 91. Criar uma função que detecta a linguagem de uma frase (heurística simples).
 92. Simular um quiz de múltipla escolha com resposta certa.
@@ -73,37 +60,6 @@
 99. Sistema de perguntas e respostas com dificuldade crescente.
 100. Criar um gerador de nomes aleatórios com prefixo e sufixo.
 
----
-
-Se quiser, posso salvar isso em um arquivo `.txt` ou `.csv`, ou transformar em um **gerador aleatório de exercícios em Python**. Deseja isso?
-
-
-Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhantes aos exemplos que você forneceu, mas com propostas diferentes para estimular aprendizado e prática, abrangendo manipulação de strings, manipulação de arquivos, orientação a objetos e lógica geral:
-
-## Exercícios de Manipulação de Strings e Dados
-
-1. Converter snake_case para camelCase (inverso do exemplo 5).  
-2. Contar quantas vogais existem em uma frase.  
-3. Verificar se uma palavra é um palíndromo.  
-4. Substituir todas as ocorrências de uma palavra em uma frase por outra.  
-5. Extrair o nome de usuário (antes do @) de um e-mail.  
-6. Validar se uma string é um endereço de e-mail válido (formato simples).  
-7. Contar quantas vezes uma palavra aparece em um texto.  
-8. Remover todos os espaços extras de uma frase.  
-9. Converter uma frase para título (capitalizar cada palavra).  
-10. Dividir uma frase em palavras e ordenar alfabeticamente.  
-11. Identificar a palavra mais curta em uma frase (variante do exemplo 16).  
-12. Contar quantas palavras começam com uma letra específica.  
-13. Substituir letras maiúsculas por minúsculas e vice-versa numa string.  
-14. Remover todos os caracteres não alfabéticos de uma string.  
-15. Verificar se uma string contém apenas números.  
-16. Extrair o domínio de um URL.  
-17. Verificar se uma frase contém uma determinada palavra.  
-18. Contar o número de frases em um texto (considerando pontos finais).  
-19. Criar um gerador de senhas aleatórias com letras, números e símbolos.  
-20. Normalizar um texto removendo acentuação.
-
-## Exercícios com Arquivos
 
 21. Ler um arquivo CSV e imprimir os dados em formato tabela.  
 22. Contar quantas vezes uma palavra aparece em um arquivo texto.  
@@ -116,7 +72,6 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 29. Criar um programa que remove linhas duplicadas de um arquivo.  
 30. Salvar dados de um dicionário em arquivo JSON.
 
-## Exercícios de Orientação a Objetos (POO)
 
 31. Criar uma classe “Aluno” com nome, idade e método para exibir dados.  
 32. Criar uma classe “Carro” com atributos marca, modelo e método acelerar.  
@@ -142,20 +97,7 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 49. Criar um programa que verifica se um número é primo.  
 50. Criar um programa que calcula a média de uma lista de números.
 
-## Exercícios de Manipulação Avançada de Strings e Dados
 
-51. Implementar uma função que converte números romanos para inteiros.  
-52. Criar uma função que gera um resumo de texto (primeiras N palavras).  
-53. Criar um programa que conta o número de ocorrências de cada letra em um texto.  
-54. Criar uma função que inverte as palavras de uma frase mantendo a ordem das letras.  
-55. Criar um programa que verifica se duas strings são anagramas.  
-56. Criar um programa que remove palavras duplicadas de uma frase.  
-57. Contar quantas linhas, palavras e caracteres há em um arquivo (variante do exemplo 57).  
-58. Criar um validador de CPF ou CNPJ.  
-59. Criar um programa que extrai hashtags de um texto.  
-60. Criar um programa que converte um texto para código Morse.
-
-## Projetos com Classes e Arquivos
 
 61. Criar uma classe “Livro” com título, autor e método exibir_info() (variante do exemplo 77).  
 62. Criar uma classe “ContaBancária” com depósitos e saques (variante do exemplo 78).  
@@ -168,21 +110,6 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 69. Criar uma classe “Veículo” com subclasses “Carro” e “Moto”.  
 70. Criar uma classe “Funcionario” que calcula salário com base em horas extras.
 
-## Desafios Lógicos e Algoritmos
-
-71. Criar um programa que ordena uma lista de números sem usar funções prontas.  
-72. Criar um programa que encontra o segundo maior número em uma lista.  
-73. Criar um programa que remove números duplicados de uma lista.  
-74. Criar um programa que gera uma matriz identidade de tamanho N.  
-75. Criar um programa que calcula o máximo divisor comum (MDC) de dois números.  
-76. Criar um programa que gera números primos até N.  
-77. Criar um programa que calcula o número de combinações possíveis de uma lista.  
-78. Criar um programa que simula o lançamento de dados e calcula probabilidades.  
-79. Criar um programa que converte um número decimal para binário.  
-80. Criar um programa que simula uma fila ou pilha.
-
-## Projetos Intermediários
-
 81. Criar um sistema simples de cadastro de livros com busca por título.  
 82. Criar um sistema bancário com múltiplas contas e histórico de transações.  
 83. Criar um gerenciador de estoque com entrada e saída de produtos.  
@@ -194,7 +121,6 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 89. Criar um programa que lê um arquivo de log e extrai erros.  
 90. Criar um programa que simula uma agenda de compromissos com salvar em arquivo.
 
-## Projetos Avançados
 
 91. Implementar um sistema de autenticação com criptografia de senhas.  
 92. Criar um programa que realiza scraping de dados de uma página web.  
@@ -207,32 +133,8 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 99. Criar um programa que monitora alterações em uma pasta e registra logs.  
 100. Criar um sistema básico de gerenciamento de usuários com permissões.
 
-Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhantes aos exemplos que você forneceu, mas com propostas diferentes para estimular aprendizado e prática, abrangendo manipulação de strings, manipulação de arquivos, orientação a objetos e lógica geral:
 
-## Exercícios de Manipulação de Strings e Dados
 
-1. Converter snake_case para camelCase (inverso do exemplo 5).  
-2. Contar quantas vogais existem em uma frase.  
-3. Verificar se uma palavra é um palíndromo.  
-4. Substituir todas as ocorrências de uma palavra em uma frase por outra.  
-5. Extrair o nome de usuário (antes do @) de um e-mail.  
-6. Validar se uma string é um endereço de e-mail válido (formato simples).  
-7. Contar quantas vezes uma palavra aparece em um texto.  
-8. Remover todos os espaços extras de uma frase.  
-9. Converter uma frase para título (capitalizar cada palavra).  
-10. Dividir uma frase em palavras e ordenar alfabeticamente.  
-11. Identificar a palavra mais curta em uma frase (variante do exemplo 16).  
-12. Contar quantas palavras começam com uma letra específica.  
-13. Substituir letras maiúsculas por minúsculas e vice-versa numa string.  
-14. Remover todos os caracteres não alfabéticos de uma string.  
-15. Verificar se uma string contém apenas números.  
-16. Extrair o domínio de um URL.  
-17. Verificar se uma frase contém uma determinada palavra.  
-18. Contar o número de frases em um texto (considerando pontos finais).  
-19. Criar um gerador de senhas aleatórias com letras, números e símbolos.  
-20. Normalizar um texto removendo acentuação.
-
-## Exercícios com Arquivos
 
 21. Ler um arquivo CSV e imprimir os dados em formato tabela.  
 22. Contar quantas vezes uma palavra aparece em um arquivo texto.  
@@ -245,8 +147,6 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 29. Criar um programa que remove linhas duplicadas de um arquivo.  
 30. Salvar dados de um dicionário em arquivo JSON.
 
-## Exercícios de Orientação a Objetos (POO)
-
 31. Criar uma classe “Aluno” com nome, idade e método para exibir dados.  
 32. Criar uma classe “Carro” com atributos marca, modelo e método acelerar.  
 33. Criar uma classe “ContaCorrente” com limite e saldo, e métodos para saque e depósito.  
@@ -258,20 +158,9 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 39. Criar uma classe “Pessoa” com método para calcular IMC.  
 40. Criar uma classe “Tarefa” com descrição, status e método para marcar como concluída.
 
-## Projetos Pequenos
 
-41. Criar um conversor de temperaturas (Celsius para Fahrenheit e vice-versa).  
-42. Criar um jogo de adivinhação de números.  
-43. Criar um sistema simples de cadastro de usuários em arquivo.  
-44. Criar um gerenciador de tarefas com salvar e carregar do arquivo.  
 45. Criar um programa que gera um relatório de vendas a partir de dados em arquivo.  
-46. Criar um sistema de autenticação simples com usuário e senha.  
-47. Criar um programa que calcula o fatorial de um número.  
-48. Criar um programa que imprime a sequência de Fibonacci até N termos.  
-49. Criar um programa que verifica se um número é primo.  
-50. Criar um programa que calcula a média de uma lista de números.
 
-## Exercícios de Manipulação Avançada de Strings e Dados
 
 51. Implementar uma função que converte números romanos para inteiros.  
 52. Criar uma função que gera um resumo de texto (primeiras N palavras).  
@@ -284,7 +173,6 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 59. Criar um programa que extrai hashtags de um texto.  
 60. Criar um programa que converte um texto para código Morse.
 
-## Projetos com Classes e Arquivos
 
 61. Criar uma classe “Livro” com título, autor e método exibir_info() (variante do exemplo 77).  
 62. Criar uma classe “ContaBancária” com depósitos e saques (variante do exemplo 78).  
@@ -296,127 +184,30 @@ Aqui está uma lista de 100 exercícios, desafios e projetos em Python semelhant
 68. Criar uma classe “Estudante” que armazena notas e calcula média final.  
 69. Criar uma classe “Veículo” com subclasses “Carro” e “Moto”.  
 70. Criar uma classe “Funcionario” que calcula salário com base em horas extras.
-
-## Desafios Lógicos e Algoritmos
-
-71. Criar um programa que ordena uma lista de números sem usar funções prontas.  
-72. Criar um programa que encontra o segundo maior número em uma lista.  
-73. Criar um programa que remove números duplicados de uma lista.  
-74. Criar um programa que gera uma matriz identidade de tamanho N.  
-75. Criar um programa que calcula o máximo divisor comum (MDC) de dois números.  
-76. Criar um programa que gera números primos até N.  
-77. Criar um programa que calcula o número de combinações possíveis de uma lista.  
-78. Criar um programa que simula o lançamento de dados e calcula probabilidades.  
-79. Criar um programa que converte um número decimal para binário.  
-80. Criar um programa que simula uma fila ou pilha.
-
-## Projetos Intermediários
-
-81. Criar um sistema simples de cadastro de livros com busca por título.  
 82. Criar um sistema bancário com múltiplas contas e histórico de transações.  
-83. Criar um gerenciador de estoque com entrada e saída de produtos.  
-84. Criar um programa que gera relatórios de vendas mensais a partir de arquivos CSV.  
-85. Criar um programa que lê e processa dados JSON para gerar estatísticas.  
-86. Criar um chatbot simples que responde perguntas básicas.  
-87. Criar um sistema de votação com registro de votos e apuração.  
-88. Criar um programa que gera gráficos simples usando matplotlib (se permitido).  
-89. Criar um programa que lê um arquivo de log e extrai erros.  
 90. Criar um programa que simula uma agenda de compromissos com salvar em arquivo.
-
-## Projetos Avançados
-
 91. Implementar um sistema de autenticação com criptografia de senhas.  
 92. Criar um programa que realiza scraping de dados de uma página web.  
 93. Criar um programa que envia e-mails automáticos com anexos.  
-94. Criar um programa que implementa um jogo simples (ex: pedra-papel-tesoura).  
-95. Criar um programa que converte arquivos entre formatos (ex: CSV para JSON).  
-96. Criar um programa que interpreta comandos de voz (usando bibliotecas externas).  
-97. Criar um programa que gera PDFs a partir de dados de entrada.  
-98. Criar um programa que realiza backup automático de arquivos.  
-99. Criar um programa que monitora alterações em uma pasta e registra logs.  
-100. Criar um sistema básico de gerenciamento de usuários com permissões.
-
-Aqui estão 100 ideias de exercícios, desafios e projetos em Python inspirados nos exemplos que você deu, mas todos diferentes (não iguais) e cobrindo diversos níveis de dificuldade e áreas da linguagem:
-
-1. Converter snake_case para camelCase.
-2. Encontrar todas as palavras palíndromas em uma frase.
-3. Extrair o número de telefone de uma string formatada.
-4. Calcular a frequência de cada letra em uma frase.
-5. Gerar uma lista de números primos até N.
-6. Verificar se duas palavras são anagramas.
-7. Implementar uma função para inverter a ordem das palavras em uma frase.
-8. Criar um validador de CPF.
-9. Ler um arquivo CSV e imprimir apenas as linhas pares.
-10. Gerar um dicionário com a contagem de vogais em uma palavra.
-11. Remover todos os números de uma string.
-12. Substituir todas as vogais de uma frase por um caractere específico.
-13. Calcular a média das notas de alunos lidas de um arquivo.
-14. Gerar uma senha aleatória com letras e números.
-15. Checar se uma frase é um pangrama (contém todas as letras do alfabeto).
-16. Implementar uma calculadora de IMC.
-17. Converter um número romano em inteiro.
-18. Gerar uma matriz identidade de dimensão N.
 19. Implementar um sistema simples de login e senha.
-20. Simular o lançamento de dois dados e contar quantas vezes a soma é 7.
-21. Criar um programa que desenhe um triângulo de Pascal.
-22. Implementar um relógio digital na linha de comando.
-23. Ordenar uma lista de tuplas pelo segundo elemento.
-24. Contar quantos números pares e ímpares há em uma lista.
-25. Simular um jogo de pedra, papel e tesoura.
-26. Calcular o MDC (máximo divisor comum) entre dois números.
-27. Validar se uma string é um número binário.
-28. Converter uma lista de Celsius para Fahrenheit.
-29. Criar uma agenda telefônica simples com dicionários.
-30. Implementar uma busca binária em uma lista ordenada.
 31. Simular um caixa eletrônico com saques múltiplos de 10, 20, 50 e 100.
-32. Ler um arquivo de texto e retornar as 10 palavras mais frequentes.
-33. Criar uma função que retorne os divisores de um número.
-34. Implementar um sistema de cadastro de usuários com persistência em arquivo.
-35. Calcular a distância entre dois pontos no plano cartesiano.
-36. Gerar todas as permutações de uma lista.
-37. Criar uma função que verifique se uma matriz é simétrica.
 38. Implementar um sistema de votação simples.
 39. Criar uma classe “Aluno” com métodos para calcular média e situação.
 40. Classe “Funcionario” com atributos de nome, salário e método para reajuste.
 41. Classe “Carro” com métodos de ligar, desligar e acelerar.
-42. Classe “Cinema” para gerenciar reservas de assentos.
-43. Classe “Playlist” de músicas com métodos de adicionar e remover faixas.
-44. Classe “Pedido” para simular compras em uma loja virtual.
-45. Classe “NotaFiscal” que calcula o valor total dos produtos.
-46. Classe “Pessoa” com método de aniversário para aumentar idade.
-47. Classe “Evento” que armazena data, local e participantes.
-48. Classe “Contato” para uma agenda, com nome, telefone e e-mail.
-49. Classe “JogoDaVelha” para dois jogadores.
-50. Implementar fila e pilha usando listas.
-51. Converter uma lista de inteiros para uma string separada por vírgulas.
-52. Criar um script para baixar imagens de URLs lidas de um arquivo.
-53. Implementar uma função para calcular a soma dos números de uma matriz.
-54. Encontrar o elemento mais comum em uma lista.
-55. Calcular o fatorial de um número usando recursão.
-56. Implementar um sistema de cadastro de livros com busca por autor.
-57. Calcular a mediana de uma lista de números.
-58. Validar se uma senha atende critérios de segurança.
-59. Gerar um gráfico de barras com dados lidos de um arquivo.
-60. Implementar um conversor de moedas com taxas atualizadas.
-61. Criar um sistema de reservas de hotel.
 62. Implementar um programa que simula uma fila de supermercado.
-63. Criar uma agenda de compromissos com datas e horários.
-64. Implementar um filtro de palavras proibidas em um texto.
-65. Criar um gerador de nomes aleatórios.
 66. Implementar um sistema de inventário para uma loja.
-
 82. Implementar um sistema de login com tentativa limitada.
-
 87. Calcular a diferença entre duas datas.
-
 99. **Jogo de memória.** Implemente um jogo onde o jogador deve encontrar pares em uma lista embaralhada.
 100. **Sistema de controle de estoque.** Crie um programa que gerencia um estoque com produtos, quantidades e preços, permitindo adicionar, remover e consultar.
-
 Classe Carro com atributos (marca, modelo) e método acelerar().
-
 Classe Contato (nome, telefone, e-mail) para uma agenda.
 Classe Aluno (matrícula, notas) com método para calcular média.
 Classe Relógio que simula um cronômetro (horas, minutos, segundos).
 To-do list via linha de comando (adicionar, remover, listar tarefas).
-
 Web scrapping para extrair títulos de notícias de um site.
+8. Relógio digital
+9. Timer regressivo
+11. Aplicativo de lista de compras
+13. Encurtador de URL
