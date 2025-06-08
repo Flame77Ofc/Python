@@ -1,4 +1,4 @@
-https://github.com/IanaPanchyshena/Python-solutions-programming-exercises
+https://github.cwom/IanaPanchyshena/Python-solutions-programming-exercises
 https://github.com/JKocher13/PythonFundamentals.Exercises.Part4
 https://github.com/JLucas09/Python_Exercicios_Resolvidos
 https://github.com/JackDoug/Exercicios-Python
