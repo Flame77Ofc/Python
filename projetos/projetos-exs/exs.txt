@@ -1,6 +1,3 @@
-4. Gerador de senhas
-11. Cronômetro  
-12. Timer regressivo  
 42. Jogo da forca  
 52. Jogo de memória (Tkinter)  
 54. Pong com Pygame  
@@ -19,25 +16,17 @@
 95. Painel de controle de tempo de estudo  
 99. Sistema de votação online  
 100. App de perguntas estilo "Kahoot"  
-1. Gerador de senhas aleatórias  
 2. Jogo da velha (simples no terminal)  
 17. Cronômetro e temporizador  
 
 Caixa Eletrônico 🏧: Simule um caixa eletrônico que libera notas de diferentes valores.
-Validação de Senha 🔐: Verifique se uma senha atende aos requisitos de segurança (comprimento mínimo, caracteres especiais, etc.).
 
-Cronômetro
-Timer regressivo
-Sistema de login com arquivos
-Jogo da forca
 Pacman básico com Pygame
 Bot do WhatsApp com Selenium
 Bot para baixar vídeos do YouTube
 Leitor de notícias com web scraping
 Notificador de aniversários
 Bot que toca música
-Sistema de login e cadastro com SQLite
-Jogo de memória (encontre os pares)
 
 3. Bloco de notas simples (salvar e ler arquivos .txt)  
 8. Gerador de números da Mega Sena  
@@ -56,13 +45,10 @@ Jogo de memória (encontre os pares)
 
 46. Sistema de votação simples (contar votos em txt)  
 
-48. Organizador de senhas (armazenamento seguro em txt)  
-
 65. Simulador de caixa de supermercado (fila, atendente)  
 72. Calculadora de tempo entre duas datas (datetime)  
 
 
-1. Bloco de notas simples (.txt)
 2. Jogo pokémon simples com coleções, cartas e inimigos
 43. Jogo de perguntas e respostas (quiz)
 
@@ -78,7 +64,6 @@ Jogo de memória (encontre os pares)
 
 89. Jogo de perguntas com tempo limitado
 
-92. Analisador de senhas (força com base em tamanho)
 93. Simulador de votação
 94. Simulador de caixa de supermercado
 100. Diário com senha de acesso
@@ -110,7 +95,6 @@ Jogo de memória (encontre os pares)
 26. Timer de Pomodoro - Notifica a cada 25 minutos  
 28. Gerador de Datas Aleatórias  
 
-41. Gerenciador de Senhas - Criptografia básica com `cryptography`  
 49. Encurtador de URL - Integração com APIs públicas  
 
 64. Fabrica de Personagens - Combina atributos/aparência  
@@ -131,11 +115,8 @@ Jogo de memória (encontre os pares)
 
 
 
-24. Verificar se uma senha é forte.
 
-41. Criar um gerador de senhas aleatórias.
 42. Fazer um cronômetro regressivo.
-43. Criar um sistema de login simples com verificação de senha.
 
 45. Simular uma roleta com premiações aleatórias.
 
@@ -212,12 +193,9 @@ Jogo de memória (encontre os pares)
 
 ## Projetos Pequenos
 
-41. Criar um conversor de temperaturas (Celsius para Fahrenheit e vice-versa).  
-42. Criar um jogo de adivinhação de números.  
 43. Criar um sistema simples de cadastro de usuários em arquivo.  
 44. Criar um gerenciador de tarefas com salvar e carregar do arquivo.  
 45. Criar um programa que gera um relatório de vendas a partir de dados em arquivo.  
-46. Criar um sistema de autenticação simples com usuário e senha.  
 47. Criar um programa que calcula o fatorial de um número.  
 48. Criar um programa que imprime a sequência de Fibonacci até N termos.  
 49. Criar um programa que verifica se um número é primo.  
@@ -300,7 +278,6 @@ Jogo de memória (encontre os pares)
 90. Criar um programa que simula uma agenda de compromissos com salvar em arquivo.
 
 
-91. Implementar um sistema de autenticação com criptografia de senhas.  
 92. Criar um programa que realiza scraping de dados de uma página web.  
 93. Criar um programa que envia e-mails automáticos com anexos.  
 94. Criar um programa que implementa um jogo simples (ex: pedra-papel-tesoura).  
@@ -312,7 +289,6 @@ Jogo de memória (encontre os pares)
 100. Criar um sistema básico de gerenciamento de usuários com permissões.
 
 
-19. Implementar um sistema simples de login e senha.
 20. Simular o lançamento de dois dados e contar quantas vezes a soma é 7.
 21. Criar um programa que desenhe um triângulo de Pascal.
 22. Implementar um relógio digital na linha de comando.
@@ -351,7 +327,6 @@ Jogo de memória (encontre os pares)
 55. Calcular o fatorial de um número usando recursão.
 56. Implementar um sistema de cadastro de livros com busca por autor.
 57. Calcular a mediana de uma lista de números.
-58. Validar se uma senha atende critérios de segurança.
 59. Gerar um gráfico de barras com dados lidos de um arquivo.
 60. Implementar um conversor de moedas com taxas atualizadas.
 61. Criar um sistema de reservas de hotel.
@@ -374,3 +349,88 @@ Classe Relógio que simula um cronômetro (horas, minutos, segundos).
 To-do list via linha de comando (adicionar, remover, listar tarefas).
 
 Web scrapping para extrair títulos de notícias de um site.
+78. Fazer uma classe “ContaBancária” com depósitos e saques.
+79. Criar uma classe “Produto” com estoque e preço.
+80. Classe “Tarefa” com descrição e status.
+42. Fazer um cronômetro regressivo.
+
+45. Simular uma roleta com premiações aleatórias.
+
+52. Classe `Carro` com velocidade e métodos `acelerar` e `frear`.
+53. Classe `Funcionario` com salário e método de aumento.
+54. Classe `Musica` com título, artista e duração.
+55. Classe `Relógio` com hora, minuto e segundo.
+56. Classe `Agenda` com contatos e métodos para adicionar/remover.
+
+
+61. Sistema de cadastro de usuários (nome, e-mail, idade).
+62. Gerenciador de tarefas com status (feito/não feito).
+
+
+81. Simulador de quiz com pontuação.
+90. Simulador de batalha entre personagens com atributos.
+31. Criar uma classe “Aluno” com nome, idade e método para exibir dados.  
+32. Criar uma classe “Carro” com atributos marca, modelo e método acelerar.  
+33. Criar uma classe “ContaCorrente” com limite e saldo, e métodos para saque e depósito.  
+34. Criar uma classe “Funcionario” com nome, salário e método para aumento salarial.  
+35. Criar uma classe “Círculo” com atributo raio e método para calcular área.  
+36. Criar uma classe “Agenda” que armazena contatos (nome e telefone).  
+37. Criar uma classe “Pedido” com itens e método para calcular total.  
+38. Criar uma classe “Elevador” que controla andar atual e capacidade.  
+
+43. Criar um sistema simples de cadastro de usuários em arquivo.  
+44. Criar um gerenciador de tarefas com salvar e carregar do arquivo.  
+
+61. Criar uma classe “Livro” com título, autor e método exibir_info() (variante do exemplo 77).  
+62. Criar uma classe “ContaBancária” com depósitos e saques (variante do exemplo 78).  
+63. Criar uma classe “Produto” com estoque e preço (variante do exemplo 79).  
+64. Criar uma classe “Tarefa” com descrição e status (variante do exemplo 80).  
+65. Criar uma classe “Biblioteca” que gerencia uma lista de livros.  
+66. Criar uma classe “Cliente” com nome, email e método para validar email.  
+67. Criar uma classe “Pedido” que armazena produtos e calcula valor total.  
+68. Criar uma classe “Estudante” que armazena notas e calcula média final.  
+69. Criar uma classe “Veículo” com subclasses “Carro” e “Moto”.  
+70. Criar uma classe “Funcionario” que calcula salário com base em horas extras.
+
+31. Criar uma classe “Aluno” com nome, idade e método para exibir dados.  
+32. Criar uma classe “Carro” com atributos marca, modelo e método acelerar.  
+33. Criar uma classe “ContaCorrente” com limite e saldo, e métodos para saque e depósito.  
+34. Criar uma classe “Funcionario” com nome, salário e método para aumento salarial.  
+35. Criar uma classe “Círculo” com atributo raio e método para calcular área.  
+36. Criar uma classe “Agenda” que armazena contatos (nome e telefone).  
+37. Criar uma classe “Pedido” com itens e método para calcular total.  
+38. Criar uma classe “Elevador” que controla andar atual e capacidade.  
+40. Criar uma classe “Tarefa” com descrição, status e método para marcar como concluída.
+61. Criar uma classe “Livro” com título, autor e método exibir_info() (variante do exemplo 77).  
+62. Criar uma classe “ContaBancária” com depósitos e saques (variante do exemplo 78).  
+63. Criar uma classe “Produto” com estoque e preço (variante do exemplo 79).  
+64. Criar uma classe “Tarefa” com descrição e status (variante do exemplo 80).  
+65. Criar uma classe “Biblioteca” que gerencia uma lista de livros.  
+66. Criar uma classe “Cliente” com nome, email e método para validar email.  
+67. Criar uma classe “Pedido” que armazena produtos e calcula valor total.  
+68. Criar uma classe “Estudante” que armazena notas e calcula média final.  
+69. Criar uma classe “Veículo” com subclasses “Carro” e “Moto”.  
+70. Criar uma classe “Funcionario” que calcula salário com base em horas extras.
+82. Criar um sistema bancário com múltiplas contas e histórico de transações.  
+90. Criar um programa que simula uma agenda de compromissos com salvar em arquivo.
+31. Simular um caixa eletrônico com saques múltiplos de 10, 20, 50 e 100.
+38. Implementar um sistema de votação simples.
+39. Criar uma classe “Aluno” com métodos para calcular média e situação.
+40. Classe “Funcionario” com atributos de nome, salário e método para reajuste.
+41. Classe “Carro” com métodos de ligar, desligar e acelerar.
+62. Implementar um programa que simula uma fila de supermercado.
+66. Implementar um sistema de inventário para uma loja.
+82. Implementar um sistema de login com tentativa limitada.
+87. Calcular a diferença entre duas datas.
+99. **Jogo de memória.** Implemente um jogo onde o jogador deve encontrar pares em uma lista embaralhada.
+100. **Sistema de controle de estoque.** Crie um programa que gerencia um estoque com produtos, quantidades e preços, permitindo adicionar, remover e consultar.
+Classe Carro com atributos (marca, modelo) e método acelerar().
+Classe Contato (nome, telefone, e-mail) para uma agenda.
+Classe Aluno (matrícula, notas) com método para calcular média.
+Classe Relógio que simula um cronômetro (horas, minutos, segundos).
+To-do list via linha de comando (adicionar, remover, listar tarefas).
+Web scrapping para extrair títulos de notícias de um site.
+8. Relógio digital
+9. Timer regressivo
+11. Aplicativo de lista de compras
+13. Encurtador de URL
