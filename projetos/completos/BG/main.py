@@ -8,6 +8,7 @@ while True:
     numero = int(input('Digite um número:\n1: bloco       3: armadura\n2: arma        4: suplemento, itens e ferramentas\n'))
     if numero == 1:
         num_bloco = int(input('Qual bloco?:\n1: lã(1 ferro)            3: madeira(4 ouros)\n2: concreto(10 ferros)      4: obsidiana(3 diamantes)\n'))
+        
         if num_bloco == 1:
             la = 1 # lã = 1 ferro
             print(f'O preço da lã é {la} ferro')
@@ -921,6 +922,6 @@ inventario['Blocos']['lã'] += quantidade
 for a, i in inventario.items():
     print(a, i)
 
-arquivo = open('projeto/BG/dados.txt', 'a')
+arquivo = open('all/BG.txt', 'a')
 arquivo.write(f'ferro: {ferro}, ouro: {ouro}, diamante: {diamante}\n')
 arquivo.close()
