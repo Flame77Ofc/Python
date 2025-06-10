@@ -81,7 +81,7 @@ while tentativas > 0:
     forca()
 
     if '_' not in ficticio:
-        print('GANHOU!')
+        print('ACERTOU!')
         break
 
     print(' '.join(ficticio))
@@ -102,7 +102,10 @@ while tentativas > 0:
 
     if letra not in palavra:
         tentativas -=1
-        print(f'Tentativas restantes: {tentativas}')
+        if tentativas != 0:
+            print(f'Tentativas restantes: {tentativas}')
 
 if tentativas == 0:
     print(f'A palavra era {palavra}')
+    forca()
+print(f'Resposta: {palavra}')

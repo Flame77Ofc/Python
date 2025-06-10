@@ -26,9 +26,6 @@ Leitor de notícias com web scraping
 Notificador de aniversários
 Bot que toca música
 
-3. Bloco de notas simples (salvar e ler arquivos .txt)  
-8. Gerador de números da Mega Sena  
-11. Jogo de forca (com palavras lidas de um .txt)  
 
 25. Calendário simples (mostrar mês/ano)  
 26. Lista de compras (salvar/ler de um arquivo)  
@@ -151,18 +148,6 @@ Bot que toca música
 90. Simulador de batalha entre personagens com atributos.
 
 
-91. Criar uma função que detecta a linguagem de uma frase (heurística simples).
-92. Simular um quiz de múltipla escolha com resposta certa.
-93. Compactar texto eliminando letras repetidas (ex: “aaabb” → “a3b2”).
-94. Contador de palavras únicas em uma lista.
-95. Simular um dado com pesos personalizados.
-96. Criar uma linha de progresso animada (em texto).
-97. Criar um sistema de mensagens entre usuários simulados.
-98. Conversor de cores RGB ↔ Hex.
-99. Sistema de perguntas e respostas com dificuldade crescente.
-100. Criar um gerador de nomes aleatórios com prefixo e sufixo.
-
-
 21. Ler um arquivo CSV e imprimir os dados em formato tabela.  
 22. Contar quantas vezes uma palavra aparece em um arquivo texto.  
 23. Criar um programa que copia o conteúdo de um arquivo para outro.  
@@ -185,8 +170,6 @@ Bot que toca música
 38. Criar uma classe “Elevador” que controla andar atual e capacidade.  
 39. Criar uma classe “Pessoa” com método para calcular IMC.  
 40. Criar uma classe “Tarefa” com descrição, status e método para marcar como concluída.
-
-## Projetos Pequenos
 
 43. Criar um sistema simples de cadastro de usuários em arquivo.  
 44. Criar um gerenciador de tarefas com salvar e carregar do arquivo.  
