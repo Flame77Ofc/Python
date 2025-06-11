@@ -171,13 +171,7 @@ Bot que toca música
 39. Criar uma classe “Pessoa” com método para calcular IMC.  
 40. Criar uma classe “Tarefa” com descrição, status e método para marcar como concluída.
 
-43. Criar um sistema simples de cadastro de usuários em arquivo.  
 44. Criar um gerenciador de tarefas com salvar e carregar do arquivo.  
-45. Criar um programa que gera um relatório de vendas a partir de dados em arquivo.  
-47. Criar um programa que calcula o fatorial de um número.  
-48. Criar um programa que imprime a sequência de Fibonacci até N termos.  
-49. Criar um programa que verifica se um número é primo.  
-50. Criar um programa que calcula a média de uma lista de números.
 
 
 
@@ -188,22 +182,14 @@ Bot que toca música
 65. Criar uma classe “Biblioteca” que gerencia uma lista de livros.  
 66. Criar uma classe “Cliente” com nome, email e método para validar email.  
 67. Criar uma classe “Pedido” que armazena produtos e calcula valor total.  
-68. Criar uma classe “Estudante” que armazena notas e calcula média final.  
-69. Criar uma classe “Veículo” com subclasses “Carro” e “Moto”.  
-70. Criar uma classe “Funcionario” que calcula salário com base em horas extras.
-
 81. Criar um sistema simples de cadastro de livros com busca por título.  
 82. Criar um sistema bancário com múltiplas contas e histórico de transações.  
 86. Criar um chatbot simples que responde perguntas básicas.  
 90. Criar um programa que simula uma agenda de compromissos com salvar arquivos.
 92. Criar um programa que realiza scraping de dados de uma página web.  
 93. Criar um programa que envia e-mails automáticos com anexos.  
-94. 
 
 
-28. Ler um arquivo e imprimir as 10 primeiras linhas.  
-29. Criar um programa que remove linhas duplicadas de um arquivo.  
-30. Salvar dados de um dicionário em arquivo JSON.
 
 31. Criar uma classe “Aluno” com nome, idade e método para exibir dados.  
 32. Criar uma classe “Carro” com atributos marca, modelo e método acelerar.  
@@ -214,23 +200,7 @@ Bot que toca música
 37. Criar uma classe “Pedido” com itens e método para calcular total.  
 38. Criar uma classe “Elevador” que controla andar atual e capacidade.  
 39. Criar uma classe “Pessoa” com método para calcular IMC.  
-40. Criar uma classe “Tarefa” com descrição, status e método para marcar como concluída.
-
-
-45. Criar um programa que gera um relatório de vendas a partir de dados em arquivo.  
-
-
-51. Implementar uma função que converte números romanos para inteiros.  
-52. Criar uma função que gera um resumo de texto (primeiras N palavras).  
-53. Criar um programa que conta o número de ocorrências de cada letra em um texto.  
-54. Criar uma função que inverte as palavras de uma frase mantendo a ordem das letras.  
-55. Criar um programa que verifica se duas strings são anagramas.  
-56. Criar um programa que remove palavras duplicadas de uma frase.  
-57. Contar quantas linhas, palavras e caracteres há em um arquivo (variante do exemplo 57).  
-58. Criar um validador de CPF ou CNPJ.  
-59. Criar um programa que extrai hashtags de um texto.  
-60. Criar um programa que converte um texto para código Morse.
-
+40. Criar uma classe “Tarefa” com descrição, status e método para marcar como concluída.    
 
 61. Criar uma classe “Livro” com título, autor e método exibir_info() (variante do exemplo 77).  
 62. Criar uma classe “ContaBancária” com depósitos e saques (variante do exemplo 78).  
@@ -256,36 +226,7 @@ Bot que toca música
 90. Criar um programa que simula uma agenda de compromissos com salvar em arquivo.
 
 
-92. Criar um programa que realiza scraping de dados de uma página web.  
-93. Criar um programa que envia e-mails automáticos com anexos.  
-94. Criar um programa que implementa um jogo simples (ex: pedra-papel-tesoura).  
-95. Criar um programa que converte arquivos entre formatos (ex: CSV para JSON).  
-96. Criar um programa que interpreta comandos de voz (usando bibliotecas externas).  
-97. Criar um programa que gera PDFs a partir de dados de entrada.  
-98. Criar um programa que realiza backup automático de arquivos.  
-99. Criar um programa que monitora alterações em uma pasta e registra logs.  
-100. Criar um sistema básico de gerenciamento de usuários com permissões.
 
-
-20. Simular o lançamento de dois dados e contar quantas vezes a soma é 7.
-21. Criar um programa que desenhe um triângulo de Pascal.
-22. Implementar um relógio digital na linha de comando.
-23. Ordenar uma lista de tuplas pelo segundo elemento.
-24. Contar quantos números pares e ímpares há em uma lista.
-25. Simular um jogo de pedra, papel e tesoura.
-26. Calcular o MDC (máximo divisor comum) entre dois números.
-27. Validar se uma string é um número binário.
-28. Converter uma lista de Celsius para Fahrenheit.
-29. Criar uma agenda telefônica simples com dicionários.
-30. Implementar uma busca binária em uma lista ordenada.
-32. Ler um arquivo de texto e retornar as 10 palavras mais frequentes.
-33. Criar uma função que retorne os divisores de um número.
-34. Implementar um sistema de cadastro de usuários com persistência em arquivo.
-35. Calcular a distância entre dois pontos no plano cartesiano.
-36. Gerar todas as permutações de uma lista.
-37. Criar uma função que verifique se uma matriz é simétrica.
-38. Implementar um sistema de votação simples.
-39. Criar uma classe “Aluno” com métodos para calcular média e situação.
 40. Classe “Funcionario” com atributos de nome, salário e método para reajuste.
 41. Classe “Carro” com métodos de ligar, desligar e acelerar.
 42. Classe “Cinema” para gerenciar reservas de assentos.
@@ -295,18 +236,6 @@ Bot que toca música
 46. Classe “Pessoa” com método de aniversário para aumentar idade.
 47. Classe “Evento” que armazena data, local e participantes.
 48. Classe “Contato” para uma agenda, com nome, telefone e e-mail.
-49. Classe “JogoDaVelha” para dois jogadores.
-50. Implementar fila e pilha usando listas.
-51. Converter uma lista de inteiros para uma string separada por vírgulas.
-52. Criar um script para baixar imagens de URLs lidas de um arquivo.
-53. Implementar uma função para calcular a soma dos números de uma matriz.
-54. Encontrar o elemento mais comum em uma lista.
-55. Calcular o fatorial de um número usando recursão.
-56. Implementar um sistema de cadastro de livros com busca por autor.
-57. Calcular a mediana de uma lista de números.
-59. Gerar um gráfico de barras com dados lidos de um arquivo.
-60. Implementar um conversor de moedas com taxas atualizadas.
-61. Criar um sistema de reservas de hotel.
 62. Implementar um programa que simula uma fila de supermercado.
 63. Criar uma agenda de compromissos com datas e horários.
 66. Implementar um sistema de inventário para uma loja.
@@ -315,7 +244,6 @@ Bot que toca música
 
 87. Calcular a diferença entre duas datas.
 
-99. **Jogo de memória.** Implemente um jogo onde o jogador deve encontrar pares em uma lista embaralhada.
 100. **Sistema de controle de estoque.** Crie um programa que gerencia um estoque com produtos, quantidades e preços, permitindo adicionar, remover e consultar.
 
 Classe Carro com atributos (marca, modelo) e método acelerar().
@@ -354,8 +282,6 @@ Web scrapping para extrair títulos de notícias de um site.
 36. Criar uma classe “Agenda” que armazena contatos (nome e telefone).  
 37. Criar uma classe “Pedido” com itens e método para calcular total.  
 38. Criar uma classe “Elevador” que controla andar atual e capacidade.  
-
-43. Criar um sistema simples de cadastro de usuários em arquivo.  
 44. Criar um gerenciador de tarefas com salvar e carregar do arquivo.  
 
 61. Criar uma classe “Livro” com título, autor e método exibir_info() (variante do exemplo 77).  
@@ -399,8 +325,6 @@ Web scrapping para extrair títulos de notícias de um site.
 66. Implementar um sistema de inventário para uma loja.
 82. Implementar um sistema de login com tentativa limitada.
 87. Calcular a diferença entre duas datas.
-99. **Jogo de memória.** Implemente um jogo onde o jogador deve encontrar pares em uma lista embaralhada.
-100. **Sistema de controle de estoque.** Crie um programa que gerencia um estoque com produtos, quantidades e preços, permitindo adicionar, remover e consultar.
 Classe Carro com atributos (marca, modelo) e método acelerar().
 Classe Contato (nome, telefone, e-mail) para uma agenda.
 Classe Aluno (matrícula, notas) com método para calcular média.

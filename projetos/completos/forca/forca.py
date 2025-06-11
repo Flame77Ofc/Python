@@ -1,4 +1,3 @@
-# HA
 import random
 escolha = random.randint(1, 4)
 
@@ -62,8 +61,8 @@ elif escolha == 4:
     palavra = random.choice(moveis)
 
 
-for letra in palavra: # Para cada letra da palavra
-    letra = palavra.split(' ') # Então, separe cada palavra
+for letra in palavra:
+    letra = palavra.split(' ')
 
 ficticio = []
 for repeticao in palavra:

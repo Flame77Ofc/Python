@@ -1,11 +1,4 @@
-# Crie um restaurante que simule um restaurante real. Deve verificar se o horário passa das 10 horas e 30 minutos da noite. Caso esteja mais que 10 horas, o programa irá mostrar 'Restaurante Fechado' e deverá ser o fim do programa. Deve ter um menu de opções:
-"""
-[1]: Ver o cardápio
-
-
-"""
 from datetime import datetime
-import random
 import time
 
 def linhas(mensagem):
@@ -21,11 +14,11 @@ def mostrar_cardapio():
 
     while True: 
         print("""CARDÁPIO
-    [1]: Batatas Fritas - R$15 reais (500 gramas)       [6]: Feijão - R$6 reais (230 gramas)
-    [2]: Coca-Cola - R$12 reais (2 litros)              [7]: Macarrão - R$6 reais (140 gramas)
-    [3]: Frango - R$4 reais (250 gramas)                [8]: Tilápia - R$2 reais (100 gramas)
-    [4]: Sprite - R$7 reais (2 litros)                  [9]: H2O - R$6 reais (2 litros)
-    [5]: Arroz - R$4 reais (450 gramas)                 [10]: Sair""")
+    [1]: Batatas Fritas - R$10 (200 gramas)       [6]: X-Salada - R$30
+    [2]: Coca-Cola - R$12 (2 litros)              [7]: Porção de Frango - R$70
+    [3]: Onion Ring - R$20 (200 gramas)           [8]: Tilápia com acompanhamentos - R$90 (600 gramas)
+    [4]: Sprite - R$12 (2 litros)                 [9]: H2O - R$8 (600 ml)
+    [5]: Polenta Frita - R$40 (500 gramas)        [10]: Sair""")
         
         cardapio = int(input('Digite o cardápio:\n>>>'))
 
@@ -33,24 +26,23 @@ def mostrar_cardapio():
             cardapio = int(input('Por favor, digite corretamente.\nDigite o cardápio:\n>>>'))
         
         if cardapio == 1:
-            preco_comida += 15
+            preco_comida += 10
         elif cardapio == 2:
             preco_comida += 12
         elif cardapio == 3:
-            preco_comida += 4
+            preco_comida += 20
         elif cardapio == 4:
-            preco_comida += 7
+            preco_comida += 12
         elif cardapio == 5:
-            preco_comida += 4
+            preco_comida += 40
         elif cardapio == 6:
-            preco_comida += 6
+            preco_comida += 30
         elif cardapio == 7:
-            preco_comida += 6
+            preco_comida += 70
         elif cardapio == 8:
-            preco_comida += 2
+            preco_comida += 90
         elif cardapio == 9:
-            preco_comida += 6
-
+            preco_comida += 8
         elif cardapio == 10:
             while preco_comida == 0:
                 print('Deve-se escolher ao menos um alimento.')
@@ -78,7 +70,7 @@ def mostrar_cardapio():
 
 data = datetime.now().strftime('%H'), datetime.now().strftime('%M')
 
-if data[0] > '22' and data[1] > '30':
+if data[0] >= '22' and data[1] > '30':
     print(f'Agora são {data[0]}:{data[1]}')
     print('Restaurante Fechado')
     print('Volte sempre!')
@@ -99,7 +91,7 @@ else:
             idade = int(input(f'Idade excedeu o limite.\nDigite a idade da pessoa {pessoa+1}\n>>> '))
 
     idades.append(idade)
-    preco_entrada += 15
+    preco_entrada += 25
 
     if idade < 10:
         desconto += 0.05
@@ -114,9 +106,6 @@ else:
 
     mostrar_cardapio()
 
-total = preco_entrada + preco_comida
+    total = preco_entrada + preco_comida
 
-print(f'O preço total é de R${total} reais')
-
-
-
+    print(f'O preço total é de R${total} reais')
