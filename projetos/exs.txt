@@ -15,57 +15,19 @@
 95. Painel de controle de tempo de estudo  
 99. Sistema de votação online  
 100. App de perguntas estilo "Kahoot"  
-2. Jogo da velha (simples no terminal)  
-17. Cronômetro e temporizador  
-
-
 Pacman básico com Pygame
 Bot do WhatsApp com Selenium
 Bot para baixar vídeos do YouTube
 Leitor de notícias com web scraping
 Notificador de aniversários
 Bot que toca música
-
-
-25. Calendário simples (mostrar mês/ano)  
 26. Lista de compras (salvar/ler de um arquivo)  
 
-
-31. Quiz de perguntas e respostas (perguntas de um txt)  
-
-35. Sistema de login e senha (com validação num txt)  
-
-39. Organizador de tarefas por prioridade  
-
-46. Sistema de votação simples (contar votos em txt)  
-
 65. Simulador de caixa de supermercado (fila, atendente)  
-72. Calculadora de tempo entre duas datas (datetime)  
-
-
-2. Jogo pokémon simples com coleções, cartas e inimigos
-43. Jogo de perguntas e respostas (quiz)
-
-46. Editor de tarefas no terminal
-
-51. Medidor de tempo com `time`
-
-60. Sistema de login simples com `.txt`
-
-65. Gerador de horários de estudo
-
 
 89. Jogo de perguntas com tempo limitado
 
-93. Simulador de votação
 94. Simulador de caixa de supermercado
-100. Diário com senha de acesso
-
-
-
-
-
-
 7. Criptografia Simples: Leia um texto de um arquivo, aplique uma cifra de César (deslocamento de letras) e salve o resultado em outro .txt.
 
 
@@ -75,10 +37,6 @@ Bot que toca música
 29. Calendário Simples: Gere um calendário de um mês específico em formato de texto.
 30. Contador de Tempo de Tarefa: Meça quanto tempo o usuário leva para completar uma tarefa, salvando o resultado em um .txt.
 
-
-1. Gerenciador de Tarefas - Salva/edita tarefas em `.txt`  
-2. Diário Pessoal - Registro diário com timestamps usando `datetime`  
-3. Lista de Compras - Adiciona/remove itens de um arquivo  
 
 20. Sistema de Pontuação - Calcula rankings a partir de `.txt`  
 
@@ -101,17 +59,6 @@ Bot que toca música
 78. Fazer uma classe “ContaBancária” com depósitos e saques.
 79. Criar uma classe “Produto” com estoque e preço.
 80. Classe “Tarefa” com descrição e status.
-91. Implementar um sistema
-
-
-
-
-
-
-42. Fazer um cronômetro regressivo.
-
-45. Simular uma roleta com premiações aleatórias.
-
 51. Classe `Aluno` com notas e método para calcular média.
 52. Classe `Carro` com velocidade e métodos `acelerar` e `frear`.
 53. Classe `Funcionario` com salário e método de aumento.
@@ -138,13 +85,9 @@ Bot que toca música
 
 81. Simulador de quiz com pontuação.
 82. Conversor de moedas com dados fictícios.
-83. Cadastro de clientes com ID automático.
 84. Editor de texto básico em terminal.
 85. Simulador de dados de RPG com múltiplos dados.
 86. Controle de séries assistidas com status e avaliação.
-87. Leitor de arquivos CSV com extração de colunas.
-88. Gerador de relatórios de vendas (dados fictícios).
-89. Sistema de sorteio com entrada de nomes.
 90. Simulador de batalha entre personagens com atributos.
 
 
@@ -240,18 +183,12 @@ Bot que toca música
 63. Criar uma agenda de compromissos com datas e horários.
 66. Implementar um sistema de inventário para uma loja.
 
-82. Implementar um sistema de login com tentativa limitada.
-
-87. Calcular a diferença entre duas datas.
 
 100. **Sistema de controle de estoque.** Crie um programa que gerencia um estoque com produtos, quantidades e preços, permitindo adicionar, remover e consultar.
 
 Classe Carro com atributos (marca, modelo) e método acelerar().
 
 Classe Contato (nome, telefone, e-mail) para uma agenda.
-Classe Aluno (matrícula, notas) com método para calcular média.
-Classe Relógio que simula um cronômetro (horas, minutos, segundos).
-To-do list via linha de comando (adicionar, remover, listar tarefas).
 
 Web scrapping para extrair títulos de notícias de um site.
 78. Fazer uma classe “ContaBancária” com depósitos e saques.
@@ -269,9 +206,6 @@ Web scrapping para extrair títulos de notícias de um site.
 
 
 61. Sistema de cadastro de usuários (nome, e-mail, idade).
-62. Gerenciador de tarefas com status (feito/não feito).
-
-
 81. Simulador de quiz com pontuação.
 90. Simulador de batalha entre personagens com atributos.
 31. Criar uma classe “Aluno” com nome, idade e método para exibir dados.  
@@ -315,7 +249,6 @@ Web scrapping para extrair títulos de notícias de um site.
 69. Criar uma classe “Veículo” com subclasses “Carro” e “Moto”.  
 70. Criar uma classe “Funcionario” que calcula salário com base em horas extras.
 82. Criar um sistema bancário com múltiplas contas e histórico de transações.  
-90. Criar um programa que simula uma agenda de compromissos com salvar em arquivo.
 31. Simular um caixa eletrônico com saques múltiplos de 10, 20, 50 e 100.
 38. Implementar um sistema de votação simples.
 39. Criar uma classe “Aluno” com métodos para calcular média e situação.
@@ -324,8 +257,6 @@ Web scrapping para extrair títulos de notícias de um site.
 62. Implementar um programa que simula uma fila de supermercado.
 66. Implementar um sistema de inventário para uma loja.
 82. Implementar um sistema de login com tentativa limitada.
-87. Calcular a diferença entre duas datas.
-Classe Carro com atributos (marca, modelo) e método acelerar().
 Classe Contato (nome, telefone, e-mail) para uma agenda.
 Classe Aluno (matrícula, notas) com método para calcular média.
 Classe Relógio que simula um cronômetro (horas, minutos, segundos).
