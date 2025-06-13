@@ -13,7 +13,7 @@ for i in range(quantidade):
     vendas.append(venda)
     total += venda
 
-
+print(f'{"ID":<3} {"Nomes":<20} {"Vendas":<10}')
 for i, nome in enumerate(nomes):
-    print(f'{i} | nome: {nomes[i]} | vendeu: {vendas[i]}')
+    print(f'{i+1:<3} {nomes[i]:<20} {vendas[i]:<10}')
 print(f'Total de vendas: {total}')

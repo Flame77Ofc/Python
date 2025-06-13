@@ -1,80 +1,106 @@
-import time, json
+import time
+import json
+import datetime
+from pathlib import Path
 
-def pomodoro():
-    iniciar = input('Deseja iniciar? [S/N]\n>>>').strip().upper()
+def initialize_data_file():
+    data_file = Path('data.json')
+    if not data_file.exists() or data_file.stat().st_size == 0:
+        nome = input('Digite o seu nome: ').strip()
+        with open(data_file, 'w', encoding='utf-8') as f:
+            json.dump({'Nome': nome}, f, indent=4)
+    with open(data_file, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+def load_horas():
+    horas_file = Path('horas.json')
+    if horas_file.exists():
+        with open(horas_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+def save_horas(data):
+    with open('horas.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4)
+
+def pomodoro(nome):
+    iniciar = input('Deseja iniciar? [S/N]\n>>> ').strip().upper()
     while iniciar not in ['S', 'N']:
-        iniciar = input('Digite corretamente.\nDeseja iniciar? [S/N]\n>>>').strip().upper()
+        iniciar = input('Digite corretamente.\nDeseja iniciar? [S/N]\n>>> ').strip().upper()
 
-    if iniciar == 'S':
-        inicio = time.time()
+    if iniciar != 'S':
+        return
 
-        for _ in range(1):
-            parar = input('Digite qualquer coisa para parar:\n>>>')
+    tarefa = input('Digite o nome da tarefa: ').strip().title()
+    if not tarefa:
+        print("Tarefa inválida!")
+        return
 
-            fim = time.time()
-            segs = round(fim - inicio, 2)
+    inicio = time.time()
+    input('Pressione Enter para parar o Pomodoro:\n>>> ')
+    fim = time.time()
+    segs = round(fim - inicio)
 
+    horas = segs // 3600
+    minutos = (segs % 3600) // 60
+    segundos = segs % 60
+    horario = f'{horas:02d}:{minutos:02d}:{segundos:02d}'
 
-            horas = int(segs // 3600)
-            minutos = int((segs % 3600) // 60)
-            segundos = int(segs % 60)
-            
-            horario = f'{horas:02d}:{minutos:02d}:{segundos:02d}'
-            
-            guardar = input(f'Deseja guardar {horario}? [S/N]\n>>>').strip().upper()
-            while guardar not in ['S', 'N']:
-                guardar = input(f'Digite corretamente. \nDeseja guardar {horario}? [S/N]\n>>>').strip().upper()
+    guardar = input(f'Deseja guardar {horario}? [S/N]\n>>> ').strip().upper()
+    while guardar not in ['S', 'N']:
+        guardar = input(f'Digite corretamente.\nDeseja guardar {horario}? [S/N]\n>>> ').strip().upper()
 
-            if guardar == 'S':
-                try:
-                    with open('arquivo.json', 'r') as arquivo:
-                        dados = json.load(arquivo)
+    if guardar == 'S':
+        horas_data = load_horas()
+        if tarefa in horas_data:
+            horas_data[tarefa]['horas'] += horas
+            horas_data[tarefa]['minutos'] += minutos
+            horas_data[tarefa]['segundos'] += segundos
+        else:
+            horas_data[tarefa] = {'horas': horas, 'minutos': minutos, 'segundos': segundos}
 
-                        secs = dados['segundos']; secs += segundos
-                        mins = dados['minutos']; mins += minutos
-                        hrs = dados['horas']; hrs += horas
+        for task in horas_data:
+            secs = horas_data[task]['segundos']
+            mins = horas_data[task]['minutos']
+            hrs = horas_data[task]['horas']
+            if secs >= 60:
+                mins += secs // 60
+                horas_data[task]['segundos'] = secs % 60
+            if mins >= 60:
+                hrs += mins // 60
+                horas_data[task]['minutos'] = mins % 60
+            horas_data[task]['horas'] = hrs
 
-                        if secs >= 60:
-                            secs -= 60
-                            mins += 1
+        save_horas(horas_data)
 
-                        if mins >= 60:
-                            mins -= 60
-                            hrs += 1
+        with open('tarefas.txt', 'a', encoding='utf-8') as arquivo:
+            data = datetime.datetime.now().strftime('%d/%m/%Y -> %H:%M:%S')
+            arquivo.write(f'➥{data}\n{nome} adicionou a tarefa "{tarefa}" {horas} horas, {minutos} minutos e {segundos} segundos.\n\n')
+    else:
+        print(f"Tempo de {horario} descartado.")
 
-                    atualizado = {
-                        "horas": hrs,
-                        "minutos": mins,
-                        "segundos": secs,
-                    }
+def main():
+    dados = initialize_data_file()
+    nome = dados['Nome']
 
-                    with open('arquivo.json', 'w') as arquivo:
-                        json.dump(atualizado, arquivo)
-                except:
-                    dados = {
-                        "horas": horas,
-                        "minutos": minutos,
-                        "segundos": segundos,
-                    }
-                    with open('arquivo.json', 'w') as arquivo:
-                        json.dump(dados, arquivo)
+    while True:
+        print('\n=== MENU ===')
+        print('1: Pomodoro')
+        print('2: Sair')
+        try:
+            menu = int(input('Digite o menu:\n>>> '))
+            if menu not in [1, 2]:
+                print('Digite um número entre 1 e 2.')
+                continue
+        except ValueError:
+            print('Digite um número válido.')
+            continue
 
-            elif guardar == 'N':
-                pass
+        if menu == 1:
+            pomodoro(nome)
+        elif menu == 2:
+            print("Saindo...")
+            break
 
-    elif iniciar == 'N':
-        pass
-
-while True:
-    print('\n=== MENU ===')
-    print('1: Pomodoro')
-    print('2: Sair')
-
-    menu = int(input('Digite o menu:\n>>>'))
-    while menu not in range(1, 3):
-        menu = int(input('Digite corretamente:\n>>>'))
-
-    if menu == 1:
-        pomodoro()
-    elif menu == 2:
-        break
+if __name__ == '__main__':
+    main()
