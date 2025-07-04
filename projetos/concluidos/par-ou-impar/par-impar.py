@@ -36,9 +36,9 @@ try:
             pontoMachine =+ 1
             print(f'A MÁQUINA GANHOU! A máquina escolheu {machineChoice} e você escolheu {userChoice}')
             partidas['Máquina'] += 1
-        
+
         print(f'Soma = {machineChoice + userChoice}')
-        
+
         continuar = input('Deseja continuar? [S/N]:\n>>>').strip().upper()
         while continuar not in ['S', 'N']:
             continuar = input('Por favor, digite corretamente.\nDeseja continuar? [S/N]\n>>>').strip().upper()

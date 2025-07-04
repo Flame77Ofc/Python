@@ -1,3 +1,5 @@
+print("==== Bem vindo ao jogo da forca ====")
+print("Você pode digitar letra por letra, ou simplesmente chutar a palavra, mas se errar a palavra, perde na hora. Boa Sorte!\n")
 import random
 escolha = random.randint(1, 4)
 
@@ -60,7 +62,6 @@ elif escolha == 4:
     dica = 'móvel'
     palavra = random.choice(moveis)
 
-
 for letra in palavra:
     letra = palavra.split(' ')
 
@@ -80,17 +81,32 @@ while tentativas > 0:
     forca()
 
     if '_' not in ficticio:
-        print('ACERTOU!')
+        print('Você acertou!!')
         break
 
     print(' '.join(ficticio))
     
     letra = input('Digite uma letra: ').strip().lower()
-    while len(letra) != 1 or not letra.isalpha() or letra in letras:
-        print('Erro. Digite novamente')
-        letra = input('Digite uma letra: ').strip().lower()
-    
-    
+    if letra == palavra:
+        print('Você acertou!')
+        break
+    elif len(letra) == len(palavra):
+        print('Você errou!')
+        break
+    else:
+        while len(letra) != 1 or not letra.isalpha() or letra in letras:
+            if letra == palavra:
+                print('Você errou!')
+                break
+            elif len(letra) == len(palavra):
+                print('Você acertou!')
+                break
+            print('Digite novamente.')
+            letra = input('Digite uma letra: ').strip().lower()
+        if len(letra) == len(palavra) or letra == palavra:
+            break
+
+
     letras.append(letra)
 
     contador = 0

@@ -7,7 +7,7 @@ def linhas(mensagem):
 {'Horário:'.rjust(25)} {data[0]}:{data[1]}
 {'Restaurante fecha às 22:30'.center(50)}
 {'-' * 50}""")
-    
+
 def mostrar_cardapio():
     global preco_comida
     preco_comida = 0
@@ -19,12 +19,12 @@ def mostrar_cardapio():
     [3]: Onion Ring - R$20 (200 gramas)           [8]: Tilápia com acompanhamentos - R$90 (600 gramas)
     [4]: Sprite - R$12 (2 litros)                 [9]: H2O - R$8 (600 ml)
     [5]: Polenta Frita - R$40 (500 gramas)        [10]: Sair""")
-        
+
         cardapio = int(input('Digite o cardápio:\n>>>'))
 
         while cardapio <= 0 or cardapio > 10:
             cardapio = int(input('Por favor, digite corretamente.\nDigite o cardápio:\n>>>'))
-        
+
         if cardapio == 1:
             preco_comida += 10
         elif cardapio == 2:

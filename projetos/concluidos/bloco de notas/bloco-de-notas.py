@@ -26,7 +26,6 @@ with open('bloco-notas.txt', 'a+', encoding='utf-8') as arquivo:
     fim = conteudo.find('᚛')
 
     password = conteudo[inicio+1:fim]
-    print(password)
 
     verificacao = input('Digite a sua senha:\n>>>').strip()
 
