@@ -1,0 +1,59 @@
+
+
+
+Conteúdo
+Robótica
+
+Robótica é um ramo educacional e tecnológico que trata de sistemas compostos por partes mecânicas automáticas em conjunto com circuitos integrados, tornando sistemas mecânicos motorizados controlados por circuitos elétricos e inteligência computacional. A robótica é objeto de estudo de diversas áreas: computação, aeroespacial, mecânica, automação, elétrica, etc.
+Cada vez mais as pessoas utilizam os robôs para suas tarefas, como por exemplo o robô aspirador, e robôs para cirurgias médicas.[1] Esta tecnologia, hoje adaptada por muitas fábricas e indústrias, tem obtido, de modo geral, êxito em questões como redução de custos, aumento de produtividade e redução de problemas trabalhistas.[2] Contudo, apesar das vantagens, os robôs acabam trazendo outros problemas específicos, como a demissão de vários funcionários humanos.[3]
+Etimologia e história do termo
+O termo robô foi usado pela primeira vez pelo checo Karel Capek (1890-1938) na peça de teatro intitulada R.U.R. (Rossum's Universal Robots, cujo livro foi lançado no Brasil pela editora Hedra com o título A Fábrica de Robôs),[4] estreada em janeiro de 1921 em Praga.[5] Inicialmente Capek estava decidido a chamar as criaturas automatas da sua peça de labori, em clara referência ao latin labor, "trabalho", mas acatou a sugestão de seu irmão, Josef Čapek (1887-1945) o verdadeiro criador da palavra (ver: Irmãos Čapek)[6] e os chamou de roboti (plural). A palavra robô, derivada de robot/roboti (singular/plural) tem como raiz a palavra checa robota,[7] a qual significa "trabalho forçado, servidão" [8] e tem como uma de suas derivações a palavra rabu, que significa "escravo".[9] Os "robôs" de R.U.R. eram fabricados com matéria orgânica sintética[10] sendo, portanto, mais próximos dos replicantes e dos clones humanos [11] enquanto que na concepção atual, "robô" é definido como sendo composto por partes totalmente mecânicas.
+O termo robótica foi criado e popularizado pelo escritor de ficção cientifica Isaac Asimov, no seu livro " I, Robot" de 1950. Neste livro, Asimov criou as Leis da robótica, que, segundo ele, regeriam os robôs no futuro:[12] Crítico de R.U.R., Asimov desenvolveu as Leis para evitar rebeliões de máquinas como as vistas na peça.[13]
+A ideia de se construir robôs começou a tomar força no início do século XX[15] com a necessidade de aumentar a produtividade e melhorar a qualidade dos produtos. É nesta época que o robô industrial encontrou suas primeiras aplicações, o pai da robótica industrial foi George Devol (1912-2011). Devol criou o primeiro robô industrial, denominado Unimate,[16] o qual foi instalado na fábrica da Ford Motor Company de Trenton (Nova Jérsei) em 1961.[17] Devido aos inúmeros recursos que os sistemas de microcomputadores nos oferece, a robótica atravessa uma época de contínuo crescimento que permitirá, em um curto espaço de tempo, o desenvolvimento de robôs inteligentes fazendo assim a ficção do homem antigo se tornar a realidade do homem moderno.
+Robótica coletiva
+A robótica de enxame trabalha com robôs grandes e pequenos e simples onde o objetivo é a otimização da realização de tarefas coletivas complexas.[18][19][20][21]
+O fenômeno da robotização
+
+Robotização é o nome dado ao processo que envolve a implementação de ferramentas tecnológicas que possibilitem a substituição de tarefas outrora executadas por humanos, de forma que tais atividades passem a ser executadas por meio de robôs.[22].
+A tecnologia envolvendo a robotização é altamente sofisticada e requer elevado grau de conhecimento, e altos níveis de desenvolvimento técnico-científico.[23] Dentre as áreas mais comumente robotizadas, temos o setor computacional, setor aeroespacial, automação industrial (indústria automobilística, têxtil, etc.), setor militar e as atividades médico-hospitalares.[24]
+Aplicações da robótica
+À medida que mais e mais robôs são projetados para tarefas específicas, este método de classificação torna-se mais relevante. Por exemplo, muitos robôs são projetados para trabalhos de montagem, o que pode não ser facilmente adaptável para outras aplicações. Eles são chamados de “robôs de montagem”. Para soldagem por costura, alguns fornecedores fornecem sistemas de soldagem completos com o robô, ou seja, o equipamento de soldagem junto com outras instalações de manuseio de materiais, como mesas giratórias, etc. como uma unidade integrada. Tal sistema robótico integrado é chamado de “robô de soldagem”, embora sua unidade manipuladora discreta possa ser adaptada a uma variedade de tarefas. Alguns robôs são projetados especificamente para manipulação de cargas pesadas e são rotulados como "robôs para serviços pesados".[25]
+As aplicações atuais e potenciais incluem:
+Aspectos básicos dos robôs
+Existem muitos tipos de robôs; eles são usados ​​em muitos ambientes diferentes e para muitos usos diferentes. Embora diversos em aplicação e forma, todos eles compartilham três aspectos básicos quando se trata de seu projeto e construção:[32]
+Projetos robóticos
+O projeto de um robô é necessariamente interdisciplinar e envolve a utilização de conhecimentos de várias áreas clássicas como:
+• Engenharia mecânica: a qual fornece metodologias para o estudo de estruturas e mecanismos em situações estáticas e dinâmicas;     • Engenharias elétrica e eletrônica: fornecem técnicas para o projeto e integração de sensores, interfaces, atuadores e controladores;
+• Teoria de controle: formula e avalia algoritmos ou critérios de inteligência artificial que realizam os movimentos desejados e controlam as interações entre robô e o ambiente;
+• Ciência da computação: propicia ferramentas para a programação de robôs, capacitando-os à realização das tarefas especificadas. Neste tipo de projeto deve-se ainda considerar entre outros aspectos:
+• dimensionamento de atuadores, mecanismos, circuitos eletrônicos (hardware), unidades de controle e potência; • cálculos estruturais;
+• fabricação e montagem de peças de precisão;
+• seleção de materiais;
+• planificação dos movimentos;
+• simulação e modelagem;
+• desenvolvimento de técnicas de programação para o sistema de controle, sistema operacional, diagnose de sistemas/componentes e comunicação ao operador; e
+• testes de desempenho.
+Os robôs são máquinas de programação flexível projetadas para operar em diversas situações, logo, as especificações de operação fornecidas pelo fabricante são de caráter geral e relacionam-se a: volume de trabalho, capacidade de carga, velocidade máxima, precisão e repetibilidade.
+Com a implementação de um sistema robótico em uma fábrica, devem ainda ser analisados aspectos relacionados às áreas econômica e social, como: análise de custos e benefícios, mudanças organizacionais na estrutura da empresa e investimentos diretos e indiretos na produção, redução do número de empregados e remanejamentos.[34]
+Inteligência artificial na robótica[35]
+Nos últimos anos, presenciamos um crescente avanço na área de tecnologia, mais precisamente na robótica e na inteligência artificial. Tal avanço não se dá de forma isolada, pelo contrário, é na sinergia entre estes dois campos que observamos uma verdadeira revolução tecnológica. A combinação de inteligência artificial (IA) com robótica representa um marco na história da inovação, trazendo desenvolvimentos significativos em diversas áreas de atuação.
+A inteligência artificial, por sua vez, vem impulsionando a robótica e revolucionando a forma como os robôs são programados e operados. A capacidade de compreender e aprender com os dados tem sido um dos principais avanços na inteligência artificial.
+A seguir entenderemos as áreas de aplicação
+SAÚDE E MEDICINA
+A robótica e a inteligência artificial têm revolucionado a área da saúde, oferecendo soluções inovadoras e melhorando a qualidade de vida dos pacientes. Por exemplo, robôs cirúrgicos assistidos por inteligência artificial estão sendo utilizados em procedimentos complexos, proporcionando maior precisão e reduzindo os riscos de erro humano.
+Dessa forma, a combinação de robôs e IA permite a realização de diagnósticos mais precisos e rápidos, auxiliando médicos e pesquisadores no desenvolvimento de tratamentos mais eficazes.
+AGRICULTURA
+A sinergia entre robótica e inteligência artificial tem desempenhado um papel fundamental na modernização da agricultura. Robôs agrícolas autônomos, equipados com sensores avançados e sistemas de IA, podem detectar pragas e doenças nas plantações, permitindo uma intervenção rápida e precisa. Esses robôs são capazes de realizar tarefas como a colheita, o que aumenta a eficiência e reduz a dependência de mão de obra humana.
+INDÚSTRIA
+Na indústria, a sinergia entre robótica e inteligência artificial está transformando a forma como as fábricas operam. Os robôs colaborativos, por exemplo, são capazes de trabalhar em conjunto com os humanos de forma segura e eficiente, aumentando a produtividade e melhorando a segurança no ambiente de trabalho.
+A IA pode ser usada para otimizar a cadeia de produção, identificando padrões e realizando análises em tempo real, o que resulta em processos mais eficientes e redução de custos.
+TRANSPORTE E LOGÍSTICA
+A sinergia entre robótica e inteligência artificial também está presente no setor de transporte e logística. Carros autônomos, por exemplo, são equipados com sistemas de IA avançados que os permitem dirigir de forma autônoma e segura, reduzindo a ocorrência de acidentes.
+Além disso, a IA também é utilizada para otimizar rotas de entrega, reduzir congestionamentos e melhorar a eficiência dos processos logísticos.
+EDUCAÇÃO
+A sinergia entre robótica e inteligência artificial tem sido explorada no campo educacional, proporcionando novas formas de aprendizado e interação. Robôs educacionais equipados com sistemas de IA são capazes de auxiliar no ensino, permitindo uma personalização do processo de aprendizagem de acordo com as necessidades e habilidades individuais dos alunos. A robótica educacional também estimula o desenvolvimento de habilidades cognitivas e criativas nas crianças.[35]
+Galeria
+
+
+
+Curiosity, astromóvel-robô empregado na exploração de Marte -> https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Curiosity_-_Robot_Geologist_and_Chemist_in_One%21.jpg/250px-Curiosity_-_Robot_Geologist_and_Chemist_in_One%21.jpg
