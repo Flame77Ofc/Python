@@ -1,5 +1,11 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title = "Contador",
+    page_icon = "🔢",
+    layout = "centered"
+)
+
 # """if 'button' not in st.session_state:
 #     st.session_state['button'] = 0
 
@@ -8,8 +14,6 @@ import streamlit as st
 
 # st.write(st.session_state['button'])
 # """
-
-
 
 try: # Verifica se já existe o arquivo
 
