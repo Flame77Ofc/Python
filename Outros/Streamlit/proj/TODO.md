@@ -1,6 +1,6 @@
 <!--  O que falta agora? -->
 
-# [ ] - Verificar se o usuário está logado em todas as páginas
+# [ - ] - Verificar se o usuário está logado em todas as páginas
 
 
 

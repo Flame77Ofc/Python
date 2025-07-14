@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title = "NeutrumSocial",
-    page_icon = "assets/image/planet_5566471.png",
+    page_icon = "assets/image/icon.png",
     layout = "wide"
 )
 
@@ -34,15 +34,18 @@ st.markdown('''<head>
         padding: 5px;
     }
 
+    span[data-testid="stIconMaterial"] {
+        color: #add1ff;
+    }
 </style>
 </head>''', unsafe_allow_html=True)
 
 
 
 pages = {
-    "🥏 Primeiros Passos": [
-        st.Page("pages/welcome.py", title=f"Bem-vindo", icon=":material/emoji_people:"),
-    ],
+    # "🥏 Primeiros Passos": [
+    #     st.Page("pages/welcome.py", title=f"Bem-vindo", icon=":material/emoji_people:"),
+    # ],
 
     "🏠 Principal": [
         st.Page("pages/initial.py", title=f"Início", icon=":material/home:"),
@@ -51,7 +54,6 @@ pages = {
     ],
 
     "🌾 Secundário": [
-        st.Page("pages/login.py", title=f"Login/Cadastrar", icon=":material/login:"),
         st.Page("pages/messages.py", title=f"Mensagens", icon=":material/message:"),
         st.Page("pages/notifications.py", title=f"Notificações", icon=":material/notifications:")
     ],
@@ -61,6 +63,13 @@ pages = {
         st.Page("pages/settings.py", title=f"Configurações", icon=":material/settings:")
     ]
 }
+
+
+try:
+    with open('./data/login.json', 'r') as arquivo: pass
+except:
+    pages["🥏 Primeiros Passos"] = st.Page("pages/welcome.py", title=f"Bem-vindo", icon=":material/emoji_people:"),
+
 
 pg = st.navigation(pages)
 pg.run()
