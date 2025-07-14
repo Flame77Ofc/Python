@@ -4,7 +4,7 @@ from assets.css.no_login_centralized import set_style
 
 st.markdown('''
 <style>
-    h4#nome-de-usuario, h4#senha, h4#nome, h4#sobrenome {
+    h4#nome-de-usuario, h4#senha, h4#nome, h4#sobrenome, h4#meu-perfil {
         margin: 0;
         padding: 0;
     }
@@ -58,7 +58,7 @@ with st.container(border=True):
 
                 if name:
                     data = {
-                        "nome": name
+                        "sobrenome": name
                     }
                     with open('./data/user-name.json', 'w', encoding='utf-8') as arquivo:
                         json.dump(data, arquivo, indent=4)
@@ -68,18 +68,37 @@ with st.container(border=True):
         try:
             with open('./data/user-username.json', 'r', encoding='utf-8') as arquivo: 
                 username = json.load(arquivo)
-            st.caption(username["nome"])
+            st.caption(username["sobrenome"])
         except:
             with st.empty():
                 username = st.text_input("Coloque seu sobrenome")
 
                 if username:
                     data = {
-                        "nome": username
+                        "sobrenome": username
                     }
                     with open('./data/user-username.json', 'w', encoding='utf-8') as arquivo:
                         json.dump(data, arquivo, indent=4)
                     st.caption(username)
+
+        st.write("#### Descrição")
+        try:
+            with open('./data/user-description.json', 'r', encoding='utf-8') as arquivo: 
+                description = json.load(arquivo)
+            st.caption(description["descricao"])
+
+        except:
+            with st.empty():
+                description = st.text_input("Coloque sua descrição")
+
+                if description:
+                    data = {
+                        "descricao": description
+                    }
+                    with open('./data/user-description.json', 'w', encoding='utf-8') as arquivo:
+                        json.dump(data, arquivo, indent=4)
+                    st.caption(description)
+
 
 
     with col2:
