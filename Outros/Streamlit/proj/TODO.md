@@ -1,15 +1,9 @@
-<!--  O que falta agora? -->
-
 <!-- # [ ] - Colocar data de aniversário no person.py -->
 <!-- # [ ] - Colocar dados do person.py no database -->
 <!-- Limitar o número de caracteres da senha e nome de usuário -->
 <!-- Ir para a área de Search -->
-Atualizar variáveis em português
-Resolver o problema dos caracteres especiais
-
-
-
-<!-- Final: Copywriting, claro. (Mensagens bonitas e com efeito em todas as páginas, incluindo aprimoramento) -->
+<!-- Atualizar variáveis em português -->
+<!-- Resolver o problema dos caracteres especiais -->
 
 
 
@@ -20,6 +14,42 @@ Resolver o problema dos caracteres especiais
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Final: Copywriting, claro. (Mensagens bonitas e com efeito em todas as páginas, incluindo aprimoramento)
+
+
+
+
+
+
+
+
+
+
+# Remover pastas e arquivos
 <!-- pasta = 'teste'
 try:
     os.rmdir(pasta)

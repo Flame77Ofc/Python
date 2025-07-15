@@ -83,7 +83,6 @@ except Exception as erro:
             requirements = False
 
 
-
         ## Senha
         # Verifica se a senha tem entre 8 caracteres e 30 caracteres
         if len(password) > 30 or len(password) < 8:
@@ -131,7 +130,6 @@ except Exception as erro:
                         st.info("Usuário criado com sucesso!")
                         st.toast("Usuário criado com sucesso!", icon="✔")
 
-
                         data = {
                             "user": {
                                 "username": username,
@@ -146,7 +144,6 @@ except Exception as erro:
 
                         with open('./data/login.json', 'w') as arquivo:
                             json.dump(data, arquivo, indent=4)
-
 
                             st.info('Página prestes a recarregar')
                             st.toast("Página prestes a recarregar!", icon="🔁")
@@ -191,7 +188,6 @@ except Exception as erro:
 
                             sleep(2)
                             st.rerun()
-
 
                     st.write('Login realizado!')
                 else:

@@ -34,20 +34,20 @@ try:
                 st.warning(':material/warning: Você não pode procurar a si mesmo.')
 
             else: # Se nenhum dos casos acima for verdadeiro, exibe os dados do usuário encontrado
-                for chave, valor in json_data.items():
-                    if 'criação' in chave or 'senha' in chave:
+                for key, value in json_data.items():
+                    if 'criação' in key or 'senha' in key:
                         pass
 
                     else:
-                        if chave == 'status':
-                            for chave2, valor2 in valor.items():
-                                if "lista_seguidores" in chave2 or "lista_seguindo" in chave2:
+                        if key == 'status':
+                            for key2, value2 in value.items():
+                                if "lista_seguidores" in key2 or "lista_seguindo" in key2:
                                     pass
                                 else:
-                                    st.write(f"<span style='display:inline-block; width:150px; font-weight:bold'>{chave2}:</span> {valor2}", unsafe_allow_html=True)
+                                    st.write(f"<span style='display:inline-block; width:150px; font-weight:bold'>{key2}:</span> {value2}", unsafe_allow_html=True)
 
                         else:
-                            st.markdown(f"<span style='display:inline-block; width:150px; font-weight:bold'>{chave}:</span> {valor}", unsafe_allow_html=True)
+                            st.markdown(f"<span style='display:inline-block; width:150px; font-weight:bold'>{key}:</span> {value}", unsafe_allow_html=True)
 
 
                 # Verificando se o usuário já segue o outro usuário
@@ -61,11 +61,12 @@ try:
 
                 else:
                     with st.empty():
-                        seguir = st.button("Seguir")
-                        if seguir:
+                        follow_button = st.button("Seguir")
+                        if follow_button:
                             # Atualizando a lista_seguindo do usuário que seguiu
                             DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/status/lista_seguindo/.json"
                             r = requests.get(DATABASE)
+
                             data = {
                                 len(r.json()): find_username
                             }
@@ -75,15 +76,17 @@ try:
                             DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/status/.json"
                             r = requests.get(DATABASE)
 
-                            seguindo = r.json()['seguindo'] + 1
+                            following = r.json()['seguindo'] + 1
+
                             data = {
-                                'seguindo': seguindo
+                                'seguindo': following
                             }
                             r = requests.patch(DATABASE, json=data)
 
                             # Atualizando a lista_seguidores do usuário que foi seguido
                             DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{find_username}/status/lista_seguidores/.json"
                             r = requests.get(DATABASE)
+
                             data = {
                                 len(r.json()): username
                             }
@@ -93,13 +96,13 @@ try:
                             DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{find_username}/status/.json"
                             r = requests.get(DATABASE)
 
-                            seguidores = r.json()['seguidores'] + 1
+                            followers = r.json()['seguidores'] + 1
+
                             data = {
-                                'seguidores': seguidores
+                                'seguidores': followers
                             }
                             r = requests.patch(DATABASE, json=data)
 
-                            st.success(f":material/check: Agora você segue {find_username}")
                             st.rerun()
 
         with st.popover("Deseja encontrar pessoas?"):
@@ -125,4 +128,3 @@ except Exception as erro:
 
     if st.button(':material/login: Criar conta ou Entrar'):
         st.switch_page('pages/welcome.py')
-

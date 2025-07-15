@@ -8,7 +8,7 @@ from time import sleep
 
 recharge = False
 try:
-    with open('./data/login.json', 'r') as arquivo: pass
+    with open('./data/login.json', 'r') as f: pass
     st.title(':material/build: Configurações')
 
     with st.popover(":material/info: Sobre", use_container_width=True):
@@ -21,30 +21,28 @@ try:
             with st.spinner("Saindo..."):
                 sleep(2)
 
-            with open('./data/login.json', 'r') as arquivo:
-                username = json.load(arquivo)
+            with open('./data/login.json', 'r') as f:
+                username = json.load(f)
                 username = username['user']['username']
 
 
-            arquivos = ['./data/follow.json', './data/login.json', './data/user-birth.json', './data/user-description.json', './data/user-image.png', './data/user-lastname.json', './data/user-name.json']
+            files = ['./data/follow.json', './data/login.json', './data/user-birth.json', './data/user-description.json', './data/user-image.png', './data/user-lastname.json', './data/user-name.json']
 
-            for arquivo in arquivos:
+            for file in files:
                 try:
-                    os.remove(arquivo)
+                    os.remove(file)
                 except:
                     pass
 
             recharge = True
-
-
 
     with st.popover(":material/no_accounts: Deletar Conta", use_container_width=True):
         st.caption("Atenção: Esta ação é irreversível e apagará todos os seus dados.")
 
         verify = st.text_input("Digite sua senha para confirmar a exclusão da conta", type="password")
 
-        with open('./data/login.json', 'r') as arquivo:
-            password = json.load(arquivo)
+        with open('./data/login.json', 'r') as f:
+            password = json.load(f)
             password = password['user']['password']
 
         if st.button("Deletar Conta", use_container_width=True):
@@ -52,16 +50,16 @@ try:
                 with st.spinner("Deletando conta..."):
                     sleep(2)
 
-                with open('./data/login.json', 'r') as arquivo:
-                    username = json.load(arquivo)
+                with open('./data/login.json', 'r') as f:
+                    username = json.load(f)
                     username = username['user']['username']
 
 
-                arquivos = ['./data/follow.json', './data/login.json', './data/user-birth.json', './data/user-description.json', './data/user-image.png', './data/user-lastname.json', './data/user-name.json', './data/welcome-data.txt']
+                files = ['./data/follow.json', './data/login.json', './data/user-birth.json', './data/user-description.json', './data/user-image.png', './data/user-lastname.json', './data/user-name.json', './data/welcome-data.txt']
 
-                for arquivo in arquivos:
+                for file in files:
                     try:
-                        os.remove(arquivo)
+                        os.remove(file)
                     except:
                         pass
                             #  https://neutrumsocial1-default-rtdb.firebaseio.com/FlameOFC
