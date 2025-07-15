@@ -42,6 +42,11 @@ st.markdown('''<head>
 
 
 
+
+# USAR MAIS TARDE PARA NOTIFICAÇÕES
+# x = lambda: ':material/message:' if True else ':material/notifications_unread:'
+
+
 pages = {
     # "🥏 Primeiros Passos": [
     #     st.Page("pages/welcome.py", title=f"Bem-vindo", icon=":material/emoji_people:"),
@@ -54,7 +59,7 @@ pages = {
     ],
 
     "🌾 Secundário": [
-        st.Page("pages/messages.py", title=f"Mensagens", icon=":material/message:"),
+        st.Page("pages/messages.py", title=f"Chat e Amigos", icon=':material/message:'), # MUDAR PARA LAMBDA X.
         st.Page("pages/notifications.py", title=f"Notificações", icon=":material/notifications:")
     ],
 
@@ -63,6 +68,7 @@ pages = {
         st.Page("pages/settings.py", title=f"Configurações", icon=":material/settings:")
     ]
 }
+
 
 
 try:

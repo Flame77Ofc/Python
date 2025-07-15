@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import json
 from time import sleep
+from datetime import datetime
 
 st.title('Bem vindo!')
 
@@ -67,91 +68,53 @@ except Exception as erro:
         requirements = True # Garante que todos os requisitos estão corretos
 
         ## Nome de usuário
-        # Verifica se nome de usuário tem mais de 6 caracteres
-        if len(username) < 6:
-            st.badge('O nome de usuário deve ter ao menos 8 caracteres', color='red', icon='✖')
+        # Verifica se o nome de usuário tem entre 6 caracteres e 25 caracteres
+        if len(username) < 6 or len(username) > 25:
+            st.badge('O nome de usuário deve estar entre 6 a 25 caracteres', color='red', icon='✖')
             requirements = False
         else:
-            st.badge('O nome de usuário tem 8 caracteres', color="green", icon='✔')
+            st.badge('O nome de usuário está entre 6 a 25 caracteres', color="green", icon='✔')
 
-
-        # Verifica se há vírgula ou ponto - O que influencia no csv
-        forbidden = '.,'
-        has_forb = [True for forb in forbidden if forb in username]
-
-        status = True if has_forb else False
-        if status:
-            st.badge('O nome de usuário não deve ter ponto nem vírgula', color='red', icon='✖')
-            requirements = False
+        # Verifica se o nome de usuário não tem caracteres especiais
+        if username.isalnum():
+            st.badge('O nome de usuário não tem símbolos especiais', color="green", icon='✔')
         else:
-            st.badge('O nome de usuário não tem ponto nem vírgula', color="green", icon='✔')
+            st.badge('O nome de usuário não deve ter símbolos especiais', color='red', icon='✖')
+            requirements = False
 
 
 
         ## Senha
-        # Verifica a senha tem mais de 8 caracteres
-        if len(password) < 8:
-            st.badge('A senha deve ter ao menos 8 caracteres', color='red', icon='✖')
+        # Verifica se a senha tem entre 8 caracteres e 30 caracteres
+        if len(password) > 30 or len(password) < 8:
+            st.badge('A senha deve estar entre 8 a 30 caracteres', color='red', icon='✖')
             requirements = False
         else:
-            st.badge('A senha tem 8 caracteres', color="green", icon='✔')
+            st.badge('A senha está entre 8 a 30 caracteres', color="green", icon='✔')
 
 
-        # Verifica se tem uma letra na senha
-        letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        has_letter = [True for letter in letters if letter in password]
-
-        status = True if has_letter else False
-        if status:
-            st.badge('A senha tem uma letra', color="green", icon='✔')
+        # Verifica se a senha não tem caracteres especiais
+        if password.isalnum():
+            st.badge('A senha não tem símbolos especiais', color="green", icon='✔')
         else:
-            st.badge('A senha deve ter ao mínimo 1 letra', color='red', icon='✖')
+            st.badge('A senha não deve ter símbolos especiais', color='red', icon='✖')
             requirements = False
-
-
-        # Verifica se na senha há numeros
-        numbers = '0123456789'
-        has_number = [True for number in numbers if number in password]
-
-        status = True if has_number else False
-        if status == False:
-            st.badge('A senha deve ter ao mínimo 1 número', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('A senha tem um número', color="green", icon='✔')
-
-
-        # Verifica se na senha há um caractere especial
-        especials = '@#!$&'
-        has_especial = [True for especial in especials if especial in password]
-
-        status = True if has_especial else False
-        if status == False:
-            st.badge('Deve ser incluso **@/#/!/$/&** na senha', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('A senha tem um caractere especial', color="green", icon='✔')
-        
-        # Verifica se há vírgula ou ponto - O que influencia no csv
-        forbidden = '.,'
-        has_forb = [True for forb in forbidden if forb in password]
-
-        status = True if has_forb else False
-        if status:
-            st.badge('A senha não deve ter ponto nem vírgula', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('A senha não tem ponto nem vírgula', color="green", icon='✔')
-
 
 
         # Verifica se os requisitos são satisfeitos
         if requirements:
             DATABASE = "https://neutrumsocial1-default-rtdb.firebaseio.com/.json"
 
-            data = {
+            firebase_data = { # BANCO DE DADOS FIREBASE
                 username: {
-                    'password': password
+                    "criação": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
+                    "senha": password,
+                    "status": {
+                        "lista_seguindo": ["None"],
+                        "lista_seguidores": ["None"],
+                        "seguidores": 0,
+                        "seguindo": 0,
+                    }
                 }
             }
 
@@ -163,21 +126,27 @@ except Exception as erro:
             else:
                 with st.spinner('Verificando Informações...'):
                     sleep(3)
-                    r = requests.patch(DATABASE, json=data)
+                    r = requests.patch(DATABASE, json=firebase_data)
                     if r.status_code == 200:
                         st.info("Usuário criado com sucesso!")
                         st.toast("Usuário criado com sucesso!", icon="✔")
 
 
                         data = {
-                            "user": [
-                                username,
-                                password
-                            ]
+                            "user": {
+                                "username": username,
+                                "password": password,
+                                "status": {
+                                    "lista": [],
+                                    "followers": 0,
+                                    "following": 0
+                                }
+                            }
                         }
 
                         with open('./data/login.json', 'w') as arquivo:
                             json.dump(data, arquivo, indent=4)
+
 
                             st.info('Página prestes a recarregar')
                             st.toast("Página prestes a recarregar!", icon="🔁")
@@ -188,129 +157,49 @@ except Exception as erro:
                         st.error("Erro ao criar o usuário:", r.status_code)
 
     def analysis_login():
-        requirements = True # Garante que todos os requisitos estão corretos
+        DATABASE = "https://neutrumsocial1-default-rtdb.firebaseio.com/.json"
 
-        ## Nome de usuário
-        # Verifica se nome de usuário tem mais de 6 caracteres
-        if len(username) < 6:
-            st.badge('O nome de usuário deve ter ao menos 8 caracteres', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('O nome de usuário tem 8 caracteres', color="green", icon='✔')
+        r = requests.get(DATABASE)
+        json_data = r.json()
 
+        if username in json_data:
+            if json_data[username]["senha"] == password:
+                if r.status_code == 200:
+                    with st.spinner('Verificando Informações...'):
+                        sleep(3)
 
-        # Verifica se há vírgula ou ponto - O que influencia no csv
-        forbidden = '.,'
-        has_forb = [True for forb in forbidden if forb in username]
+                        st.info("Informações Corretas!")
+                        st.toast("Informações Corretas!", icon="✔")
 
-        status = True if has_forb else False
-        if status:
-            st.badge('O nome de usuário não deve ter ponto nem vírgula', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('O nome de usuário não tem ponto nem vírgula', color="green", icon='✔')
-
-
-
-        ## Senha
-        # Verifica a senha tem mais de 8 caracteres
-        if len(password) < 8:
-            st.badge('A senha deve ter ao menos 8 caracteres', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('A senha tem 8 caracteres', color="green", icon='✔')
-
-
-        # Verifica se tem uma letra na senha
-        letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        has_letter = [True for letter in letters if letter in password]
-
-        status = True if has_letter else False
-        if status:
-            st.badge('A senha tem uma letra', color="green", icon='✔')
-        else:
-            st.badge('A senha deve ter ao mínimo 1 letra', color='red', icon='✖')
-            requirements = False
-
-
-        # Verifica se na senha há numeros
-        numbers = '0123456789'
-        has_number = [True for number in numbers if number in password]
-
-        status = True if has_number else False
-        if status == False:
-            st.badge('A senha deve ter ao mínimo 1 número', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('A senha tem um número', color="green", icon='✔')
-
-
-        # Verifica se na senha há um caractere especial
-        especials = '@#!$&'
-        has_especial = [True for especial in especials if especial in password]
-
-        status = True if has_especial else False
-        if status == False:
-            st.badge('Deve ser incluso **@/#/!/$/&** na senha', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('A senha tem um caractere especial', color="green", icon='✔')
-        
-        # Verifica se há vírgula ou ponto - O que influencia no csv
-        forbidden = '.,'
-        has_forb = [True for forb in forbidden if forb in password]
-
-        status = True if has_forb else False
-        if status:
-            st.badge('A senha não deve ter ponto nem vírgula', color='red', icon='✖')
-            requirements = False
-        else:
-            st.badge('A senha não tem ponto nem vírgula', color="green", icon='✔')
-
-
-
-        # Verifica se os requisitos são satisfeitos
-        if requirements:
-            DATABASE = "https://neutrumsocial1-default-rtdb.firebaseio.com/.json"
-
-            r = requests.get(DATABASE)
-            json_data = r.json()
-
-            if username in json_data:
-                if json_data[username]["password"] == password:
-                    if r.status_code == 200:
-                        with st.spinner('Verificando Informações...'):
-                            sleep(3)
-                            st.info("Informações Corretas!")
-                            st.toast("Informações Corretas!", icon="✔")
-
-
-
-
-                            data = {
-                                "user": [
-                                    username,
-                                    password
-                                ]
+                        data = {
+                            "user": {
+                                "username": username,
+                                "password": password,
+                                "status": {
+                                    "lista": [],
+                                    "followers": 0,
+                                    "following": 0
+                                }
                             }
+                        }
 
-                            with open('./data/login.json', 'w') as arquivo:
-                                json.dump(data, arquivo, indent=4)
+                        with open('./data/login.json', 'w') as arquivo:
+                            json.dump(data, arquivo, indent=4)
 
-                                st.info('Página prestes a recarregar')
-                                st.toast("Página prestes a recarregar🔁")
+                            st.info('Página prestes a recarregar')
+                            st.toast("Página prestes a recarregar🔁")
 
-                                sleep(2)
-                                st.rerun()
+                            sleep(2)
+                            st.rerun()
 
 
-                        st.write('Login realizado!')
-                    else:
-                        st.warning(f'Erro: {r.status_code}')
+                    st.write('Login realizado!')
                 else:
-                    st.warning('Senha incorreta')
+                    st.warning(f'Erro: {r.status_code}')
             else:
-                st.warning('Nome de usuário não encontrado')
+                st.warning('Senha incorreta')
+        else:
+            st.warning('Nome de usuário não encontrado')
 
     col1, col2 = st.columns([1, 1])
 
@@ -319,7 +208,7 @@ except Exception as erro:
             st.markdown('<style>h2 {text-align: center;}</style><h2>Cadastrar</h2>', unsafe_allow_html=True)
 
             username = st.text_input('Crie seu nome de usuário')
-            password = st.text_input('Crie sua senha')
+            password = st.text_input('Crie sua senha', type="password")
 
             submit = st.button("Cadastrar", use_container_width=True)
             if submit:
@@ -330,7 +219,7 @@ except Exception as erro:
             st.markdown('<style>h2 {text-align: center;}</style><h2>Entrar</h2>', unsafe_allow_html=True)
 
             username = st.text_input('Digite seu nome de usuário')
-            password = st.text_input('Digite sua senha')
+            password = st.text_input('Digite sua senha', type="password")
 
             submit = st.button("Entrar", use_container_width=True)
             if submit:

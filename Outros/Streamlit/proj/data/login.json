@@ -1,6 +1,11 @@
 {
-    "user": [
-        "Flame77OFC",
-        "1234567890#a"
-    ]
+    "user": {
+        "username": "naosonheiqueiacriarconta",
+        "password": "naosonheiqueiacriarconta",
+        "status": {
+            "lista": [],
+            "followers": 0,
+            "following": 0
+        }
+    }
 }

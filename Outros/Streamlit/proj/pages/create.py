@@ -4,10 +4,7 @@ from assets.css.no_login_centralized import set_style
 
 try:
     with open('./data/login.json', 'r') as arquivo: pass
-    st.write('')
-
-
-    busca = 
+    st.write('Logado')
 
 except:
     set_style(True, True, True)
