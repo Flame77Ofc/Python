@@ -1,7 +1,6 @@
 import streamlit as st
 
 def set_style(button: bool, text: bool, title: bool):
-
     if button:
         st.markdown('''
         <style>

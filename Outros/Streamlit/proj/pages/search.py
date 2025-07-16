@@ -35,7 +35,7 @@ try:
 
             else: # Se nenhum dos casos acima for verdadeiro, exibe os dados do usuário encontrado
                 for key, value in json_data.items():
-                    if 'criação' in key or 'senha' in key:
+                    if 'criação' in key or 'senha' in key or 'posts' in key:
                         pass
 
                     else:
@@ -105,19 +105,19 @@ try:
 
                             st.rerun()
 
-        with st.popover("Deseja encontrar pessoas?"):
-            st.caption("Aqui vai algumas sugestões de pessoas que você pode encontrar")
+    with st.popover("Deseja encontrar pessoas?"):
+        st.caption("Aqui vai algumas sugestões de pessoas que você pode encontrar")
 
-            DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/.json"
+        DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/.json"
 
-            r = requests.get(DATABASE)
-            json_data = r.json()
+        r = requests.get(DATABASE)
+        json_data = r.json()
 
-            for user in json_data:
-                if user == username or 'users' in user:
-                    pass
-                else:
-                    st.write(user)
+        for user in json_data:
+            if user == username or 'users' in user:
+                pass
+            else:
+                st.write(user)
 
 
 except Exception as erro:

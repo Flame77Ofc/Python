@@ -174,7 +174,21 @@ try:
             st.caption(str(following))
 
 
-except:
+            st.write("#### Posts")
+            DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/posts/.json"
+
+            r = requests.get(DATABASE)
+            posts = r.json()
+
+            quantidade = 0
+            if posts == ['0']:
+                st.caption("0")
+            else:
+                for post in posts:
+                    quantidade += 1
+                st.caption(str(quantidade))
+
+except Exception as error:
     set_style(True, True, True)
 
     st.title('🌞 Vamos deixar nosso perfil bonito!')

@@ -4,10 +4,11 @@
 <!-- Ir para a área de Search -->
 <!-- Atualizar variáveis em português -->
 <!-- Resolver o problema dos caracteres especiais -->
+utf-8 em todos os arquivos
+Arrumar todos os "except: pass" -> except:
+pass
 
-
-
-
+Se o usuário estiver seguindo um usuário especifico, na área de notificações aparecerá os post do seguidor
 
 
 

@@ -108,6 +108,7 @@ except Exception as erro:
                 username: {
                     "criação": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
                     "senha": password,
+                    "posts": {"0": "0"},
                     "status": {
                         "lista_seguindo": ["None"],
                         "lista_seguidores": ["None"],

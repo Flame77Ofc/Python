@@ -26,7 +26,7 @@ try:
                 username = username['user']['username']
 
 
-            files = ['./data/follow.json', './data/login.json', './data/user-birth.json', './data/user-description.json', './data/user-image.png', './data/user-lastname.json', './data/user-name.json']
+            files = ['./data/follow.json', './data/login.json', './data/user-birth.json', './data/user-description.json', './data/user-image.png', './data/user-lastname.json', './data/user-name.json', './data/welcome-data.txt']
 
             for file in files:
                 try:
@@ -62,7 +62,6 @@ try:
                         os.remove(file)
                     except:
                         pass
-                            #  https://neutrumsocial1-default-rtdb.firebaseio.com/FlameOFC
                 DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/.json"
                 r = requests.delete(DATABASE)
 
@@ -71,8 +70,6 @@ try:
 
             else:
                 st.error("Senha incorreta.")
-
-
 except:
     set_style(True, True, True)
 
