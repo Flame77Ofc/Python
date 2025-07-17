@@ -173,7 +173,6 @@ try:
             st.write(f"#### Seguindo")
             st.caption(str(following))
 
-
             st.write("#### Posts")
             DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/posts/.json"
 

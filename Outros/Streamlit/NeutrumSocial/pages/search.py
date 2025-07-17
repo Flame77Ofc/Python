@@ -35,7 +35,7 @@ try:
 
             else: # Se nenhum dos casos acima for verdadeiro, exibe os dados do usuário encontrado
                 for key, value in json_data.items():
-                    if 'criação' in key or 'senha' in key or 'posts' in key:
+                    if 'criação' in key or 'senha' in key or 'posts' in key or 'chat' in key:
                         pass
 
                     else:

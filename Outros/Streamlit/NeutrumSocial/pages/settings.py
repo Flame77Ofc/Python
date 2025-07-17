@@ -12,14 +12,20 @@ try:
     st.title(':material/build: Configurações')
 
     with st.popover(":material/info: Sobre", use_container_width=True):
-        pass
+        st.caption("""O que é o NeutrumSocial?
+
+É uma simulação de uma rede social, que permite que o usuário possa interagir com o sistema, podendo criar seus próprios posts, configurar sua conta, conversar com amigos e muito mais.
+
+Por que foi criado?
+
+Meu objetivo era fazer um projeto de uma rede social "sem limites" - onde o usuário pode criar coisas com sua imaginação e vontade.""")
 
     with st.popover(":material/logout: Sair", use_container_width=True):
         st.caption("Caso você deseja sair, precisará entrar novamente para acessar sua conta. Isso não irá apagar seus dados, nem deletará a sua conta.")
 
         if st.button("Sair", use_container_width=True):
             with st.spinner("Saindo..."):
-                sleep(2)
+                sleep(0.5)
 
             with open('./data/login.json', 'r') as f:
                 username = json.load(f)
@@ -48,7 +54,7 @@ try:
         if st.button("Deletar Conta", use_container_width=True):
             if verify == password:
                 with st.spinner("Deletando conta..."):
-                    sleep(2)
+                    sleep(0.5)
 
                 with open('./data/login.json', 'r') as f:
                     username = json.load(f)
