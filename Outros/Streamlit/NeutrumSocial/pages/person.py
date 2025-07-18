@@ -1,3 +1,8 @@
+"""
+Este arquivo é responsável por configurar suas informações, como nome, sobrenome, descrição, data de nascimento.
+Estes dados são todos enviados pelo banco de dados da firebase.
+"""
+
 import streamlit as st
 import requests
 import json
@@ -17,7 +22,7 @@ st.markdown('''
 
 try:
     set_style(False, False, True)
-    with open('./data/login.json', 'r', encoding='utf-8') as arquivo:
+    with open('./data/login.json', 'r', encoding="utf-8") as f:
         pass
 
     with st.container(border=True):
@@ -27,22 +32,22 @@ try:
 
         with col1:
             st.write('#### Nome de usuário')
-            with open('./data/login.json', 'r', encoding='utf-8') as arquivo:
-                username = json.load(arquivo)
+            with open('./data/login.json', 'r', encoding="utf-8") as f:
+                username = json.load(f)
                 username = username["user"]["username"]
             st.caption(username)
 
             st.write('#### Senha')
-            with open('./data/login.json', 'r', encoding='utf-8') as arquivo:
-                password = json.load(arquivo)
+            with open('./data/login.json', 'r', encoding="utf-8") as f:
+                password = json.load(f)
                 password = password["user"]["password"]
             with st.popover("Revelar", icon='👀'):
                 st.caption(password)
 
             st.write("#### Nome")
             try: 
-                with open('./data/user-name.json', 'r', encoding='utf-8') as arquivo: 
-                    name = json.load(arquivo)
+                with open('./data/user-name.json', 'r', encoding="utf-8") as f: 
+                    name = json.load(f)
                 st.caption(name["nome"])
             except:
                 with st.empty():
@@ -53,8 +58,8 @@ try:
                             "nome": name
                         }
 
-                        with open('./data/user-name.json', 'w', encoding='utf-8') as arquivo:
-                            json.dump(data, arquivo, indent=4)
+                        with open('./data/user-name.json', 'w', encoding="utf-8") as f:
+                            json.dump(data, f, indent=4)
                         st.caption(name)
 
                         DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/.json"
@@ -65,8 +70,8 @@ try:
 
             st.write("#### Sobrenome")
             try:
-                with open('./data/user-lastname.json', 'r', encoding='utf-8') as arquivo: 
-                    lastname = json.load(arquivo)
+                with open('./data/user-lastname.json', 'r', encoding="utf-8") as f: 
+                    lastname = json.load(f)
                 st.caption(lastname["sobrenome"])
             except:
                 with st.empty():
@@ -78,8 +83,8 @@ try:
                             "sobrenome": lastname
                         }
 
-                        with open('./data/user-lastname.json', 'w', encoding='utf-8') as arquivo:
-                            json.dump(data, arquivo, indent=4)
+                        with open('./data/user-lastname.json', 'w', encoding="utf-8") as f:
+                            json.dump(data, f, indent=4)
                         st.caption(lastname.title())
 
                         DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/.json"
@@ -90,8 +95,8 @@ try:
 
             st.write("#### Data de Nascimento")
             try:
-                with open('./data/user-birth.json', 'r', encoding='utf-8') as arquivo: 
-                    birth = json.load(arquivo)
+                with open('./data/user-birth.json', 'r', encoding="utf-8") as f: 
+                    birth = json.load(f)
                 st.caption(birth["nascimento"])
             except:
                 with st.empty():
@@ -104,8 +109,8 @@ try:
                             "nascimento": birth
                         }
 
-                        with open('./data/user-birth.json', 'w', encoding='utf-8') as arquivo:
-                            json.dump(data, arquivo, indent=4)
+                        with open('./data/user-birth.json', 'w', encoding="utf-8") as f:
+                            json.dump(data, f, indent=4)
                         st.caption(birth)
 
                         DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/.json"
@@ -116,8 +121,8 @@ try:
 
             st.write("#### Descrição")
             try:
-                with open('./data/user-description.json', 'r', encoding='utf-8') as arquivo: 
-                    description = json.load(arquivo)
+                with open('./data/user-description.json', 'r', encoding="utf-8") as f: 
+                    description = json.load(f)
                 st.caption(description["descrição"])
             except:
                 with st.empty():
@@ -129,8 +134,8 @@ try:
                             "descrição": description
                         }
 
-                        with open('./data/user-description.json', 'w', encoding='utf-8') as arquivo:
-                            json.dump(data, arquivo, indent=4)
+                        with open('./data/user-description.json', 'w', encoding="utf-8") as f:
+                            json.dump(data, f, indent=4)
                         st.caption(description)
 
                         DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/.json"

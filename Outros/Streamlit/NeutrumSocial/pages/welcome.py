@@ -1,3 +1,8 @@
+"""
+Este arquivo é a página de boas-vindas, é quando o usuário não possui o arquivo de login.
+Coleta as informações do usuário e insere no database.
+"""
+
 import streamlit as st
 import requests
 import json
@@ -7,10 +12,9 @@ from datetime import datetime
 st.title('Bem vindo!')
 
 try:
-    with open('data/welcome-data.txt', 'r', encoding='utf-8') as file: pass
+    with open('data/welcome-data.txt', 'r', encoding="utf-8") as f:
+        pass
 except:
-    with open('data/welcome-data.txt', 'w', encoding='utf-8') as file: pass
-
     try:
         DATABASE = "https://neutrumsocial1-default-rtdb.firebaseio.com/.json"
 
@@ -43,7 +47,8 @@ except:
 
 
 try:
-    with open('./data/login.json', 'r') as arquivo: pass
+    with open('./data/login.json', 'r', encoding="utf-8") as f:
+        pass
 
 except Exception as erro:
     st.subheader('O que é o :rainbow[NeutrumSocial]?')
@@ -143,8 +148,8 @@ except Exception as erro:
                             }
                         }
 
-                        with open('./data/login.json', 'w') as arquivo:
-                            json.dump(data, arquivo, indent=4)
+                        with open('./data/login.json', 'w', encoding="utf-8") as f:
+                            json.dump(data, f, indent=4)
 
                             st.info('Página prestes a recarregar')
                             st.toast("Página prestes a recarregar!", icon="🔁")
@@ -181,8 +186,8 @@ except Exception as erro:
                             }
                         }
 
-                        with open('./data/login.json', 'w') as arquivo:
-                            json.dump(data, arquivo, indent=4)
+                        with open('./data/login.json', 'w', encoding="utf-8") as f:
+                            json.dump(data, f, indent=4)
 
                             st.info('Página prestes a recarregar')
                             st.toast("Página prestes a recarregar🔁")

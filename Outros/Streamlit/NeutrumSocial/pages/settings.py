@@ -1,3 +1,8 @@
+"""
+Este arquivo é responsável pelas configurações do site em si.
+Permite que o usuário possa sair, deletar sua conta ou ver mais sobre o projeto.
+"""
+
 import streamlit as st
 from assets.css.no_login_centralized import set_style
 import json
@@ -8,7 +13,6 @@ from time import sleep
 
 recharge = False
 try:
-    with open('./data/login.json', 'r') as f: pass
     st.title(':material/build: Configurações')
 
     with st.popover(":material/info: Sobre", use_container_width=True):
@@ -27,7 +31,7 @@ Meu objetivo era fazer um projeto de uma rede social "sem limites" - onde o usu�
             with st.spinner("Saindo..."):
                 sleep(0.5)
 
-            with open('./data/login.json', 'r') as f:
+            with open('./data/login.json', 'r', encoding="utf-8") as f:
                 username = json.load(f)
                 username = username['user']['username']
 
@@ -47,7 +51,7 @@ Meu objetivo era fazer um projeto de uma rede social "sem limites" - onde o usu�
 
         verify = st.text_input("Digite sua senha para confirmar a exclusão da conta", type="password")
 
-        with open('./data/login.json', 'r') as f:
+        with open('./data/login.json', 'r', encoding="utf-8") as f:
             password = json.load(f)
             password = password['user']['password']
 
@@ -56,7 +60,7 @@ Meu objetivo era fazer um projeto de uma rede social "sem limites" - onde o usu�
                 with st.spinner("Deletando conta..."):
                     sleep(0.5)
 
-                with open('./data/login.json', 'r') as f:
+                with open('./data/login.json', 'r', encoding="utf-8") as f:
                     username = json.load(f)
                     username = username['user']['username']
 

@@ -1,3 +1,8 @@
+"""
+Este arquivo realiza a parte da criação de posts.
+Aqui o usuário coloca o título, a descrição, a imagem e clica no botão de enviar, e o arquivo envia estes dados paara o banco de dados
+"""
+
 import streamlit as st
 from assets.css.no_login_centralized import set_style
 from datetime import datetime
@@ -5,9 +10,10 @@ import json
 import requests
 
 try:
+    st.caption("Arrase criando posts chamativos para atrair mais seguidores! 🌠")
     image_error = False # Define se a imagem falhou no carregamento/url não existe
 
-    with open('./data/login.json', 'r', encoding='utf-8') as f:
+    with open('./data/login.json', 'r', encoding="utf-8") as f:
         username = json.load(f)
         username = username["user"]["username"]
 
@@ -67,17 +73,17 @@ try:
                 r = requests.get(DATABASE)
                 json_data = r.json() or {}
 
-                for titulo, post in json_data.items():
+                for title, post in json_data.items():
                     if not isinstance(post, dict):
                         continue  # Ignora entradas inválidas
 
-                    st.markdown(f"### {titulo}")
+                    st.markdown(f"### {title}")
                     st.write("🗓️", post.get("data", "—"))
                     st.write("📝", post.get("descrição", "—"))
 
-                    categorias = post.get("categoria", [])
-                    if isinstance(categorias, list) and categorias:
-                        st.write("🏷️", ", ".join(categorias))
+                    categories = post.get("categoria", [])
+                    if isinstance(categories, list) and categories:
+                        st.write("🏷️", ", ".join(categories))
                     else:
                         st.write("🏷️ Sem categoria")
 

@@ -1,10 +1,15 @@
+"""
+Este arquivo permite pesquisar por usuários, assim podendo ver informações básicas e seguir o usuário.
+Além de mostrar também uma aba com alguns usuários.
+"""
+
 import streamlit as st
 import requests
 from assets.css.no_login_centralized import set_style
 import json
 
 try:
-    with open('./data/login.json', 'r') as arquivo: pass
+    st.caption("Que tal encontrar amigos e novas pessoas?")
     find_username = st.text_input(":material/id_card: Digite o nome de usuário que deseja encontrar", placeholder="Nome de usuário")
 
     DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{find_username}/.json"
@@ -15,8 +20,8 @@ try:
     submit = st.button(':material/travel_explore: Encontrar', type="primary")
 
     # Abre o arquivo de login para obter o nome de usuário do usuário atual
-    with open('./data/login.json', 'r') as arquivo:
-        username = json.load(arquivo); username = username['user']['username']
+    with open('./data/login.json', 'r', encoding="utf-8") as f:
+        username = json.load(f); username = username['user']['username']
 
     # st.session_state
     if 'clique' not in st.session_state:

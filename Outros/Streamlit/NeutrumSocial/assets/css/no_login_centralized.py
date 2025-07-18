@@ -27,4 +27,3 @@ def set_style(button: bool, text: bool, title: bool):
             }
         </style>
         ''', unsafe_allow_html=True)
-

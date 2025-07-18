@@ -1,3 +1,8 @@
+"""
+Este arquivo é responsável por executar todo o projeto, conhecido como EXECUTADOR.
+É ele quem cria as páginas e configura alguns estilos para cada página.
+"""
+
 import streamlit as st
 import requests
 import json
@@ -62,98 +67,99 @@ pages = {
 }
 
 try:
-    with open('./data/login.json', 'r') as arquivo: 
+    with open('./data/login.json', 'r', encoding="utf-8") as f: 
         pass
 except:
     pages["🥏 Primeiros Passos"] = st.Page("pages/welcome.py", title="Bem-vindo", icon=":material/emoji_people:"),
 
 ### Chat
 try:
-    with open("./data/login.json", 'r', encoding="utf-8") as arquivo:
-        username = json.load(arquivo)["user"]["username"]
+    with open("./data/login.json", 'r', encoding="utf-8") as f:
+        username = json.load(f)["user"]["username"]
 
     # Coletando os seguindo e os seguidores
-    seguindo = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/status/lista_seguindo/.json").json()
+    following = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/status/lista_following/.json").json()
 
-    seguidores = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/status/lista_seguidores/.json").json()
-    lista = set()
+    followers = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/status/lista_seguidores/.json").json()
+    users = set()
 
     # Adicionando cada na lista (set)
-    for seguindo in seguindo:
-        lista.add(seguindo)
+    for following in following:
+        users.add(following)
 
-    for seguidor in seguidores:
-        lista.add(seguidor)
+    for seguidor in followers:
+        users.add(seguidor)
 
-    lista.remove("None")
-    lista = list(lista)
+    users.remove("None")
+    users = list(users)
 
-    if len(lista) == 0:
+    if len(users) == 0:
         pass
     else:
         # Criando os arquivos para cada seguindo/seguidor da lista.
-        for user in lista:
+        for user in users:
             try:
-                with open(f"pages/friends/{user}.py", "r") as arquivo: pass
+                with open(f"pages/friends/{user}.py", "r", encoding="utf-8") as f: 
+                    pass
             except:
-                with open(f"pages/friends/{user}.py", "w", encoding='utf-8') as arquivo:
-                    arquivo.write(f'''import streamlit as st
+                with open(f"pages/friends/{user}.py", "w", encoding="utf-8") as f:
+                    f.write(f'''import streamlit as st
 import requests
 import json
 
 me = "{username}"
 friend = "{user}"
 
-letra = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/$me!/chat/$friend!/letra/.json").json()
+letter = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/$me!/chat/$friend!/letra/.json").json()
 main = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/$me!/chat/$friend!/main/.json").json()
 sec = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/$me!/chat/$friend!/sec/.json").json()
 
-with open("./data/login.json", "r") as arquivo:
-    username = json.load(arquivo)["user"]["username"]
+with open("./data/login.json", "r", encoding="utf-8") as f:
+    username = json.load(f)["user"]["username"]
 
-mensagens = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/$me!/chat/$friend!/.json").json()
-for i, mensagem in mensagens.items():
-    if mensagem == "None" or (i == "letra" and mensagem == "a") or (i == "letra" and mensagem == "b") or (i == "main" and mensagem == me) or (i == "main" and mensagem == friend):
+messages = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/$me!/chat/$friend!/.json").json()
+for key, message in messages.items():
+    if message == "None" or (key == "letra" and message == "a") or (key == "letra" and message == "b") or (key == "main" and message == me) or (key == "main" and message == friend):
         pass
     else:
 
-        if i[0] == "a":
+        if key[0] == "a":
             if me == main:
                 with st.chat_message("user", avatar=":material/mood:"):
                     st.caption(f":green[$main!]")
-                    st.write(mensagem)
+                    st.write(message)
             else:
                 with st.chat_message("user", avatar=":material/account_circle:"):
                     st.caption(f":blue[Eu $sec!]")
-                    st.write(mensagem)
+                    st.write(message)
         else:
             if me == main:
                 with st.chat_message("user", avatar=":material/account_circle:"):
                     st.caption(f":blue[Eu $me!]")
-                    st.write(mensagem)
+                    st.write(message)
             else:
                 with st.chat_message("user", avatar=":material/mood:"):
                     st.caption(f":green[Amigo $friend!]")
-                    st.write(mensagem)
+                    st.write(message)
 
 
-enviar_mensagem = st.chat_input("Digite sua mensagem")
+send_message = st.chat_input("Digite sua mensagem")
 
-if enviar_mensagem:
+if send_message:
     with st.spinner("Enviado Mensagem, aguarde..."):
         # Enviando a mensagem para o banco de dados
         r = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/$me!/chat/$friend!/.json").json()
 
-        pessoa_a = f"a$[sum(pessoa[0].count('a') for pessoa, _ in r.items() if pessoa[0] == 'a')][0] + 1!"
-        pessoa_b = f"b$[sum(pessoa[0].count('b') for pessoa, _ in r.items() if pessoa[0] == 'b')][0] + 1!"
+        a_person = f"a$[sum(pessoa[0].count('a') for pessoa, _ in r.items() if pessoa[0] == 'a')][0] + 1!"
+        b_person = f"b$[sum(pessoa[0].count('b') for pessoa, _ in r.items() if pessoa[0] == 'b')][0] + 1!"
 
-        if letra == "a":
+        if letter == "a":
             data = $
-                pessoa_a: enviar_mensagem
+                a_person: send_message
             !
         else:
             data = $
-                pessoa_b: enviar_mensagem
+                b_person: send_message
             !
 
         r = requests.patch(f"https://neutrumsocial1-default-rtdb.firebaseio.com/$me!/chat/$friend!/.json", json=data)

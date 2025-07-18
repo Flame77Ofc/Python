@@ -1,11 +1,19 @@
+"""
+Este arquivo mostra todos os posts (sem ser os seus próprios) na página.
+"""
+
 import streamlit as st
 from assets.css.no_login_centralized import set_style
 import json
 import requests
 
 try:
-    with open('./data/login.json', 'r') as arquivo:
-        username = json.load(arquivo)
+    st.caption("Explore os posts do momento, veja o que está rolando!")
+
+    st.divider()
+
+    with open('./data/login.json', 'r', encoding="utf-8") as f:
+        username = json.load(f)
         username = username["user"]["username"]
 
     r = requests.get("https://neutrumsocial1-default-rtdb.firebaseio.com/.json")
@@ -20,25 +28,25 @@ try:
 
             if json_data == ['0']: pass
             else:
-                categorias = []
-                for chave, valor in json_data.items():
+                categories = []
+                for key, value in json_data.items():
                     with st.container(border=True):
                         st.write(user)
-                        st.write(f"## **{chave}**")
-                        for chave2, valor2 in valor.items():
-                            if chave2 == 'data':
-                                st.write(f"📆 {valor2}")
-                            elif chave2 == "categoria":
-                                for categoria in valor2:
-                                    categorias.append(categoria)
-                                st.write(f"🏷️: {", ".join(categorias)}")
-                            elif chave2 == "descrição":
-                                st.write(f"📃 {valor2}")
-                            elif chave2 == "imagem":
+                        st.write(f"## **{key}**")
+                        for key2, value2 in value.items():
+                            if key2 == 'data':
+                                st.write(f"📆 {value2}")
+                            elif key2 == "categoria":
+                                for category in value2:
+                                    categories.append(category)
+                                st.write(f"🏷️: {", ".join(categories)}")
+                            elif key2 == "descrição":
+                                st.write(f"📃 {value2}")
+                            elif key2 == "imagem":
                                 try:
-                                    st.image(valor2, width=300)
+                                    st.image(value2, width=300)
                                 except:
-                                    st.caption(f"[*Não foi possível carregar a imagem*]({valor2})")
+                                    st.caption(f"[*Não foi possível carregar a imagem*]({value2})")
 
                 st.divider()
 
