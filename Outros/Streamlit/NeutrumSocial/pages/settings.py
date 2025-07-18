@@ -71,6 +71,12 @@ Meu objetivo era fazer um projeto de uma rede social "sem limites" - onde o usu√
                 DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/.json"
                 r = requests.delete(DATABASE)
 
+                # Decrementa -1 em users
+                r = requests.get(f"https://neutrumsocial1-default-rtdb.firebaseio.com/users/.json")
+                update_users = int(r.json()) - 1
+
+                r = requests.patch(f"https://neutrumsocial1-default-rtdb.firebaseio.com/users/.json", json=update_users)
+
                 st.success("Conta deletada com sucesso!")
                 recharge = True
 

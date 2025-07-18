@@ -64,18 +64,11 @@ try:
                         follow_button = st.button("Seguir")
                         if follow_button:
                             # Criando a data de chat/conversa
-                            DATABASE = f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/.json"
+                            data = {"chat": {find_username: {"letra": "a", "main": username, "sec": find_username}}}
+                            r = requests.patch(f"https://neutrumsocial1-default-rtdb.firebaseio.com/{username}/.json", json=data)
 
-                            data = {
-                                "chat": {
-                                    find_username: {
-                                        "you": "",
-                                        "friend": ""
-                                    }
-                                }
-                            }
-
-                            r = requests.patch(DATABASE, json=data)
+                            data = {"chat": {username: {"letra": "b", "main": username, "sec": find_username}}}
+                            r = requests.patch(f"https://neutrumsocial1-default-rtdb.firebaseio.com/{find_username}/.json", json=data)
 
 
                             # Atualizando a lista_seguindo do usuário que seguiu

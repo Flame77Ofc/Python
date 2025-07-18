@@ -125,7 +125,7 @@ except Exception as erro:
                 st.warning('Este nome de usuário já existe. Tente outro.')
             else:
                 with st.spinner('Verificando Informações...'):
-                    sleep(3)
+                    sleep(0.5)
                     r = requests.patch(DATABASE, json=firebase_data)
                     if r.status_code == 200:
                         st.info("Usuário criado com sucesso!")
@@ -149,7 +149,7 @@ except Exception as erro:
                             st.info('Página prestes a recarregar')
                             st.toast("Página prestes a recarregar!", icon="🔁")
 
-                            sleep(3)
+                            sleep(0.5)
                             st.rerun()
                     else:
                         st.error("Erro ao criar o usuário:", r.status_code)
@@ -164,7 +164,7 @@ except Exception as erro:
             if json_data[username]["senha"] == password:
                 if r.status_code == 200:
                     with st.spinner('Verificando Informações...'):
-                        sleep(3)
+                        sleep(0.5)
 
                         st.info("Informações Corretas!")
                         st.toast("Informações Corretas!", icon="✔")
@@ -187,7 +187,7 @@ except Exception as erro:
                             st.info('Página prestes a recarregar')
                             st.toast("Página prestes a recarregar🔁")
 
-                            sleep(2)
+                            sleep(1)
                             st.rerun()
 
                     st.write('Login realizado!')
