@@ -1,5 +1,5 @@
-1. Apenas um nível de indentação por método
-    Códigos **Hadouken** são os códigos que possuem inúmeros else's, e isso dificulta muito a leitura e a legibilidade do código. A recomendação de "Apenas um nível de indentação por método" busca eliminar o código Hadouken e substituir essa "mal prática" por outras técnicas mais eficientes e com maior legibilidade.
+1. Não use else
+    Códigos **Hadouken** são os códigos que possuem inúmeros else's, e isso dificulta muito a leitura e a legibilidade do código. A recomendação de "Early Return/Fail First" busca eliminar o código Hadouken e substituir essa "mal prática" por outras técnicas mais eficientes e com maior legibilidade.
 
     # Técnicas
     1. Early Return: Retornar cedo

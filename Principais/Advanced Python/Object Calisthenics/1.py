@@ -1,4 +1,4 @@
-# 1. Apenas um nível de indentação por método (Exemplos simples)
+# 1. Não use else
 import requests
 
 
@@ -27,4 +27,3 @@ def scraping_com_fail_first(site: str):
         return "JSON não encontrado."
 
     return json
-
