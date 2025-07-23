@@ -1,0 +1,3 @@
+- Simulador De Loteria
+- Scraping de comentários do youtube de um vídeo (uma função)
+- Gerador de tabuadas com streamlit
