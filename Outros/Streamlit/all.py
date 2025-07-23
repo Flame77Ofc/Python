@@ -70,4 +70,3 @@ st.balloons() # Solta balões na tela
 #     st.Page("pagina.py", title="Página Principal", icon="⛄"),
 #     st.Page("second.py", title="Página Secundária", icon="🚩")
 # ])
-
