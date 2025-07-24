@@ -1,5 +1,3 @@
-# Raíz quadrada exata: Pedir ao usuário um número e o programa deve retornar
-# se aquele número é uma raíz exata quadrada ou não e mostrar o resultado.
 import math
 
 while True:
