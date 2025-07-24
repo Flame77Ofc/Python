@@ -1,5 +1,6 @@
 from random import choice
 
+
 try:
     partidas = {
         "Jogador": 0,
@@ -41,8 +42,8 @@ try:
             break
         elif continuar == 'S':
             continue
-except:
-    print('Erro inesperado')
+except Exception as erro:
+    print(f'Erro: {erro}')
 else:
     for chave, valor in partidas.items():
         print(f'{chave} fez {valor} {"ponto" if valor == 1 else "pontos"}')
