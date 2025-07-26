@@ -1,4 +1,4 @@
-# Desafio 1: Mude a cor do fundo para roxo, sabendo que: RGB = (156, 0, 203)
+# des001: Mude a cor do fundo para roxo, sabendo que: RGB = (156, 0, 203)
 import pygame
 
 pygame.init()

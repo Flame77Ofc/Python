@@ -1,4 +1,4 @@
-# Desafio4: Criar uma simples movimentação de direita e esquerda, com um personagem
+# des003: Criar uma simples movimentação de direita e esquerda, com um personagem
 import pygame
 
 pygame.init()
