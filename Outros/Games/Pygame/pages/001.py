@@ -1,64 +1,78 @@
 import pygame
-from time import sleep
 
 pygame.init()
 
-screen = pygame.display.set_mode((840, 650))
-title = pygame.display.set_caption("Ghost Fly")
+window_width, window_height = 960, 640
+screen = pygame.display.set_mode((window_width, window_height))
 
-IMGicon = pygame.image.load("aulas/pixelart-ghost.png")
-icon = pygame.display.set_icon(IMGicon)
+dirt = pygame.image.load("assets/tiles/dirt.png")
+grass = pygame.image.load("assets/tiles/grass.png")
+water = pygame.image.load("assets/tiles/water.png")
 
-IMGcharacter = pygame.image.load("aulas/pixelart-ghost.png")
-x, y, speed = 50, 200, 5
+tile_size = 32
+dirt = pygame.transform.scale(dirt, (tile_size, tile_size))
+grass = pygame.transform.scale(grass, (tile_size, tile_size))
+water = pygame.transform.scale(water, (tile_size, tile_size))
 
-retangulo = pygame.Rect(0, 600, 840, 50)
+tile_map = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+]
+
+tile_images = [None, dirt, grass, water]
+
+x, y = window_width / 2, window_height / 2
+speed = 10
 
 fps = pygame.time.Clock()
-font = pygame.font.SysFont(None, 36)
 
 running = True
 while running:
-    fps.tick(120)
-    bg = screen.fill((12, 57, 108))
-
-    fps_text = font.render(f"Fps: {int(fps.get_fps())}", True, (12, 12, 12))
-
+    fps.tick(60)
+    screen.fill("lightskyblue")
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
     key = pygame.key.get_pressed()
-    if key[pygame.K_UP]:
-        y -= speed
-    if key[pygame.K_DOWN]:
-        y += speed
-    if key[pygame.K_LEFT]:
+    if key[pygame.K_LEFT] and x > 50:
         x -= speed
-    if key[pygame.K_RIGHT]:
+    if key[pygame.K_RIGHT] and x < window_width-50:
         x += speed
+    if key[pygame.K_UP] and y > 50:
+        y -= speed
+    if key[pygame.K_DOWN] and y < window_height-50:
+        y += speed
 
+    # Desenhando
+    for row_index, row in enumerate(tile_map):
+        for col_index, tile in enumerate(row):
+            if tile != 0:
+                tile_x = col_index * tile_size
+                tile_y = row_index * tile_size
+                screen.blit(tile_images[tile], (tile_x, tile_y))
 
-    if y <= -450:
-        y = 525
-        screen.blit(IMGcharacter, (x, y))
-    if y >= 600:
-        y = -450
-        screen.blit(IMGcharacter, (x, y))
-    if x <= -335:
-        x = 800
-        screen.blit(IMGcharacter, (x, y))
-    if x >= 850:
-        x = -300
-        screen.blit(IMGcharacter, (x, y))
-    else:
-        screen.blit(IMGcharacter, (x, y))
+    character = pygame.draw.circle(screen, "white", (x, y), 45)
 
-
-    pygame.draw.rect(screen, (98, 14, 7), retangulo)
-    screen.blit(fps_text, (50, 50))
     pygame.display.update()
-
 
 pygame.quit()

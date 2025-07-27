@@ -1,2 +1,0 @@
-desafios:
-Fazer um jogo em que aparece circulos em pos. randômicas e seu objetivo é tocar nesses circulos.

@@ -1,24 +1,40 @@
+# Movimentos restritos
 import pygame
 
-# Colocando imagens na tela
 pygame.init()
 
+window_width = 1000
+window_height = 750
 
-screen = pygame.display.set_mode((850, 740))
-title = pygame.display.set_caption("Colocando Imagens na janela")
+screen = pygame.display.set_mode((window_width, window_height))
+pygame.display.set_caption("Meu Jogo")
 
-playerIMG = pygame.image.load("player-pixelart.png")
-playerX = 200
-playerY = 200
+x, y = 500, 350
+speed = 8
 
+fps = pygame.time.Clock()
 
 running = True
 while running:
+    fps.tick(60)
+    screen.fill("grey")
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
+            running = False
 
-    screen.blit(playerIMG, (playerX, playerY))
+    character = pygame.draw.circle(screen, "black", (x, y), 45)
+
+    key = pygame.key.get_pressed()
+    if (key[pygame.K_LEFT] or key[pygame.K_a]) and x > 50:
+        x -= speed
+    if (key[pygame.K_RIGHT] or key[pygame.K_d]) and x < window_width - 50:
+        x += speed
+    if (key[pygame.K_UP] or key[pygame.K_w]) and y > 50:
+        y -= speed
+    if (key[pygame.K_DOWN] or key[pygame.K_s]) and y < window_height - 50:
+        y += speed
+
     pygame.display.update()
 
 pygame.quit()

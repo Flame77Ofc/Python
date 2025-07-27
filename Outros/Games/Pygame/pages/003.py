@@ -1,20 +1,30 @@
+# Mouse MOTION
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode((850, 640))
-title = pygame.display.set_caption("Meu Jogo")
 
-clock = pygame.time.Clock()
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Meu Jogo")
+
+x, y = 400, 300
+speed = 10
+
+fps = pygame.time.Clock()
 
 running = True
 while running:
-    clock.tick(60)
+    fps.tick(60)
+    bg = screen.fill("gray")
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
+            running = False
 
-    screen.fill((34, 54, 45))
+    if event.type == pygame.MOUSEMOTION:
+        pos = pygame.mouse.get_pos()
+        x, y = pos[0], pos[1]
+
+    character = pygame.draw.circle(screen, "red", (x, y), 50)
     pygame.display.update()
 
 pygame.quit()
