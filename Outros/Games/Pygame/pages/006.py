@@ -16,7 +16,7 @@ fps = pygame.time.Clock()
 
 running = True
 while running:
-    fps.tick(60)
+    fps.tick(180)
     screen.fill("grey")
 
     for event in pygame.event.get():
