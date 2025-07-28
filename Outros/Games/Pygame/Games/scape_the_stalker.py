@@ -37,7 +37,7 @@ while running:
         main_y += main_speed
 
     stalker_character = pygame.draw.rect(screen, "red", (stalker_x, stalker_y, 50, 50))
-    main_character = pygame.draw.circle(screen, "orange", (main_x, main_y), 45)
+    main_character = pygame.draw.circle(screen, "orange", (main_x, main_y), 15)
 
     if stalker_x < main_x:
         stalker_x += stalker_speed

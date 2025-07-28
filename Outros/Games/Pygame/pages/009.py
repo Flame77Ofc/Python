@@ -5,6 +5,11 @@ pygame.init()
 width, height = 1280, 750
 screen = pygame.display.set_mode((width, height))
 
+# class Character:
+#     def __init__(self, x, y)
+
+character = pygame.image.load("")
+
 x, y = width / 2, height / 2
 speed = 10
 
