@@ -2,48 +2,51 @@ import pygame
 
 pygame.init()
 
-window_width, window_height = 960, 640
-screen = pygame.display.set_mode((window_width, window_height))
+width, height = 960, 640
+screen = pygame.display.set_mode((width, height))
 
-sprite_sheet = pygame.image.load("assets/Characters/doux.png").convert_alpha()
+sprite_sheet = pygame.image.load("assets/Characters/Ninja Frog/Idle (32x32).png")
 
 def get_image(sheet, frame, width, height, scale, color):
     image = pygame.Surface((width, height)).convert_alpha()
     image.blit(sheet, (0, 0), (frame * width, 0, width, height))
     image = pygame.transform.scale(image, (scale, scale))
-    image.set_colorkey(color)
+    image.set_colorkey("black")
 
     return image
 
+
 animation_list = []
-animation_steps = 24
+animation_steps = 11
+animation_countdown = 50
 last_update = pygame.time.get_ticks()
-animation_cooldown = 100
-frame = 18
+frame = 0
 
-for i in range(animation_steps):
-    animation_list.append(get_image(sprite_sheet, i, 24, 24, 64, "black"))
+for animation in range(animation_steps):
+    animation_list.append(get_image(sprite_sheet, animation, 32, 32, 128, "black"))
 
-clock = pygame.time.Clock()
+
+fps = pygame.time.Clock()
+
 running = True
-
 while running:
-    clock.tick(60)
+    fps.tick(60)
     screen.fill("grey")
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-    if frame >= animation_steps - 1:
-        frame = 18
+    if frame >= animation_steps-1:
+        frame = 0
 
     current_time = pygame.time.get_ticks()
-    if current_time - last_update >= animation_cooldown:
+    if current_time - last_update >= animation_countdown:
         frame += 1
         last_update = current_time
 
-    screen.blit(animation_list[frame], (50, 85))
+    screen.blit(animation_list[frame], (0, 0))
+
     pygame.display.update()
 
 pygame.quit()
