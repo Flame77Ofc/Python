@@ -50,14 +50,21 @@ sound.play(loops)  # nota: Se configurar loops para -1, repetirá para sempre.
 
 
 # Limitando os movimentos do personagem
-*Dentro do Game Loop:*
+character = pygame.image.load("character.png")
+character_width = 45
+character_height = 45
+x, y = window_width / 2, window_height / 2
+speed = 10
+
+*Game Loop:*
 
 key = pygame.key.get_pressed()
-if (key[pygame.K_LEFT] or key[pygame.K_a]) and **x > 50**:
+if key[pygame.K_LEFT] and x > character_width-5:
     x -= speed
-if (key[pygame.K_RIGHT] or key[pygame.K_d]) and **x < window_width - 50**:
+if key[pygame.K_RIGHT] and x < window_width-character_width-5:
     x += speed
-if (key[pygame.K_UP] or key[pygame.K_w]) and **y > 50**:
+if key[pygame.K_UP] and y > character_height-5:
     y -= speed
-if (key[pygame.K_DOWN] or key[pygame.K_s]) and **y < window_height - 50**:
+if key[pygame.K_DOWN] and y < character_height-character_height-5:
     y += speed
+

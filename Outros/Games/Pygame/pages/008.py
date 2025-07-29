@@ -1,13 +1,19 @@
 import pygame
-import spritesheet_class008
 
 pygame.init()
 
 window_width, window_height = 960, 640
 screen = pygame.display.set_mode((window_width, window_height))
 
-sprite = pygame.image.load("assets/sprites/doux.png").convert_alpha()
-sprite_sheet = spritesheet_class008.SpriteSheet(sprite)
+sprite_sheet = pygame.image.load("assets/sprites/doux.png").convert_alpha()
+
+def get_image(sheet, frame, width, height, scale, color):
+    image = pygame.Surface((width, height)).convert_alpha()
+    image.blit(sheet, (0, 0), (frame * width, 0, width, height))
+    image = pygame.transform.scale(image, (scale, scale))
+    image.set_colorkey(color)
+
+    return image
 
 animation_list = []
 animation_steps = 24
@@ -15,22 +21,26 @@ last_update = pygame.time.get_ticks()
 animation_cooldown = 100
 frame = 18
 
+# Montar a lista de frames
 for i in range(animation_steps):
-    animation_list.append(sprite_sheet.get_image(i, 24, 24, 64, "black"))
+    animation_list.append(get_image(sprite_sheet, i, 24, 24, 64, "black"))
 
+x, y = window_width / 2, window_height / 2
+speed = 10
 
-fps = pygame.time.Clock()
-
+clock = pygame.time.Clock()
 running = True
+
 while running:
-    fps.tick(60)
+    clock.tick(60)
     screen.fill("grey")
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-    if frame >= animation_steps-1:
+    # Animação
+    if frame >= animation_steps - 1:
         frame = 18
 
     current_time = pygame.time.get_ticks()
@@ -38,8 +48,7 @@ while running:
         frame += 1
         last_update = current_time
 
-    screen.blit(animation_list[frame], (0, 0))
-
+    screen.blit(animation_list[frame], (x, y))
     pygame.display.update()
 
 pygame.quit()
