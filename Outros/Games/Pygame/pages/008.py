@@ -5,7 +5,7 @@ pygame.init()
 window_width, window_height = 960, 640
 screen = pygame.display.set_mode((window_width, window_height))
 
-sprite_sheet = pygame.image.load("assets/sprites/doux.png").convert_alpha()
+sprite_sheet = pygame.image.load("assets/Characters/dino.png").convert_alpha()
 
 def get_image(sheet, frame, width, height, scale, color):
     image = pygame.Surface((width, height)).convert_alpha()
@@ -21,7 +21,6 @@ last_update = pygame.time.get_ticks()
 animation_cooldown = 100
 frame = 18
 
-# Montar a lista de frames
 for i in range(animation_steps):
     animation_list.append(get_image(sprite_sheet, i, 24, 24, 64, "black"))
 
@@ -39,7 +38,6 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    # Animação
     if frame >= animation_steps - 1:
         frame = 18
 
