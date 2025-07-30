@@ -5,20 +5,65 @@ pygame.init()
 
 window_width, window_height = 960, 640
 screen = pygame.display.set_mode((window_width, window_height))
+pygame.display.set_caption("Hit The Lucky Block!")
 
-background_image = pygame.image.load("assets/Background/blue_blackground.png")
-background_image = pygame.transform.scale(background_image, (window_width, window_height))
 
-def get_image(sheet, frame, width, height, scale, color):
-    character = pygame.image.load(sheet)
-    image = pygame.Surface((width, height)).convert_alpha()
-    image.blit(character, (0, 0), (frame*width, 0, width, height))
+def get_image(sheet, frame, width, height, scale, color_key):
+    character = pygame.image.load(sheet).convert_alpha()
+    image = pygame.Surface((width, height), pygame.SRCALPHA).convert_alpha()
+    image.blit(character, (0, 0), (frame * width, 0, width, height))
     image = pygame.transform.scale(image, (scale, scale))
-    image.set_colorkey(color)
+    if color_key:
+        image.set_colorkey(pygame.Color(color_key))
 
     return image
 
-def caracter(final_steps, initial_frame, img):
+
+def get_effect_image(final_steps, initial_frame, img):
+    animation_list = []
+    animation_steps = final_steps
+    animation_countdown = 100
+    last_update = pygame.time.get_ticks()
+    frame = initial_frame
+
+    lista = [animation_list, animation_steps, animation_countdown, last_update, frame, [animation_list.append(get_image(img, animation, 7, 7, 16, "black")) for animation in range(animation_steps)]]
+
+    return lista
+
+
+effect = get_effect_image(7, 0, "assets/Effects/Glint/glint1.png")
+animation_list_effect = effect[0]
+animation_steps_effect = effect[1]
+animation_countdown_effect = effect[2]
+last_update_effect = effect[3]
+frame_effect = effect[4]
+
+
+def get_monster_image(final_steps, initial_frame, img):
+    animation_list = []
+    animation_steps = final_steps
+    animation_countdown = 55
+    last_update = pygame.time.get_ticks()
+    frame = initial_frame
+
+    lista = [animation_list, animation_steps, animation_countdown, last_update, frame, [animation_list.append(get_image(img, animation, 44, 30, 56, "black")) for animation in range(animation_steps)]]
+
+    return lista
+
+
+monster = get_monster_image(10, 0, "assets/Enemies/Slime/Idle-Run (44x30).png")
+animation_list_monster = monster[0]
+animation_steps_monster = monster[1]
+animation_countdown_monster = monster[2]
+last_update_monster = monster[3]
+frame_monster = monster[4]
+
+monster_x, monster_y = 900, 553
+monster_facing_right = True
+monster_speed = 1
+
+
+def get_character_image(final_steps, initial_frame, img):
     animation_list = []
     animation_steps = final_steps
     animation_countdown = 50
@@ -26,14 +71,17 @@ def caracter(final_steps, initial_frame, img):
     frame = initial_frame
 
     lista = [animation_list, animation_steps, animation_countdown, last_update, frame, [animation_list.append(get_image(img, animation, 32, 32, 64, "black")) for animation in range(animation_steps)]]
+
     return lista
 
-character = caracter(11, 0, "assets/Characters/Virtual Guy/Idle (32x32).png")
+
+character = get_character_image(11, 0, "assets/Characters/Virtual Guy/Idle (32x32).png")
 animation_list = character[0]
 animation_steps = character[1]
 animation_countdown = character[2]
 last_update = character[3]
 frame = character[4]
+character_right = True
 
 
 jumping = False
@@ -77,7 +125,6 @@ lucky_block = pygame.transform.scale(lucky_block, (32, 32))
 block_x, block_y = randint(50, 910), 450
 false_block_y = block_y + 8
 
-
 tocou = False
 pontos = 0
 font = pygame.font.SysFont("mono", 45, True)
@@ -87,24 +134,58 @@ fps = pygame.time.Clock()
 running = True
 while running:
     fps.tick(60)
-    screen.fill("grey")
-    screen.blit(background_image, (0, 0))
-
-    text = font.render(f"Pontos: {pontos}", True, "black")
-    screen.blit(text, (35, 70))
+    screen.fill("lightskyblue")
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-    screen.blit(lucky_block, (block_x, block_y))
-
+    # LUCKY BLOCK
     if (x >= block_x-50 and x <= block_x+50) and (y <= false_block_y):
+        effect = get_effect_image(10, 0, "assets/Enemies/Slime/Idle-Run (44x30).png")
+        animation_list_effect = effect[0]
+        animation_steps_effect = effect[1]
+        animation_countdown_effect = effect[2]
+        last_update_effect = effect[3]
+        frame_effect = effect[4]
+
         tocou = True
 
+    screen.blit(lucky_block, (block_x, block_y))
+
+    if tocou:
+        pontos += 1
+        block_x = randint(50, 910)
+        tocou = False
+
+    # MONSTER
+    if monster_x > x:
+        monster_facing_right = True
+        monster_x -= monster_speed
+    elif monster_x < x:
+        monster_facing_right = False
+        monster_x += monster_speed
+
+    if frame_monster >= animation_steps_monster-1:
+        frame_monster = 0
+
+    current_time_monster = pygame.time.get_ticks()
+
+    if current_time_monster - last_update_monster >= animation_countdown_monster:
+        frame_monster += 1
+        last_update_monster = current_time_monster
+
+    monster_image = animation_list_monster[frame_monster]
+    if not monster_facing_right:
+        monster_image = pygame.transform.flip(monster_image, True, False)
+
+    screen.blit(monster_image, (monster_x, monster_y))
+
+    # CHARACTER
     key = pygame.key.get_pressed()
     if key[pygame.K_LEFT] and x > 10:
-        character = caracter(11, 0, "assets/Characters/Virtual Guy/Idle - left(32x32).png")
+        character_right = False
+        character = get_character_image(11, 0, "assets/Characters/Virtual Guy/Idle - left(32x32).png")
         animation_list = character[0]
         animation_steps = character[1]
         animation_countdown = character[2]
@@ -113,7 +194,8 @@ while running:
 
         x -= speed
     if key[pygame.K_RIGHT] and x < window_width-74:
-        character = caracter(11, 0, "assets/Characters/Virtual Guy/Idle (32x32).png")
+        character_right = True
+        character = get_character_image(11, 0, "assets/Characters/Virtual Guy/Idle (32x32).png")
         animation_list = character[0]
         animation_steps = character[1]
         animation_countdown = character[2]
@@ -135,9 +217,14 @@ while running:
             last_update = current_time
 
         screen.blit(animation_list[frame], (x, y))
-
     else:
-        screen.blit(animation_list[frame], (x, y))
+        if character_right:
+            jump = pygame.image.load("assets/Characters/Virtual Guy/Jump (32x32).png")
+        else:
+            jump = pygame.image.load("assets/Characters/Virtual Guy/Jump - left(32x32).png")
+
+        jump = pygame.transform.scale(jump, (64, 64))
+        screen.blit(jump, (x, y))
 
         y -= VELOCITY
         VELOCITY -= GRAVITY
@@ -146,6 +233,7 @@ while running:
             jumping = False
             VELOCITY = JUMP_HEIGHT
 
+    # MAP
     for row_index, row in enumerate(tiled_map):
         for col_index, tile in enumerate(row):
             if tile != 0:
@@ -153,11 +241,25 @@ while running:
                 tile_y = row_index * tile_size
                 screen.blit(blocks[tile], (tile_x, tile_y))
 
-    if tocou:
+    # Collision
+    character_rect = pygame.Rect(x+10, y+12, 45, 45)
+    monster_rect = pygame.Rect(monster_x, monster_y+12, 50, 45)
+
+    text = font.render(f"Pontos: {pontos}", True, "black")
+    screen.blit(text, (35, 70))
+
+    if character_rect.colliderect(monster_rect):
+        font = pygame.font.SysFont("Consolas", 50, True)
+        text = font.render("Você perdeu!", True, "red")
+        text_rect = text.get_rect(center=(window_width // 2, window_height // 2))
+
+        screen.blit(text, text_rect)
+        print(text.get_size())
+
         pygame.display.update()
-        pontos += 1
-        block_x = randint(50, 910)
-        tocou = False
+
+        pygame.time.delay(500)
+        running = False
 
     pygame.display.update()
 
