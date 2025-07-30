@@ -125,8 +125,8 @@ lucky_block = pygame.transform.scale(lucky_block, (32, 32))
 block_x, block_y = randint(50, 910), 450
 false_block_y = block_y + 8
 
-tocou = False
-pontos = 0
+touch = False
+points = 0
 font = pygame.font.SysFont("mono", 45, True)
 
 fps = pygame.time.Clock()
@@ -149,14 +149,17 @@ while running:
         last_update_effect = effect[3]
         frame_effect = effect[4]
 
-        tocou = True
+        touch = True
 
     screen.blit(lucky_block, (block_x, block_y))
 
-    if tocou:
-        pontos += 1
+    if touch:
+        points += 1
         block_x = randint(50, 910)
-        tocou = False
+
+        touch_sound = pygame.mixer.Sound("assets/Sounds/Magic.wav")
+        touch_sound.play()
+        touch = False
 
     # MONSTER
     if monster_x > x:
@@ -230,8 +233,11 @@ while running:
         VELOCITY -= GRAVITY
 
         if VELOCITY < -JUMP_HEIGHT:
-            jumping = False
             VELOCITY = JUMP_HEIGHT
+            jumping = False
+            jump_sound = pygame.mixer.Sound("assets/Sounds/Jump.wav")
+            jump_sound.play()
+
 
     # MAP
     for row_index, row in enumerate(tiled_map):
@@ -242,10 +248,10 @@ while running:
                 screen.blit(blocks[tile], (tile_x, tile_y))
 
     # Collision
-    character_rect = pygame.Rect(x+10, y+12, 45, 45)
-    monster_rect = pygame.Rect(monster_x, monster_y+12, 50, 45)
+    character_rect = pygame.Rect(x+17, y+8, 30, 56)
+    monster_rect = pygame.Rect(monster_x+7, monster_y+7, 40, 40)
 
-    text = font.render(f"Pontos: {pontos}", True, "black")
+    text = font.render(f"Pontos: {points}", True, "black")
     screen.blit(text, (35, 70))
 
     if character_rect.colliderect(monster_rect):
@@ -254,8 +260,6 @@ while running:
         text_rect = text.get_rect(center=(window_width // 2, window_height // 2))
 
         screen.blit(text, text_rect)
-        print(text.get_size())
-
         pygame.display.update()
 
         pygame.time.delay(500)
