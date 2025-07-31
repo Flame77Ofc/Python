@@ -89,3 +89,17 @@ while running:
 
 
 pygame.quit()
+
+
+# mouse
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            print("Mouse Down")
+        if event.type == pygame.MOUSEBUTTONUP:
+            print("Mouse Up")
+
+pygame.quit()
