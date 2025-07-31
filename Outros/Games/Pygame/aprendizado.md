@@ -68,3 +68,24 @@ if key[pygame.K_UP] and y > character_height-5:
 if key[pygame.K_DOWN] and y < character_height-character_height-5:
     y += speed
 
+
+# KeyBoard
+running = True
+while running:
+    for event in pygame.event.key():
+        if event.type == pygame.QUIT:
+            running = False
+
+        # keydown: acontece quando o usuário clica na tecla
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                print("Space")
+
+
+        # keyup: acontece apenas quando o usuário solta a tecla
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_UP:
+                print("Up")
+
+
+pygame.quit()
