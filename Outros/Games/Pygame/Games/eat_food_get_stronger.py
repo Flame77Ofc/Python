@@ -9,9 +9,6 @@ window_height = 750
 screen = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption("Eat The Food and Get Stronger!")
 
-song = pygame.mixer.Sound("assets/music-game002.mp3")
-song.play(-1)
-
 main_x, main_y = window_width / 2, window_height / 2
 collision_x, collision_y = randint(100, window_width-100), randint(100, window_height-100)
 speed = 10
