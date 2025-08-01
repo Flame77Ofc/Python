@@ -118,7 +118,7 @@ x, y = 45, 545
 initial_y = y
 speed = 10
 
-grass = pygame.image.load("assets/tilesets/grass.png")
+grass = pygame.image.load("assets/Background/parallax/tilesets/grass.png")
 tile_size = 32
 grass = pygame.transform.scale(grass, (tile_size, tile_size))
 
