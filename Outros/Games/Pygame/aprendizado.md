@@ -1,4 +1,4 @@
-# Formas Geométricas
+$ Formas Geométricas $
 - Para criar um círculo:
 pygame.draw.circle(screen, color, coordinates, thickness, 0=fill, 1,...=outline only, draw_top_right, draw_top_left, draw_bottom_left,draw_bottom_right)
 
@@ -9,8 +9,8 @@ pygame.draw.line(screen, color, initial pos., final pos., thickness)
 pygame.draw.rect(screen, color,  x, y, width, height, 0 value, border-radius)
 
 
-# eventos
-*Dentro do Game Loop*
+$ eventos $
+**Game Loop**:
 key = pygame.key.get_pressed()
 if key[pygame.K_LEFT]:
     x -= speed
@@ -22,12 +22,12 @@ if key[pygame.K_DOWN]:
     y += speed
 
 
-# Background-Color
+$ Background-Color $
 definindo o fundo como RGB: **screen.fill((0, 0, 255))**
 definindo o fundo como cor em string: **screen.filll("blue")**
 
 
-# Definindo fontes
+$ Definindo fontes $
 1. Definindo as configurações da cor (Fonte e Estilo)
 font = pygame.font.SysFont("font", size, bold, italic)
 
@@ -38,25 +38,25 @@ text = font.render("text", antialias, "color")
 screen.blit(text, (x, y))
 
 
-# Fazer delay (SEM time.sleep()!):
+$ Fazer delay $
 pygame.time.delay(mileseconds)
 
 
-# Adicionando Som
+$ Adicionando Som $
 sound = pygame.mixer.Sound("path")
 sound.set_volume(float)  # Volume
 
 sound.play(loops)  # nota: Se configurar loops para -1, repetirá para sempre.
 
 
-# Limitando os movimentos do personagem
+$ Limitando os movimentos do personagem $
 character = pygame.image.load("character.png")
 character_width = 45
 character_height = 45
 x, y = window_width / 2, window_height / 2
 speed = 10
 
-*Game Loop:*
+**Game Loop**:
 
 key = pygame.key.get_pressed()
 if key[pygame.K_LEFT] and x > character_width-5:
@@ -69,12 +69,9 @@ if key[pygame.K_DOWN] and y < character_height-character_height-5:
     y += speed
 
 
-# KeyBoard
-running = True
-while running:
+$ KeyBoard $
+**Game Loop**:
     for event in pygame.event.key():
-        if event.type == pygame.QUIT:
-            running = False
 
         # keydown: acontece quando o usuário clica na tecla
         if event.type == pygame.KEYDOWN:
@@ -88,18 +85,32 @@ while running:
                 print("Up")
 
 
-pygame.quit()
 
 
-# mouse
-running = True
-while running:
+$ mouse $
+**Game Loop**:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
         if event.type == pygame.MOUSEBUTTONDOWN:
             print("Mouse Down")
         if event.type == pygame.MOUSEBUTTONUP:
             print("Mouse Up")
 
-pygame.quit()
+
+
+$ Group $
+class Square(pygame.sprite.Sprite):
+    def __init__(self, color: str, width: int, height: int, x: int, y: int):
+        super().__init__()
+
+        self.image = pygame.Surface((width, height))
+        self.image.fill(color)
+        self.rect = self.image.get_rect()
+        self.rect.center = (x, y)
+
+square_group = pygame.sprite.Group()
+square = Square("orange", 50, 50, 150, 340)
+square_group.add(square)
+
+**Game Loop**:
+    square_group.draw(screen)
+    pygame.display.update()
