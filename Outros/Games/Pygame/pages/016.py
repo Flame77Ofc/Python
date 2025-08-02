@@ -1,3 +1,4 @@
+# parallax
 import pygame
 
 pygame.init()
@@ -31,6 +32,7 @@ def draw_background():
         screen.blit(sky, ((x * width) - scroll * 0.2, 0))
         screen.blit(mountain, ((x * width) - scroll * 0.6, height - mountain.get_height() + 100))
         screen.blit(floor, ((x * width) - scroll * 0.7, height - floor.get_height() + 100))
+
 
 
 fps = pygame.time.Clock()
