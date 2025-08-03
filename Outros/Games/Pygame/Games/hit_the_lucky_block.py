@@ -118,7 +118,7 @@ x, y = 45, 545
 initial_y = y
 speed = 10
 
-grass = pygame.image.load("assets/Background/parallax/tilesets/grass.png")
+grass = pygame.image.load("assets/tilesets/grass.png")
 tile_size = 32
 grass = pygame.transform.scale(grass, (tile_size, tile_size))
 
@@ -237,7 +237,7 @@ while running:
         key = pygame.key.get_pressed()
         if key[pygame.K_LEFT] and x > 10:
             character_right = False
-            character = get_character_image(11, 0, "assets/Characters/Virtual Guy/Idle - left(32x32).png")
+            character = get_character_image(11, 0, "assets/Characters/Virtual Guy/Idle (32x32).png")
             animation_list = character[0]
             animation_steps = character[1]
             animation_countdown = character[2]

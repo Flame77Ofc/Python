@@ -26,8 +26,7 @@ class Sprite:
         image.blit(self.image, (0, 0), (frame * width, 0, width, height))
         image = pygame.transform.scale(image, (scale, scale))
         image.set_colorkey(color)
-        if not right:
-            image = pygame.transform.flip(image, True, False)
+
 
         return image
 
