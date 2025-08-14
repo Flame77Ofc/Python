@@ -65,11 +65,6 @@ def scraping(site: str):
 
 
 
-    # https://www.worldometers.info/
-    yield soup.prettify()[:10000]
-
-
-
 
 # for item in scraping("https://www.booking.com/"):
 #     print(item)
@@ -79,7 +74,3 @@ def scraping(site: str):
 
 # for item in scraping("https://www.airbnb.com.br/"):
 #     print(item)
-
-for item in scraping("https://www.worldometers.info/"):
-    print(item)
-

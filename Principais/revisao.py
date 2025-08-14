@@ -69,11 +69,11 @@ def tipos_de_dados():
     São eles:
     - str (String): Caractere, é um tipo de dado para textos, delimitados por aspas simples ('string') ou aspas duplas ("string")
 
-    - int (Inteiros): Inteiro, é um tipo de dado especialmente para números inteiros sem casas decimais, sem números após a vírgula
+    - int (Inteiro): Inteiro, é um tipo de dado especialmente para números inteiros sem casas decimais, sem números após a vírgula
 
-    - float (Flutuantes): Flutuante ou Decimal, é um tipo de dado para números de ponto flutuante com casas decimais, possuindo números após a vírgula.
+    - float (Flutuante): Flutuante ou Decimal, é um tipo de dado para números de ponto flutuante com casas decimais, possuindo números após a vírgula.
 
-    - bool (Booleanos): Booleanos, é um tipo de dado que existem apenas dois valores a serem preenchidos: O True (verdadeiro) e o False (falso)
+    - bool (Booleano): Booleanos, é um tipo de dado que existem apenas dois valores a serem preenchidos: True (verdadeiro) e False (falso)
     """
 
     # Exemplo (Sem estarem dentro de variáveis - próximo assunto)
@@ -511,6 +511,18 @@ def dicionarios():
     numero_pessoas_apartamento2 = hotel[315]["numero de pessoas"]
     print(f"Número de pessoas totais: {numero_pessoas_apartamento1 + numero_pessoas_apartamento2}") # Número de pessoas totais: 7
 
+    # Iteração
+    # Retorna as chaves
+    for chave in hotel.keys():
+        print(chave)
+
+    # Retorna os valores das chaves
+    for valor in hotel.values():
+        print(valor)
+
+    # Retorna ambos chaves e valores
+    for chave, valor in hotel.items():
+        print(chave, valor)
 
 
 dicionarios()
