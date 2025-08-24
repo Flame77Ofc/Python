@@ -1,5 +1,7 @@
-# Criar um sistema bancário com múltiplas contas e histórico de transações
-import json, random, datetime
+import json
+import random
+import datetime
+
 data = datetime.datetime.now().strftime('%d/%m/%Y -> %H:%M:%S')
 
 try:

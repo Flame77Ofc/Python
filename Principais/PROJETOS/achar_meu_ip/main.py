@@ -42,10 +42,12 @@ def encontrar_meu_ip():
         IP = soup.find("h3").getText().strip()
 
         return IP
-    except requests.ConnectionError:
-        return "Erro de conexão, verifique a sua internet."
-    except Exception as erro:
-        return f"Erro: {erro}."
+    except requests.ConnectionError as conn_e:
+        return f"Erro de conexão, verifique a sua internet. {conn_e}"
+    except requests.exceptions.Timeout as timeout_e:
+        return f"Não foi possível encontrar seu IP. Tempo limite excedido. {timeout_e}"
+    except Exception as e:
+        return f"Erro: {e}."
 
 
 print(encontrar_meu_ip())
