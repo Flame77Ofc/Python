@@ -3,6 +3,6 @@ disjuntores = [True, False, False, False, True, True, False, False, True, False]
 
 posicao = 1
 for i in disjuntores:
-  if i:
-    print(posicao)
-  posicao += 1
+    if i:
+      print(posicao)
+    posicao += 1
