@@ -1,5 +1,4 @@
-https://scrapepark.org/
-https://sandbox.oxylabs.io/products
+
 https://www.yelp.com.br/
 https://www.tripadvisor.com/
 https://www.producthunt.com/

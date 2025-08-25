@@ -1,4 +1,3 @@
-# Dicionários: podem ser úteis para senha!! Uow
 semana = {
     1: 'Segunda-feira',
     2: 'Terça-feira',
@@ -41,4 +40,3 @@ semana.clear()
 # apagar o próprio dicionário
 del semana
 "print(semana) # erro"
-
