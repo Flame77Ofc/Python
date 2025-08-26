@@ -1,8 +1,9 @@
 # Crie um programa que verifica em que posições há disjuntores ligados e desligados
 disjuntores = [True, False, False, False, True, True, False, False, True, False]
 
-posicao = 1
-for i in disjuntores:
-    if i:
-      print(posicao)
-    posicao += 1
+pos = 0
+for disjuntor in disjuntores:
+    if disjuntor:
+        print(pos)
+
+    pos += 1
