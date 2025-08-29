@@ -65,8 +65,8 @@ st.snow()# Efeito de neve caindo
 st.balloons() # Solta balões na tela
 
 
-# Outros
-# pages = st.navigation([
-#     st.Page("pagina.py", title="Página Principal", icon="⛄"),
-#     st.Page("second.py", title="Página Secundária", icon="🚩")
-# ])
+# Páginas
+pages = st.navigation([
+    st.Page("pagina.py", title="Página Principal", icon="⛄"),
+    st.Page("second.py", title="Página Secundária", icon="🚩")
+])
