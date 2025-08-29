@@ -1,6 +1,6 @@
 import streamlit as st
+from database.pages import verifica_paginas
 from config import settings
-from assets.css import css
 
 settings.page_config()
 
@@ -11,7 +11,7 @@ pages = {
     ],
 
     "🪄 Criação": [
-        st.Page("pages/create.py", title="Criar Post", icon="🎁")
+        st.Page("pages/create.py", title="Criar Post", icon="✨"),
     ],
 
     "🔧 Sistema": [
@@ -23,11 +23,13 @@ pages = {
     ]
 }
 
-for i in range(1, 10):
-    try:
-        pages["🗒️ Blogs"].append(st.Page(f"pages/blogs/blog00{i}.py", title=f"Blog00{i}", icon=":material/mood:"))
-    except:
-        pass
+
+try:
+    for pagina in verifica_paginas():
+        numero_pagina = pagina[-6:-3]
+        pages["🗒️ Blogs"].append(st.Page(f"{pagina}", title=f"Blog{numero_pagina}", icon="📃"))
+except:
+    pass
 
 
 navigation = st.navigation(pages)
