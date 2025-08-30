@@ -12,8 +12,9 @@ def set_pages():
         st.Page("pages/welcome.py", title="Bem-vindo", icon="☃️")
     ],
 
-    "🪄 Criação": [
-        st.Page("pages/create.py", title="Criar Blog", icon="✨")
+    "🪄 Criação e Remoção": [
+        st.Page("pages/create.py", title="Criar Blog", icon="✨"),
+        st.Page("pages/remove.py", title="Remover Blog", icon="🗑️")
     ],
 
     "📱 Sistema": [

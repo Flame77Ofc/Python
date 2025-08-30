@@ -1,4 +1,5 @@
 import streamlit as st
+from config import pages
 from random import choice
 
 
@@ -25,8 +26,15 @@ def criacao_blog():
         if len(icone) != 1 and icone.isalnum():
             st.warning("Preencha o campo com apenas um ícone!")
 
+        submit = st.button("Enviar dados")
+        if submit:
+            if titulo != "" and conteudo != "" and len(icone) == 1 and not icone.isalnum():
+                proximo_blog = pages.salvar_proximo_blog()
+                with open(f"pages/blogs/{proximo_blog}.py", "w", encoding="utf-8") as f:
+                    f.write("""
 
-        submit = st.button("")
+
+""")
 
 
 def main():
