@@ -1,2 +1,5 @@
-[ ] Alterar o nome dos Blogs para o título do Blog. Ex: Blog007 -> Tecnologia (arquivo será o mesmo)
+[ ] Terminar o texto do welcome.py
+[ ] Alterar variáveis e funções português -> inglês
 [ ] Adicionar mais textos e decorações em cada página
+
+

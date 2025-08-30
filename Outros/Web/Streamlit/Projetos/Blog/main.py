@@ -1,36 +1,41 @@
 import streamlit as st
-from database.pages import verifica_paginas
-from config import settings
+from config import configset
 
-settings.page_config()
+configset.main()
 
 
-pages = {
+def set_pages():
+    """Configura as páginas do Blog"""
+
+    pages = {
     "🏠 Início": [
-        st.Page("pages/welcome.py", title="Bem-Vindo", icon="🎉")
+        st.Page("pages/welcome.py", title="Bem-vindo", icon="☃️")
     ],
 
     "🪄 Criação": [
-        st.Page("pages/create.py", title="Criar Post", icon="✨"),
+        st.Page("pages/create.py", title="Criar Blog", icon="✨")
     ],
 
-    "🔧 Sistema": [
-        st.Page("pages/config.py", title="Configurações", icon="⚙️")
+    "📱 Sistema": [
+        st.Page("pages/settings.py", title="Configurações", icon="⚙️"),
+        st.Page("pages/about.py", title="Sobre", icon="🗨️")
     ],
 
-    "🗒️ Blogs": [
-        # code
-    ]
-}
+    # "🗒️ Blogs": [
+    #     # code...
+    # ]
+    }
 
 
-try:
-    for pagina in verifica_paginas():
-        numero_pagina = pagina[-6:-3]
-        pages["🗒️ Blogs"].append(st.Page(f"{pagina}", title=f"Blog{numero_pagina}", icon="📃"))
-except:
-    pass
+    # pages["🗒️ Blogs"].append(st.Page("pages/teste.py", title="asasasdadasdasd", icon="⚙️"))
 
 
-navigation = st.navigation(pages)
-navigation.run()
+    pg = st.navigation(pages=pages)
+    pg.run()
+
+
+def main():
+    set_pages()
+
+
+main()
